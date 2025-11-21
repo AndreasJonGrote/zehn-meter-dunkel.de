@@ -1,0 +1,23 @@
+{
+  "extends": ["airbnb"],
+  "rules": {
+    "quotes": ["error", "single"],
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "no-undef": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off",
+    "indent": ["error", 2],
+    "object-property-newline": [
+      "error",
+      {
+        "allowAllPropertiesOnSameLine": true
+      }
+    ],
+    "no-underscore-dangle": "off",
+    "array-element-newline": ["error", { "multiline": true }],
+    "multiline-ternary": ["error", "never"]
+  }
+}

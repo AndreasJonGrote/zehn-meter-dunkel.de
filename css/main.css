@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cal-bg: white;
+}
+
+.dark {
+  --cal-bg: black;
+}
+
+@layer base {
+  /* @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/open-sans-v34-latin-regular.woff2') format('woff2');
+    font-display: swap;
+  } */
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .container-fluid {
+    @apply px-5 md:px-10 mx-auto max-w-screen-2xl;
+  }
+}
