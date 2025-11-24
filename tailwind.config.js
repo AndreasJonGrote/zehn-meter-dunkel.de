@@ -18,25 +18,34 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: {
-        '2xl': '1500px',
+      fontFamily: {
+        heading: ['Fira Sans', 'sans-serif'],
+        body: ['Cormorant Garamond', 'serif'],
+        title: ['Inter', 'sans-serif'],
       },
       fontSize: {
-        h1: [clamp('48px', '400px', '1280px', '62px'), {
-          lineHeight: '1.156',
-          fontWeight: '800',
-          letterSpacing: '-0.13px',
+        sm: ['rfs(18px)', {
+          lineHeight: '1.5',
+        }],
+        md: ['rfs(18px)', {
+          lineHeight: '1.5',
         }],
         lg: ['rfs(18px)', {
           lineHeight: '1.5',
         }],
+        clamp: [clamp('48px', '400px', '1280px', '62px'), {
+          lineHeight: '1.156',
+          fontWeight: '800',
+          letterSpacing: '-0.13px',
+        }],
       },
       colors: {
-        bg: 'var(--cal-bg)',
+        dark: '#000000',
+        light: '#FFFFFF',
       },
     },
     bgSvg: {
-      ...bgSvgIcons,
+      icon: '',
     },
   },
   plugins: [
