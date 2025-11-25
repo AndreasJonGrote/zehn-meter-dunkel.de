@@ -24,14 +24,18 @@ module.exports = {
         title: ['Inter', 'sans-serif'],
       },
       fontSize: {
-        sm: ['rfs(18px)', {
-          lineHeight: '1.5',
+        title: ['rfs(14px)', {
+          lineHeight: '1.1',
+          fontWeight: '700',
         }],
-        md: ['rfs(18px)', {
-          lineHeight: '1.5',
+        sm: ['rfs(12px)', {
+          lineHeight: '1.2',
         }],
-        lg: ['rfs(18px)', {
-          lineHeight: '1.5',
+        md: ['rfs(16px)', {
+          lineHeight: '1.2',
+        }],
+        lg: ['rfs(20px)', {
+          lineHeight: '1.2',
         }],
         clamp: [clamp('48px', '400px', '1280px', '62px'), {
           lineHeight: '1.156',
@@ -39,13 +43,29 @@ module.exports = {
           letterSpacing: '-0.13px',
         }],
       },
-      colors: {
-        dark: '#000000',
-        light: '#FFFFFF',
-      },
+			colors: {
+				dark: '#000000',
+				light: '#FFFFFF',
+			},
+			keyframes: {
+				'caret-float': {
+					'0%, 100%': {
+						transform: 'translateY(0)',
+						opacity: '0.85',
+					},
+					'50%': {
+						transform: 'translateY(8px)',
+						opacity: '1',
+					},
+				},
+			},
+			animation: {
+				'caret-float': 'caret-float 1.8s ease-in-out infinite',
+			},
     },
     bgSvg: {
-      icon: '',
+      'menu': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="svgcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="40" y1="64" x2="216" y2="64" fill="none" stroke="svgcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="40" y1="192" x2="216" y2="192" fill="none" stroke="svgcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>',
+      'caret-double-down': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><polyline points="208 136 128 216 48 136" fill="none" stroke="svgcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="208 56 128 136 48 56" fill="none" stroke="svgcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>',
     },
   },
   plugins: [

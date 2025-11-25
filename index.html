@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./dist/css/main.css" rel="stylesheet">
-</head>
-<body class="class bg-bg dark">
-  <h1 class="font-bold text-red-100 underline text-h1">Hello</h1>
-  <h1 class="font-bold underline class:text-red-300 text-h1">Test</h1>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/css/main.css" rel="stylesheet">
+  </head>
+  <body class="bg-light h-[2000px]">
+    
+    <header class="fixed mix-blend-difference bg-transparent top-0 left-0 w-full z-10">
+      <div class="container-fluid relative">
+        <div class="grid grid-cols-12">
+          <div class="col-span-6">
+            <h1>
+              <span class="block text-light text-title font-title">ZEHN</span>
+              <span class="block text-light text-title font-title">METER</span>
+              <span class="block text-light text-title font-title">DUNKEL</span>
+            </h1>
+          </div>
+          <div class="col-span-6 flex justify-end">
+            <button class="bg-svg-menu-light w-[28px] h-[28px] block bg-no-repeat bg-contain relative top-[-4px]"></button>
+          </div>
+        </div>
+      </div>
+    </header>
 
-  <div class="w-5 h-5 bg-svg-arrow-white"></div>
+    <section class="relative min-h-screen overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="w-full h-full">
+          <video src="./assets/Folie.mp4" autoplay muted loop playsinline class="w-full h-full object-cover"></video>
+        </div>
+      </div>
+			<a href="#about" class="absolute inset-x-0 bottom-10 cursor-pointer flex justify-center mix-blend-difference bg-transparent">
+				<span class="bg-svg-caret-double-down-light w-[24px] h-[24px] block bg-no-repeat bg-contain animate-caret-float" aria-hidden="true"></span>
+      </a>
+    </section>
 
-  <script type="module" src="./dist/js/main.js"></script>
-</body>
+    <script type="module" src="./dist/js/main.js"></script>
+  </body>
 </html>

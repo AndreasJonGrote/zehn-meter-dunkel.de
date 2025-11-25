@@ -96,7 +96,8 @@
 }
 
 @layer components {
-  .container-fluid {
-    @apply px-5 md:px-10 mx-auto max-w-screen-2xl;
-  }
+	.container-fluid {
+		@apply px-5 md:px-10 py-5 mx-auto max-w-screen-lg;
+	}
+
 }
