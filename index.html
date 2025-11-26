@@ -5,24 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./dist/css/main.css" rel="stylesheet">
   </head>
-  <body class="bg-light h-[2000px]">
+  <body class="bg-light navigation-open">
     
-    <header class="fixed mix-blend-difference bg-transparent top-0 left-0 w-full z-10">
-      <div class="container-fluid relative">
+    <header class="fixed mix-blend-difference [.navigation-open_&]:mix-blend-normal [.navigation-open_&]:bg-transparent top-0 left-0 w-full z-20">
+      <div class="container-fluid relative py-5">
         <div class="grid grid-cols-12">
           <div class="col-span-6">
             <h1>
-              <span class="block text-light text-title font-title">ZEHN</span>
-              <span class="block text-light text-title font-title">METER</span>
-              <span class="block text-light text-title font-title">DUNKEL</span>
+              <span class="block text-light text-title font-title" data-scramble data-scramble-delay="0">ZEHN</span>
+              <span class="block text-light text-title font-title" data-scramble data-scramble-delay="250">METER</span>
+              <span class="block text-light text-title font-title" data-scramble data-scramble-delay="500">DUNKEL</span>
             </h1>
           </div>
           <div class="col-span-6 flex justify-end">
-            <button class="bg-svg-menu-light w-[28px] h-[28px] block bg-no-repeat bg-contain relative top-[-4px]"></button>
+            <button class="navigation-button bg-svg-menu-light [.navigation-open_&]:bg-svg-menu-close-light w-[28px] h-[28px] block bg-no-repeat bg-contain relative top-[-4px] transition-all duration-300"></button>
           </div>
         </div>
       </div>
     </header>
+
+    <nav class="navigation fixed top-0 right-0 w-full h-full z-10 bg-dark/50 backdrop-blur-md hidden [.navigation-open_&]:block">
+      <div class="container-fluid relative py-5 mt-24">
+        <ul>
+          <li><a class="text-light text-xl font-heading" href="index.html">Übersicht</a></li>
+          <li><a class="text-light text-xl font-heading" href="laermschutzwall-i.html">Lärmschutzwall I</a></li>
+          <li><a class="text-light text-xl font-heading" href="laermschutzwall-ii.html">Lärmschutzwall II</a></li>
+          <li><a class="text-light text-xl font-heading" href="ceres.html">Ceres</a></li>
+          <li><a class="text-light text-xl font-heading" href="kesselbrink.html">Kesselbrink</a></li>
+          <li><a class="text-light text-xl font-heading" href="folie.html">Folie</a></li>
+          <li><a class="text-light text-xl font-heading" href="unterfuehrung.html">Unterführung</a></li>
+          <li><a class="text-light text-xl font-heading" href="kreuzung.html">Kreuzung</a></li>
+        </ul>
+      </div>
+    </nav>
 
     <section class="relative min-h-screen overflow-hidden">
       <div class="absolute inset-0 pointer-events-none">
@@ -33,6 +48,65 @@
 			<a href="#about" class="absolute inset-x-0 bottom-10 cursor-pointer flex justify-center mix-blend-difference bg-transparent">
 				<span class="bg-svg-caret-double-down-light w-[24px] h-[24px] block bg-no-repeat bg-contain animate-caret-float" aria-hidden="true"></span>
       </a>
+    </section>
+
+    <section class="bg-dark" id="about">
+      <div class="container-fluid">
+        <p class="text-light text-xl font-heading text-justify hyphens-auto">lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+      </div>
+    </section>
+
+    <section class="" id="works">
+      <div class="container-fluid ">
+        <div class="grid grid-cols-12 gap-5">
+          <div class="col-span-12 sm:col-span-6 lg:col-span-4">
+            <picture>
+              <source srcset="assets/heimweg-01-600x0-c-default.webp" type="image/webp">
+              <img src="assets/heimweg-01-600x0-c-default.webp" alt="Work 1">
+            </picture>
+            <h2 class="text-dark text-lg font-heading">Lärmschutzwall I</h2>
+          </div>
+          <div class="col-span-12 sm:col-span-6 lg:col-span-4">
+            <picture>
+              <source srcset="assets/heimweg-02-600x0-c-default.webp" type="image/webp">
+              <img src="assets/heimweg-02-600x0-c-default.webp" alt="Work 1">
+            </picture>
+            <h2 class="text-dark text-lg font-heading">Lärmschutzwall II</h2>
+          </div>
+          <div class="col-span-12 sm:col-span-6 lg:col-span-4">
+            <picture>
+              <source srcset="assets/heimweg-03-600x0-c-default.webp" type="image/webp">
+              <img src="assets/heimweg-03-600x0-c-default.webp" alt="Work 1">
+            </picture>
+            <h2 class="text-dark text-lg font-heading">Ceres</h2>
+          </div>
+          <div class="col-span-12 sm:col-span-6 lg:col-span-4">
+            <picture>
+              <source srcset="assets/heimweg-04-600x0-c-default.webp" type="image/webp">
+              <img src="assets/heimweg-04-600x0-c-default.webp" alt="Work 1">
+            </picture>
+            <h2 class="text-dark text-lg font-heading">Kesselbrink</h2>
+          </div>
+          <div class="col-span-12 sm:col-span-6 lg:col-span-4">
+            <video src="./assets/Folie.mp4" autoplay muted loop playsinline class="w-full h-auto object-cover"></video>
+            <h2 class="text-dark text-lg font-heading">Folie</h2>
+          </div>
+          <div class="col-span-12 sm:col-span-6 lg:col-span-4">
+            <picture>
+              <source srcset="assets/heimweg-10-800x0-c-default.webp" type="image/webp">
+              <img src="assets/heimweg-10-800x0-c-default.webp" alt="Work 1">
+            </picture>
+            <h2 class="text-dark text-lg font-heading">Unterführung</h2>
+          </div>
+          <div class="col-span-12 sm:col-span-6 lg:col-span-4">
+            <picture>
+              <source srcset="assets/heimweg-01-600x0-c-default.webp" type="image/webp">
+              <img src="assets/heimweg-01-600x0-c-default.webp" alt="Work 1">
+            </picture>
+            <h2 class="text-dark text-lg font-heading">Kreuzung</h2>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script type="module" src="./dist/js/main.js"></script>
