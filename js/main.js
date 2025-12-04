@@ -15,7 +15,7 @@ const navigation_button = document.querySelector('.navigation-button');
 navigation_button.addEventListener('click', () => {
 	navigation.classList.toggle('navigation-open');
 	document.body.classList.toggle('navigation-open');
-});
+}); 
 
 /**
  * Scramble-Animation Konfiguration
@@ -146,3 +146,28 @@ document.querySelectorAll('[data-scramble]').forEach(el => {
 	const initialTimeout = delay + (startOnLoad ? 0 : SCRAMBLE_CONFIG.interval);
 	setTimeout(loop, initialTimeout);
 });
+
+/**
+ * Startet alle Videos mit autoplay-Attribut programmatisch
+ */
+const startAutoplayVideos = () => {
+	const videos = document.querySelectorAll('video[autoplay]');
+	videos.forEach(video => {
+		const playPromise = video.play();
+		if (playPromise !== undefined) {
+			playPromise.catch(() => {
+				// Fallback: Versuche erneut nach kurzer Verzögerung
+				setTimeout(() => {
+					video.play().catch(() => {});
+				}, 100);
+			});
+		}
+	});
+};
+
+// Videos beim Laden der Seite starten
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', startAutoplayVideos);
+} else {
+	startAutoplayVideos();
+}
