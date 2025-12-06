@@ -19,7 +19,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['Fira Sans', 'sans-serif'],
+        heading: ['Noway', 'sans-serif'],
         body: ['Cormorant Garamond', 'serif'],
         title: ['Inter', 'sans-serif'],
       },

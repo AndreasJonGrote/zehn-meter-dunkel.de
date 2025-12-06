@@ -90,6 +90,33 @@
     src: url('../fonts/fira-sans-v18-latin-italic.woff2') format('woff2');
   }
 
+  /* Noway */
+  @font-face {
+    font-display: swap;
+    font-family: 'Noway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Noway-Regular.woff2') format('woff2');
+  }
+
+  /* Noway Italic */
+  @font-face {
+    font-display: swap;
+    font-family: 'Noway';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/Noway_Regular_Italic.woff2') format('woff2');
+  }
+
+  /* Noway Bold */
+  @font-face {
+    font-display: swap;
+    font-family: 'Noway';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Noway-Bold.woff2') format('woff2');
+  }
+
   body {
     @apply antialiased;
   }
