@@ -22,6 +22,7 @@ module.exports = {
         heading: ['Noway', 'sans-serif'],
         body: ['Cormorant Garamond', 'serif'],
         title: ['Inter', 'sans-serif'],
+        italic: ['Cormorant Garamond', 'serif'],
       },
       fontSize: {
         title: ['rfs(14px)', {
@@ -31,14 +32,14 @@ module.exports = {
         sm: ['rfs(12px)', {
           lineHeight: '1.2',
         }],
-        md: ['rfs(16px)', {
-          lineHeight: '1.2',
+        md: ['rfs(17px)', {
+          lineHeight: '1.3',
         }],
         lg: ['rfs(20px)', {
           lineHeight: '1.2',
         }],
         xl: ['rfs(32px)', {
-          lineHeight: '1.5',
+          lineHeight: '1.35',
         }],
         clamp: [clamp('48px', '400px', '1280px', '62px'), {
           lineHeight: '1.156',

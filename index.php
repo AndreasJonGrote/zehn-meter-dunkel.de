@@ -1,44 +1,7 @@
 <?php
 
   $works = [
-    'complete' => [
-      [
-        'title' => 'ZEHN METER DUNKEL',
-        'description' => 'Annäherung an Schwellen, Routinen und Unsicherheiten, die den Alltag im urbanen Raum prägen.',
-        'media' => 'assets/ZMD-I.jpg',
-        'link' => 'zmd.php',
-      ],
-      [
-        'title' => 'Das Rauschen des Moments',
-        'description' => 'Über Wahrnehmung und Verhaltensweisen, die sich zu einem dynamischen Netzwerk urbaner Sicherheit verdichten.',
-        'media' => 'assets/LSW-1.jpg',
-        'link' => 'das-rauschen-des-moments.php',
-      ],
-      [
-        'title' => 'Lesung urbaner Unsicherheiten',
-        'description' => 'Umfrageergebnisse zu Angsträumen, Wegen, Erfahrungen und dem subjektiven Sicherheitsempfinden.',
-        'media' => 'assets/LSU.jpg',
-        'link' => 'lesung-urbaner-unsicherheiten.php',
-      ],
-      [
-        'title' => 'Atlas der (UN-)sicherheit',
-        'description' => 'Fotografische Untersuchungen von Übergängen, Sichtbarkeit, räumlichen Spannungen und Lesbarkeit.',
-        'media' => 'assets/ATLAS.jpg',
-        'link' => 'atlas-der-unsicherheit.php',
-      ],
-      [
-        'title' => 'Ceres',
-        'description' => 'Analyse der medialen Dramaturgien, in denen Gewalt zwischen Information und Inszenierung verhandelt wird.',
-        'media' => 'assets/CERES.jpg',
-        'link' => 'ceres.php',
-      ],
-      [
-        'title' => 'Ich habe kein Gesicht',
-        'description' => 'Videografische Erkundung von Beobachtung, Anonymität und den Mechanismen visueller Kontrolle.',
-        'media' => 'assets/KESSLBRINK.jpg',
-        'link' => 'ich-habe-kein-gesicht.php',
-      ],
-    ],
+
     'exhibition' => [
       [
         'title' => 'Parkbank',
@@ -105,12 +68,26 @@
       ],
 
     ],
+    'other' => [
+      [
+        'title' => 'CERES CONTENT MARKER',
+        'description' => 'Forschungsprojekt, das Schlagzeilen sammelt und mit Marker‑Analyse nach gewaltbezogenen Mustern auswertet',
+        'media' => 'assets/ZMD-I.jpg',
+        'link' => 'zmd.php',
+      ],
+      [
+        'title' => 'Das Rauschen des Moments',
+        'description' => 'Über Wahrnehmung und Verhaltensweisen, die sich zu einem dynamischen Netzwerk urbaner Sicherheit verdichten',
+        'media' => 'assets/LSW-1.jpg',
+        'link' => 'das-rauschen-des-moments.php',
+      ]
+    ],
   ];
 
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="de">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -164,14 +141,34 @@
       </a>
     </section>
 
-    <section class="bg-dark" id="about">
-      <div class="container-fluid">
-        <p class="text-light text-xl font-heading text-justify hyphens-auto">lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+    <section class="bg-light" id="about">
+      <div class="container-fluid px-10 sm:px-20 max-w-screen-lg">
+        <div class="">
+          <p class="text-dark text-xl font-body text-justify hyphens-auto indent-[140px]">
+            <span class="italic">ZEHN METER DUNKEL</span> ist eine multimediale, künstlerisch‑forschende Auseinandersetzung mit Dunkelheit, Distanz und (Un-)Sicherheit im urbanen Raum. Ausgangspunkt ist eine Schwelle: jene wenigen Meter, in denen Orientierung noch möglich scheint – und zugleich kippen kann.
+          </p> 
+          <p class="text-dark text-xl font-body text-justify hyphens-auto indent-5">
+            Die Arbeit sucht keine abschließende Antwort. Sie setzt bei Situationen an, in denen Alltag kippt: Engstellen, tote Winkel, Warteschleifen. Aus fotografischer Bildlektüre, Erfahrungswissen und Schlagzeilensprache entwickelt sie Verfahren, die Lesbarkeit als Voraussetzung von Orientierung greifbar machen.
+          </p> 
+          <p class="text-dark text-xl font-body text-justify hyphens-auto indent-5">
+            Im Zentrum steht nicht die Zuspitzung, sondern der zweite Blick. Die Verfahren, die ihn ermöglichen. Was bleibt, ist ein Maßstab, kein Manifest. Zivilität zeigt sich zwischen uns: im Platzmachen, im Blickkontakt, im Ton, der beruhigt statt hetzt.
+          </p> 
+          <p class="text-dark text-xl font-body text-justify hyphens-auto indent-5">
+            Eine Einladung, die Stadt anders zu lesen: Aufmerksamkeit statt Alarm, Resonanz statt Rhetorik – und auf ihre Herausforderungen zu antworten, Vielstimmigkeit und Paroli.      
+          </p>
+        </div>
       </div>
     </section>
 
     <section class="" id="works">
-      <div class="container-fluid ">
+      <div class="container-fluid px-10 sm:px-20 max-w-screen-lg">
+
+        <div class="mb-10 ">
+          <h2 class="text-dark text-xl font-heading uppercase mb-1 indent-[140px]">Ausstellung</h2>
+          <p class="text-lg font-body text-justify hyphens-auto indent-[140px]">
+            Als Master-Abschlussarbeit wird <span class="italic">ZEHN METER DUNKEL</span> im Rahmen der Werkschau an der HSBI vom 29.01. bis 31.01.2026 mit den folgenden Positionen als multimediale Installation gezeigt.
+          </p>
+        </div>
         <div class="flex flex-col sm:grid grid-cols-12 gap-10">
           <?php foreach ($works['exhibition'] as $work) : ?>
             <div class="col-span-12 sm:col-span-6 lg:col-span-4">
@@ -183,6 +180,33 @@
             </div>
             <h2 class="text-dark text-lg font-heading mt-3 uppercase"><?php echo $work['title']; ?></h2>
             <p class="text-md font-body">
+              <?php echo $work['description']; ?>
+            </p>  
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark" id="works">
+      <div class="container-fluid">
+        <div class="mb-10 ">
+        <h2 class="text-light text-xl font-heading uppercase mb-1 indent-[140px]">Weitere Positionen</h2>
+        <p class="text-light text-lg font-body text-justify hyphens-auto indent-[140px]">
+          Das Gesamtwerk umfasst weitere Positionen, die über die Installation hinausgehen.
+        </p>
+        </div>
+        <div class="flex flex-col sm:grid grid-cols-12 gap-10">
+          <?php foreach ($works['other'] as $work) : ?>
+            <div class="col-span-12 sm:col-span-6 lg:col-span-4">
+            <div class="aspect-square overflow-hidden">
+              <picture>
+                <source srcset="assets/ZMD-I.jpg" type="image/webp">
+                <img src="assets/ZMD-I.jpg" alt="Work 1">
+              </picture>
+            </div>
+            <h2 class="text-light text-lg font-heading mt-3 uppercase"><?php echo $work['title']; ?></h2>
+            <p class="text-md font-body text-light text-justify hyphens-auto">
               <?php echo $work['description']; ?>
             </p>  
           </div>
