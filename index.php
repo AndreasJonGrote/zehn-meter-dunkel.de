@@ -68,7 +68,7 @@
       ],
 
     ],
-    'other' => [
+    'other-positions' => [
       [
         'title' => 'CERES CONTENT MARKER',
         'description' => 'Forschungsprojekt, das Schlagzeilen sammelt und mit Marker‑Analyse nach gewaltbezogenen Mustern auswertet',
@@ -96,7 +96,7 @@
   <body class="bg-light">
     
     <header class="fixed mix-blend-difference [.navigation-open_&]:mix-blend-normal [.navigation-open_&]:bg-transparent top-0 left-0 w-full z-20">
-      <div class="container-fluid relative py-5">
+      <div class="container-fluid relative py-5 px-10 sm:px-20 max-w-screen-lg">
         <div class="grid grid-cols-12">
           <div class="col-span-6">
             <h1>
@@ -111,7 +111,7 @@
     </header>
 
     <nav class="navigation fixed top-0 right-0 w-full h-full z-10 bg-dark/50 backdrop-blur-md hidden [.navigation-open_&]:block">
-      <div class="container-fluid relative py-5 mt-32">
+      <div class="container-fluid relative py-5 mt-32 px-10 sm:px-20 max-w-screen-lg">
         <ul>
           <li class="block mb-10"><a class="text-light text-xl font-heading" href="index.html">Übersicht</a></li>
           
@@ -145,7 +145,7 @@
       <div class="container-fluid px-10 sm:px-20 max-w-screen-lg">
         <div class="">
           <p class="text-dark text-xl font-body text-justify hyphens-auto indent-[140px]">
-            <span class="italic">ZEHN METER DUNKEL</span> ist eine multimediale, künstlerisch‑forschende Auseinandersetzung mit Dunkelheit, Distanz und (Un-)Sicherheit im urbanen Raum. Ausgangspunkt ist eine Schwelle: jene wenigen Meter, in denen Orientierung noch möglich scheint – und zugleich kippen kann.
+            <span class="italic">ZEHN METER DUNKEL</span> ist eine multi&shy;mediale, künstler&shy;isch‑&shy;forschende Auseinandersetzung mit Dunkelheit, Distanz und (Un-)Sicherheit im urbanen Raum. Ausgangspunkt ist eine Schwelle: jene wenigen Meter, in denen Orientierung noch möglich scheint – und zugleich kippen kann.
           </p> 
           <p class="text-dark text-xl font-body text-justify hyphens-auto indent-5">
             Die Arbeit sucht keine abschließende Antwort. Sie setzt bei Situationen an, in denen Alltag kippt: Engstellen, tote Winkel, Warteschleifen. Aus fotografischer Bildlektüre, Erfahrungswissen und Schlagzeilensprache entwickelt sie Verfahren, die Lesbarkeit als Voraussetzung von Orientierung greifbar machen.
@@ -188,8 +188,8 @@
       </div>
     </section>
 
-    <section class="bg-dark" id="works">
-      <div class="container-fluid">
+    <section class="bg-dark" id="other-positions">
+      <div class="container-fluid px-10 sm:px-20 max-w-screen-lg">
         <div class="mb-10 ">
         <h2 class="text-light text-xl font-heading uppercase mb-1 indent-[140px]">Weitere Positionen</h2>
         <p class="text-light text-lg font-body text-justify hyphens-auto indent-[140px]">
@@ -197,7 +197,7 @@
         </p>
         </div>
         <div class="flex flex-col sm:grid grid-cols-12 gap-10">
-          <?php foreach ($works['other'] as $work) : ?>
+          <?php foreach ($works['other-positions'] as $work) : ?>
             <div class="col-span-12 sm:col-span-6 lg:col-span-4">
             <div class="aspect-square overflow-hidden">
               <picture>
@@ -215,9 +215,16 @@
       </div>
     </section>
 
-    <footer class="bg-dark">
+    <footer class="bg-light">
       <div class="container-fluid py-5">
-        <p class="text-light text-md font-heading text-right">© 2025 ZMD. All rights reserved.</p>
+        <div class="flex flex-col sm:grid grid-cols-12 gap-10">
+          <p class="text-dark text-sm font-heading col-span-6">© 2025 Andreas Jon Grote</p>
+          <p class="text-dark text-sm font-heading text-right col-span-6">
+          <a href="https://www.xjonx.com" class="underline" target="_blank">www.xjonx.com</a>
+            <a href="impressum.php" class="underline">Impressum</a>
+            <a href="datenschutz.php" class="underline">Datenschutz</a>
+          </p>  
+        </div>
       </div>
     </footer>
 
