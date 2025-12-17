@@ -4,71 +4,39 @@
 
     'exhibition' => [
       [
-        'title' => 'Parkbank',
-        'description' => 'Sinnbild für den kleinsten gemeinsamen Nenner in der Stadt.',
+        'title' => 'Das Rauschen des Moments',
+        'description' => 'Über Wahrnehmung und Verhaltensweisen, die sich zu einem dynamischen Netzwerk urbaner Sicherheit verdichten.',
         'media' => 'assets/EXHIBITION-1.jpg',
-        'link' => '#',
-        'chapter' => 'Ich habe kein Gesicht'
+        'link' => '#'
+      ],
+      [
+        'title' => 'Lesung urbaner Unsicherheiten',
+        'description' => 'Umfrageergebnisse zu Angsträumen, Wegen, Erfahrungen und dem subjektiven Sicherheitsempfinden.',
+        'media' => 'assets/EXHIBITION-1.jpg',
+        'link' => '#'
+      ],
+      [
+        'title' => 'Atlas der (UN-)sicherheit',
+        'description' => 'Fotografische Untersuchungen von Übergängen, Sichtbarkeit, räumlichen Spannungen und Lesbarkeit.',
+        'media' => 'assets/EXHIBITION-1.jpg',
+        'link' => '#'
       ],
       [
         'title' => 'Ceres',
-        'description' => 'Rauminstalltion von Information zur Inzienierung in Schlagzeilen.',
+        'description' => 'Analyse der medialen Dramaturgien, in denen Gewalt zwischen Information und Inszenierung verhandelt wird.',
         'media' => 'assets/EXHIBITION-1.jpg',
-        'link' => '#',
-        'chapter' => 'Ceres'
+        'link' => '#'
       ],
       [
-        'title' => 'Folie',
-        'description' => 'Video mit der Frage zur Sichtbarkeit in der Stadt.',
+        'title' => 'Ich habe kein Gesicht',
+        'description' => 'Videografische Erkundung von Beobachtung, Anonymität und den Mechanismen visueller Kontrolle.',
         'media' => 'assets/EXHIBITION-1.jpg',
-        'link' => '#',
-        'chapter' => 'Ich habe kein Gesicht'
+        'link' => '#'
       ],
-      [
-        'title' => 'Datenstrom',
-        'description' => 'Experimentelles Videoinstallation mit Menschen als Daten.',
-        'media' => 'assets/EXHIBITION-1.jpg',
-        'link' => '#',
-        'chapter' => 'Ich habe kein Gesicht'
-      ],
-      [
-        'title' => 'Lärmschutzwall II',
-        'description' => 'Videografische Untersuchung von Übergängen, Sichtbarkeit, räumlichen Spannungen und Lesbarkeit.',
-        'media' => 'assets/EXHIBITION-1.jpg',
-        'link' => '#',
-        'chapter' => 'Ich habe kein Gesicht'
-      ],
-      [
-        'title' => 'Lärmschutzwall I',
-        'description' => 'Fotografische Abwicklung die 200m auf 7m verdichtet.',
-        'media' => 'assets/EXHIBITION-1.jpg',
-        'link' => '#',
-        'chapter' => 'Atlas der (UN-)sicherheit'
-      ],
-      [
-        'title' => 'Kesselbrink I',
-        'description' => 'Fotografische Untersuchung von Kesselbrink und seiner Umgebung.',
-        'media' => 'assets/EXHIBITION-1.jpg',
-        'link' => '#',
-        'chapter' => 'Atlas der (UN-)sicherheit'
-      ],
-      [
-        'title' => 'Kesselbrink II',
-        'description' => 'Videografische Untersuchung von Übergängen, Sichtbarkeit, räumlichen Spannungen und Lesbarkeit.',
-        'media' => 'assets/EXHIBITION-1.jpg',
-        'link' => '#',
-        'chapter' => 'Ich habe kein Gesicht'
-      ],
-      [
-        'title' => 'Unterführung',
-        'description' => 'Videografische Untersuchung von Übergängen, Sichtbarkeit, räumlichen Spannungen und Lesbarkeit.',
-        'media' => 'assets/EXHIBITION-1.jpg',
-        'link' => '#',
-        'chapter' => 'Ich habe kein Gesicht'
-      ],
+      
 
     ],
-    'other-positions' => [
+    'art-science' => [
       [
         'title' => 'CERES CONTENT MARKER',
         'description' => 'Forschungsprojekt, das Schlagzeilen sammelt und mit Marker‑Analyse nach gewaltbezogenen Mustern auswertet',
@@ -76,7 +44,7 @@
         'link' => 'zmd.php',
       ],
       [
-        'title' => 'Das Rauschen des Moments',
+        'title' => 'Heimweg-Umfrage',
         'description' => 'Über Wahrnehmung und Verhaltensweisen, die sich zu einem dynamischen Netzwerk urbaner Sicherheit verdichten',
         'media' => 'assets/LSW-1.jpg',
         'link' => 'das-rauschen-des-moments.php',
@@ -91,7 +59,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./dist/css/main.css" rel="stylesheet">
+    <link href="./dist/css/main.css?v=1" rel="stylesheet">
   </head>
   <body class="bg-light">
     
@@ -112,17 +80,27 @@
 
     <nav class="navigation fixed top-0 right-0 w-full h-full z-10 bg-dark/50 backdrop-blur-md hidden [.navigation-open_&]:block">
       <div class="container-fluid relative py-5 mt-32 px-10 sm:px-20 max-w-screen-lg">
-        <ul>
-          <li class="block mb-10"><a class="text-light text-xl font-heading" href="index.html">Übersicht</a></li>
-          
-          <?php foreach ($works as $work) : ?>
+        <p class="text-light/50 text-md font-heading mb-5">Künstlerische Positionen</p>
+        <ul class="pl-5">         
+          <?php foreach ($works['exhibition'] as $work) : ?>
             <li class="block mb-5">
               <a class="text-light group flex flex-col" href="<?php echo $work['link']; ?>">
-                <h3 class="text-xl font-heading uppercase"><?php echo $work['title']; ?></h3>
+                <h3 class="text-lg font-heading uppercase"><?php echo $work['title']; ?></h3>
               </a>
             </li>
           <?php endforeach; ?>
-          
+        </ul>
+        <p class="text-light/50 text-md font-heading mb-5">Forschungsprojekte</p>
+        <ul class="pl-5">         
+          <?php foreach ($works['art-science'] as $work) : ?>
+            <li class="block mb-5">
+              <a class="text-light group flex flex-col" href="<?php echo $work['link']; ?>">
+                <h3 class="text-lg font-heading uppercase"><?php echo $work['title']; ?></h3>
+              </a>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+        <ul class="mt-10">
           <li class="block mb-1"><a class="text-light text-md font-heading" href="kontakt.php">Kontakt</a></li>
           <li class="block mb-1"><a class="text-light text-md font-heading" href="impressum.php">Impressum</a></li>
           <li class="block mb-1"><a class="text-light text-md font-heading" href="datenschutz.php">Datenschutz</a></li>
@@ -144,29 +122,29 @@
     <section class="bg-light" id="about">
       <div class="container-fluid px-10 sm:px-20 max-w-screen-lg">
         <div class="">
-          <p class="text-dark text-xl font-body text-justify hyphens-auto indent-[140px]">
+          <p class="text-dark text-lg font-body text-justify hyphens-auto indent-[120px] md:indent-[140px]">
             <span class="italic">ZEHN METER DUNKEL</span> 
             ist eine multimediale, künst&shy;ler&shy;isch‑for&shy;sch&shy;ende Auseinandersetzung mit Dunkelheit, Distanz und (Un-)Sicherheit im urbanen Raum. Ausgangspunkt ist eine Schwelle: jene wenigen Meter, in denen Orientierung noch möglich scheint – und zugleich kippen kann. Zehn Meter werden zur Wahrnehmungsspanne: nah genug, um Strukturen zu erkennen, weit genug, damit Gesichter und Absichten unscharf bleiben.
           </p> 
-          <p class="text-dark text-xl font-body text-justify hyphens-auto indent-5">
+          <p class="text-dark text-lg font-body text-justify hyphens-auto indent-5">
           Die Arbeit sucht keine abschließende Antwort – auch, weil sich das Themenfeld nicht abnutzt: Es ordnet sich fortlaufend neu und bleibt gegenwärtig, selbst wenn seine Intensität schwankt. Sie setzt bei Situationen an, in denen Alltag kippt: Engstellen, tote Winkel, Warteschleifen. Aus fotografischer Bildlektüre, Erfahrungswissen und Schlagzeilensprache entwickelt sie Verfahren, die Lesbarkeit als Voraussetzung von Orientierung greifbar machen.
           </p> 
-          <p class="text-dark text-xl font-body text-justify hyphens-auto indent-5">
+          <p class="text-dark text-lg font-body text-justify hyphens-auto indent-5">
           Im Zentrum steht nicht die Zuspitzung, sondern der zweite Blick – und die Verfahren, die ihn ermöglichen. Was bleibt, ist ein Maßstab, kein Manifest. Zivilität zeigt sich zwischen uns im Platzmachen, im Blickkontakt, im Ton, der beruhigt statt hetzt.
           </p> 
-          <p class="text-dark text-xl font-body text-justify hyphens-auto indent-5">
+          <p class="text-dark text-lg font-body text-justify hyphens-auto indent-5">
           Eine Einladung, die Stadt anders zu lesen: Aufmerksamkeit statt Alarm, Resonanz statt Rhetorik – und um auf ihre Herausforderungen zu antworten, mit Vielstimmigkeit und Paroli.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="" id="works">
+    <section class="border-t border-dark" id="works">
       <div class="container-fluid px-10 sm:px-20 max-w-screen-lg">
 
         <div class="mb-10 ">
-          <h2 class="text-dark text-xl font-heading uppercase mb-1 indent-[140px]">Ausstellung</h2>
-          <p class="text-lg font-body text-justify hyphens-auto indent-[140px]">
+          <h2 class="text-dark text-lg font-heading uppercase mb-1">Künstlerische Positionen</h2>
+          <p class="text-lg font-body text-justify hyphens-auto">
             Als Master-Abschlussarbeit wird <span class="italic">ZEHN METER DUNKEL</span> im Rahmen der Werkschau an der HSBI vom 29.01. bis 31.01.2026 mit den folgenden Positionen als multimediale Installation gezeigt.
           </p>
         </div>
@@ -192,13 +170,13 @@
     <section class="bg-dark" id="other-positions">
       <div class="container-fluid px-10 sm:px-20 max-w-screen-lg">
         <div class="mb-10 ">
-        <h2 class="text-light text-xl font-heading uppercase mb-1 indent-[140px]">Weitere Positionen</h2>
-        <p class="text-light text-lg font-body text-justify hyphens-auto indent-[140px]">
+        <h2 class="text-light text-lg font-heading uppercase mb-1">Forschungsprojekte</h2>
+        <p class="text-light text-lg font-body text-justify hyphens-auto">
           Das Gesamtwerk umfasst weitere Positionen, die über die Installation hinausgehen.
         </p>
         </div>
         <div class="flex flex-col sm:grid grid-cols-12 gap-10">
-          <?php foreach ($works['other-positions'] as $work) : ?>
+          <?php foreach ($works['art-science'] as $work) : ?>
             <div class="col-span-12 sm:col-span-6 lg:col-span-4">
             <div class="aspect-square overflow-hidden">
               <picture>
@@ -229,6 +207,6 @@
       </div>
     </footer>
 
-    <script type="module" src="./dist/js/main.js?v=1"></script>
+    <script type="module" src="./dist/js/main.js?v=2"></script>
   </body>
 </html>

@@ -35,8 +35,8 @@ module.exports = {
         md: ['rfs(17px)', {
           lineHeight: '1.3',
         }],
-        lg: ['rfs(20px)', {
-          lineHeight: '1.2',
+        lg: [clamp('20px', '400px', '1280px', '32px'), {
+          lineHeight: '1.35',
         }],
         xl: ['rfs(32px)', {
           lineHeight: '1.35',
