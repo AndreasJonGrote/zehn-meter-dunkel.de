@@ -32,8 +32,8 @@ module.exports = {
         sm: ['rfs(12px)', {
           lineHeight: '1.2',
         }],
-        md: ['rfs(17px)', {
-          lineHeight: '1.3',
+        md: ['rfs(18px)', {
+          lineHeight: '1.35',
         }],
         lg: [clamp('20px', '400px', '1280px', '32px'), {
           lineHeight: '1.35',
@@ -48,7 +48,8 @@ module.exports = {
         }],
       },
 			colors: {
-				dark: '#000000',
+				dark: '#050505',
+        grey: '#151515',
 				light: '#FFFFFF',
 			},
 			keyframes: {

@@ -80,31 +80,31 @@
 
     <nav class="navigation fixed top-0 right-0 w-full h-full z-10 bg-dark/50 backdrop-blur-md hidden [.navigation-open_&]:block">
       <div class="container-fluid relative py-5 mt-32 px-10 sm:px-20 max-w-screen-lg">
-        <p class="text-light/50 text-md font-heading mb-5">Künstlerische Positionen</p>
-        <ul class="pl-5">         
+        <p class="text-light/50 text-md font-heading mb-3 uppercase">Künstlerische Positionen</p>
+        <ul>         
           <?php foreach ($works['exhibition'] as $work) : ?>
-            <li class="block mb-5">
+            <li class="mb-3">
               <a class="text-light group flex flex-col" href="<?php echo $work['link']; ?>">
-                <h3 class="text-lg font-heading uppercase"><?php echo $work['title']; ?></h3>
+                <h3 class="text-md font-heading uppercase"><?php echo $work['title']; ?></h3>
               </a>
             </li>
           <?php endforeach; ?>
         </ul>
-        <p class="text-light/50 text-md font-heading mb-5">Forschungsprojekte</p>
-        <ul class="pl-5">         
+        <p class="text-light/50 text-md font-heading mb-3 mt-10 uppercase">Forschungsprojekte</p>
+        <ul>         
           <?php foreach ($works['art-science'] as $work) : ?>
-            <li class="block mb-5">
+            <li class="mb-3">
               <a class="text-light group flex flex-col" href="<?php echo $work['link']; ?>">
-                <h3 class="text-lg font-heading uppercase"><?php echo $work['title']; ?></h3>
+                <h3 class="text-md font-heading uppercase"><?php echo $work['title']; ?></h3>
               </a>
             </li>
           <?php endforeach; ?>
         </ul>
-        <ul class="mt-10">
-          <li class="block mb-1"><a class="text-light text-md font-heading" href="kontakt.php">Kontakt</a></li>
-          <li class="block mb-1"><a class="text-light text-md font-heading" href="impressum.php">Impressum</a></li>
-          <li class="block mb-1"><a class="text-light text-md font-heading" href="datenschutz.php">Datenschutz</a></li>
-        </ul>
+        <p class="mt-10">
+          <a class="text-light text-md font-heading" href="kontakt.php">Kontakt</a><br>
+          <a class="text-light text-md font-heading" href="impressum.php">Impressum</a><br>
+          <a class="text-light text-md font-heading" href="datenschutz.php">Datenschutz</a>
+        </p>
       </div>
     </nav>
 
@@ -194,16 +194,65 @@
       </div>
     </section>
 
-    <footer class="bg-light">
-      <div class="container-fluid py-5">
-        <div class="flex flex-col sm:grid grid-cols-12 gap-10">
-          <p class="text-dark text-sm font-heading col-span-6">© 2025 Andreas Jon Grote</p>
-          <p class="text-dark text-sm font-heading text-right col-span-6">
-          <a href="https://www.xjonx.com" class="underline" target="_blank">www.xjonx.com</a>
-            <a href="impressum.php" class="underline">Impressum</a>
-            <a href="datenschutz.php" class="underline">Datenschutz</a>
-          </p>  
-        </div>
+    <footer class="bg-grey">
+      <div class="container-fluid py-25 px-10 sm:px-20 max-w-screen-lg">
+        <section>
+          <h2 class="text-light text-lg font-heading uppercase mb-10">Impressum</h2>
+          <div class="flex flex-col sm:grid grid-cols-12 gap-10">
+            <div class="col-span-6">
+              
+
+              <h3 class="text-light/50 text-md font-heading uppercase mb-1">
+                Layout, Fotografie & Medien,<br>
+                Texte, Recherche & Forschung
+              </h3>
+              <p class="text-light text-md font-body mb-6">
+                Andreas Jon Grote
+              </p>
+
+              <h3 class="text-light/50 text-md font-heading uppercase mb-1">Lektorat</h3>
+              <p class="text-light text-md font-body mb-6">
+                Kim Groche
+              </p>
+
+              <h3 class="text-light/50 text-md font-heading uppercase mb-1">Betreuung</h3>
+              <p class="text-light text-md font-body mb-6">
+                Prof. Dr. Kirsten Wagner<br>
+                Prof. Adrian Sauer
+              </p>
+
+              <h3 class="text-light/50 text-md font-heading uppercase mb-1">Dank</h3>
+              <p class="text-light text-md font-body mb-6">
+                Vanessa Biondi,<br>
+                Carsten Gips,<br>
+                Kim Groche,<br>
+                Oliver Hunke,<br>
+                Nadine & Kevin Schima,<br>
+                Jana Sehnert
+              </p>
+
+              <h3 class="text-light/50 text-md font-heading uppercase mb-1">
+                Hochschule Bielefeld<br>
+                Fachbereich Gestaltung
+              </h3>
+              <p class="text-light text-md font-body">
+                Bielefeld, Dezember 2025
+              </p>
+            </div>
+            <div class="col-span-6">
+              <h3 class="text-light/50 text-md font-heading uppercase mb-1">Kontakt</h3>
+              <p class="text-light text-md font-body">
+                Andreas Jon Grote<br>
+                Meindersstr. 3<br>
+                33615 Bielefeld<br>
+                <br>
+                <a href="https://www.xjonx.com" target="_blank">www.xjonx.com</a><br>
+                <a href="mailto:mail@xjonx.com" target="_blank">mail@xjonx.com</a><br>
+                <a href="https://www.instagram.com/andreasjongrote" target="_blank">@andreasjongrote</a>
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
     </footer>
 

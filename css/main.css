@@ -68,4 +68,11 @@
 		@apply px-5 md:px-10 py-24 mx-auto max-w-screen-lg;
 	}
 
+  li a,
+  p a {
+    @apply relative no-underline opacity-100 transition-opacity duration-300 hover:opacity-80;
+    @apply after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-current;
+    @apply after:origin-right after:scale-x-100 after:opacity-100 after:transition-all after:duration-300;
+    @apply hover:after:scale-x-0 hover:after:opacity-0;
+  }
 }
