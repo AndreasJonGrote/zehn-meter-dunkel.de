@@ -145,16 +145,17 @@
       <div class="container-fluid px-10 sm:px-20 max-w-screen-lg">
         <div class="">
           <p class="text-dark text-xl font-body text-justify hyphens-auto indent-[140px]">
-            <span class="italic">ZEHN METER DUNKEL</span> ist eine multi&shy;mediale, künstler&shy;isch‑&shy;forschende Auseinandersetzung mit Dunkelheit, Distanz und (Un-)Sicherheit im urbanen Raum. Ausgangspunkt ist eine Schwelle: jene wenigen Meter, in denen Orientierung noch möglich scheint – und zugleich kippen kann.
+            <span class="italic">ZEHN METER DUNKEL</span> 
+            ist eine multimediale, künst&shy;ler&shy;isch‑for&shy;sch&shy;ende Auseinandersetzung mit Dunkelheit, Distanz und (Un-)Sicherheit im urbanen Raum. Ausgangspunkt ist eine Schwelle: jene wenigen Meter, in denen Orientierung noch möglich scheint – und zugleich kippen kann. Zehn Meter werden zur Wahrnehmungsspanne: nah genug, um Strukturen zu erkennen, weit genug, damit Gesichter und Absichten unscharf bleiben.
           </p> 
           <p class="text-dark text-xl font-body text-justify hyphens-auto indent-5">
-            Die Arbeit sucht keine abschließende Antwort. Sie setzt bei Situationen an, in denen Alltag kippt: Engstellen, tote Winkel, Warteschleifen. Aus fotografischer Bildlektüre, Erfahrungswissen und Schlagzeilensprache entwickelt sie Verfahren, die Lesbarkeit als Voraussetzung von Orientierung greifbar machen.
+          Die Arbeit sucht keine abschließende Antwort – auch, weil sich das Themenfeld nicht abnutzt: Es ordnet sich fortlaufend neu und bleibt gegenwärtig, selbst wenn seine Intensität schwankt. Sie setzt bei Situationen an, in denen Alltag kippt: Engstellen, tote Winkel, Warteschleifen. Aus fotografischer Bildlektüre, Erfahrungswissen und Schlagzeilensprache entwickelt sie Verfahren, die Lesbarkeit als Voraussetzung von Orientierung greifbar machen.
           </p> 
           <p class="text-dark text-xl font-body text-justify hyphens-auto indent-5">
-            Im Zentrum steht nicht die Zuspitzung, sondern der zweite Blick. Die Verfahren, die ihn ermöglichen. Was bleibt, ist ein Maßstab, kein Manifest. Zivilität zeigt sich zwischen uns: im Platzmachen, im Blickkontakt, im Ton, der beruhigt statt hetzt.
+          Im Zentrum steht nicht die Zuspitzung, sondern der zweite Blick – und die Verfahren, die ihn ermöglichen. Was bleibt, ist ein Maßstab, kein Manifest. Zivilität zeigt sich zwischen uns im Platzmachen, im Blickkontakt, im Ton, der beruhigt statt hetzt.
           </p> 
           <p class="text-dark text-xl font-body text-justify hyphens-auto indent-5">
-            Eine Einladung, die Stadt anders zu lesen: Aufmerksamkeit statt Alarm, Resonanz statt Rhetorik – und auf ihre Herausforderungen zu antworten, Vielstimmigkeit und Paroli.      
+          Eine Einladung, die Stadt anders zu lesen: Aufmerksamkeit statt Alarm, Resonanz statt Rhetorik – und um auf ihre Herausforderungen zu antworten, mit Vielstimmigkeit und Paroli.
           </p>
         </div>
       </div>
