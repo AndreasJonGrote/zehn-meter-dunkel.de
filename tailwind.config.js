@@ -20,32 +20,30 @@ module.exports = {
     extend: {
       fontFamily: {
         heading: ['Noway', 'sans-serif'],
-        body: ['Cormorant Garamond', 'serif'],
-        title: ['Inter', 'sans-serif'],
-        italic: ['Cormorant Garamond', 'serif'],
+        body: ['Cormorant', 'serif'],
+        italic: ['Cormorant', 'serif'],
       },
       fontSize: {
         title: ['rfs(14px)', {
           lineHeight: '1.1',
           fontWeight: '700',
         }],
-        sm: ['rfs(12px)', {
-          lineHeight: '1.2',
-        }],
-        md: ['rfs(18px)', {
-          lineHeight: '1.35',
-        }],
-        lg: [clamp('20px', '400px', '1280px', '32px'), {
-          lineHeight: '1.35',
-        }],
-        xl: ['rfs(32px)', {
-          lineHeight: '1.35',
-        }],
-        clamp: [clamp('48px', '400px', '1280px', '62px'), {
-          lineHeight: '1.156',
-          fontWeight: '800',
-          letterSpacing: '-0.13px',
-        }],
+        sm: [
+          clamp('14px', '400px', '1024px', '18px'),
+          { lineHeight: '1.35' }
+        ],
+        md: [
+          clamp('18px', '400px', '1024px', '22px'),
+          { lineHeight: '1.35' }
+        ],
+        lg: [
+          clamp('22px', '400px', '1024px', '26px'),
+          { lineHeight: '1.35' }
+        ],
+        xl: [
+          clamp('26px', '400px', '1024px', '32px'),
+          { lineHeight: '1.25' }
+        ]
       },
 			colors: {
 				dark: '#050505',

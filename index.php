@@ -6,7 +6,11 @@
       [
         'title' => 'Das Rauschen des Moments',
         'description' => 'Über Wahrnehmung und Verhaltensweisen, die sich zu einem dynamischen Netzwerk urbaner Sicherheit verdichten.',
-        'media' => 'assets/EXHIBITION-1.jpg',
+        'media' => [
+          'type' => 'video',
+          'src' => 'assets/das-rauschen-des-moments-10s-small.mp4',
+          'poster' => 'assets/das-rauschen-des-moments-10s-small.jpg'
+        ],
         'link' => '#'
       ],
       [
@@ -18,7 +22,15 @@
       [
         'title' => 'Atlas der (UN-)sicherheit',
         'description' => 'Fotografische Untersuchungen von Übergängen, Sichtbarkeit, räumlichen Spannungen und Lesbarkeit.',
-        'media' => 'assets/EXHIBITION-1.jpg',
+        'media' => [
+          'type' => 'image',
+          'srcset' => [
+            'assets/heimweg-07-600x0-c-default.webp',
+            'assets/heimweg-04-600x0-c-default.webp',
+            'assets/heimweg-02-600x0-c-default.webp',
+            'assets/heimweg-01-600x0-c-default.webp'
+          ]
+        ],
         'link' => '#'
       ],
       [
@@ -30,7 +42,10 @@
       [
         'title' => 'Ich habe kein Gesicht',
         'description' => 'Videografische Erkundung von Beobachtung, Anonymität und den Mechanismen visueller Kontrolle.',
-        'media' => 'assets/EXHIBITION-1.jpg',
+        'media' => [
+          'type' => 'video',
+          'src' => 'assets/Folie.mp4'
+        ],
         'link' => '#'
       ],
       
@@ -80,35 +95,29 @@
 
     <nav class="navigation fixed top-0 right-0 w-full h-full z-10 bg-dark/50 backdrop-blur-md hidden [.navigation-open_&]:block">
       <div class="container-fluid relative py-5 mt-32 px-10 sm:px-20 max-w-screen-lg">
-        <p class="text-light/50 text-md font-heading mb-3 uppercase">Künstlerische Positionen</p>
-        <ul>         
-          <?php foreach ($works['exhibition'] as $work) : ?>
-            <li class="mb-3">
-              <a class="text-light group flex flex-col" href="<?php echo $work['link']; ?>">
-                <h3 class="text-md font-heading uppercase"><?php echo $work['title']; ?></h3>
-              </a>
-            </li>
-          <?php endforeach; ?>
+        <ul>
+          <li class="mb-2">
+            <a class="text-light group text-md font-heading uppercase" href="#einleitung">Einleitung</a>
+          </li>
+          <li class="mb-2">
+            <a class="text-light group text-md font-heading uppercase" href="#ausstellung">Ausstellung</a>
+          </li>
+          <li class="mb-2">
+            <a class="text-light group text-md font-heading uppercase" href="#zehnmeterdunkel">Gesamtwerk</a>
+          </li>
+          <li class="mb-2">
+            <a class="text-light group text-md font-heading uppercase" href="#forschungsprojekte">Forschungsprojekte</a>
         </ul>
-        <p class="text-light/50 text-md font-heading mb-3 mt-10 uppercase">Forschungsprojekte</p>
-        <ul>         
-          <?php foreach ($works['art-science'] as $work) : ?>
-            <li class="mb-3">
-              <a class="text-light group flex flex-col" href="<?php echo $work['link']; ?>">
-                <h3 class="text-md font-heading uppercase"><?php echo $work['title']; ?></h3>
-              </a>
-            </li>
-          <?php endforeach; ?>
-        </ul>
-        <p class="mt-10">
-          <a class="text-light text-md font-heading" href="kontakt.php">Kontakt</a><br>
-          <a class="text-light text-md font-heading" href="impressum.php">Impressum</a><br>
-          <a class="text-light text-md font-heading" href="datenschutz.php">Datenschutz</a>
-        </p>
+        <ul class="list-none mt-10">
+            <li class="mb-1"><a class="text-light text-sm font-heading uppercase" href="kontakt.php">Kontakt</a></li>
+            <li class="mb-1"><a class="text-light text-sm font-heading uppercase" href="impressum.php">Impressum</a></li>
+            <li class="mb-1"><a class="text-light text-sm font-heading uppercase" href="datenschutz.php">Datenschutz</a></li>
+          </ul>
       </div>
     </nav>
+    
 
-    <section class="relative min-h-screen overflow-hidden">
+    <section class="relative min-h-screen overflow-hidden hidden">
       <div class="absolute inset-0 pointer-events-none">
         <div class="w-full h-full">
           <video src="./assets/Folie.mp4" autoplay muted loop playsinline class="w-full h-full object-cover"></video>
@@ -119,7 +128,7 @@
       </a>
     </section>
 
-    <section class="bg-light" id="about">
+    <section class="bg-light mt-[100px]" id="about">
       <div class="container-fluid px-10 sm:px-20 max-w-screen-lg">
         <div class="">
           <p class="text-dark text-lg font-body text-justify hyphens-auto indent-[120px] md:indent-[140px]">
@@ -143,26 +152,60 @@
       <div class="container-fluid px-10 sm:px-20 max-w-screen-lg">
 
         <div class="mb-10 ">
-          <h2 class="text-dark text-lg font-heading uppercase mb-1">Künstlerische Positionen</h2>
-          <p class="text-lg font-body text-justify hyphens-auto">
-            Als Master-Abschlussarbeit wird <span class="italic">ZEHN METER DUNKEL</span> im Rahmen der Werkschau an der HSBI vom 29.01. bis 31.01.2026 mit den folgenden Positionen als multimediale Installation gezeigt.
+          <h2 class="text-dark text-lg font-heading uppercase mb-1 indent-[120px] md:indent-[140px]">Ausstellung</h2>
+          <p class="text-md font-body text-justify hyphens-auto indent-[120px] md:indent-[140px]">
+            Die Arbeit <span class="italic">ZEHN METER DUNKEL</span> wird mit ausgewählten Positionen in Form einer Rauminstallation vom 29.01. bis 31.01.2026 im Rahmen der Werkschau an der Hochschule Bielefeld (HSBI) als Abschlussarbeit des Masterstudiengangs öffentlich ausgestellt.
           </p>
         </div>
-        <div class="flex flex-col sm:grid grid-cols-12 gap-10">
-          <?php foreach ($works['exhibition'] as $work) : ?>
-            <div class="col-span-12 sm:col-span-6 lg:col-span-4">
-            <div class="aspect-square overflow-hidden">
-              <picture>
-                <source srcset="assets/ZMD-I.jpg" type="image/webp">
-                <img src="assets/ZMD-I.jpg" alt="Work 1">
-              </picture>
+        <div class="flex flex-col sm:grid grid-cols-12 gap-20">
+          <?php foreach ($works['exhibition'] as $index => $work) : ?>
+            <div class="col-span-12 sm:col-span-6 <?php echo ($index % 2 === 1) ? ' mt-[70px]' : ''; ?>">
+            <div class="">
+              <?php
+              $rendered = false;
+              
+              if ($work['media'] && is_array($work['media']) && isset($work['media']['type'])) {
+                if ($work['media']['type'] === 'video' && isset($work['media']['src']) && file_exists($work['media']['src'])) {
+                  $rendered = true; ?>
+                  <video autoplay muted loop playsinline class="w-full h-full object-cover"<?php echo (isset($work['media']['poster']) && file_exists($work['media']['poster'])) ? ' poster="' . htmlspecialchars($work['media']['poster']) . '"' : ''; ?>>
+                    <source src="<?php echo htmlspecialchars($work['media']['src']); ?>" type="video/mp4">
+                  </video>
+                <?php } elseif ($work['media']['type'] === 'image' && isset($work['media']['srcset']) && is_array($work['media']['srcset']) && count($work['media']['srcset']) > 0) {
+                  $filteredImages = array_filter($work['media']['srcset'], 'file_exists');
+                  if (count($filteredImages) > 0) {
+                    $rendered = true; ?>
+                    <div class="image-fade-container relative w-full overflow-hidden" data-images='<?php echo json_encode(array_values($filteredImages)); ?>'>
+                      <img src="<?php echo htmlspecialchars($filteredImages[0]); ?>" alt="<?php echo htmlspecialchars($work['title']); ?>" class="image-fade-item w-full h-auto object-cover opacity-100 transition-opacity duration-[2000ms]">
+                    </div>
+                  <?php }
+                }
+              }
+              
+              if (!$rendered) { ?>
+                <picture>
+                  <source srcset="assets/ZMD-I.jpg" type="image/webp">
+                  <img src="assets/ZMD-I.jpg" alt="<?php echo htmlspecialchars($work['title']); ?>">
+                </picture>
+              <?php } ?>
             </div>
-            <h2 class="text-dark text-lg font-heading mt-3 uppercase"><?php echo $work['title']; ?></h2>
+            <h2 class="text-dark text-md font-heading mt-3 uppercase"><?php echo $work['title']; ?></h2>
             <p class="text-md font-body">
               <?php echo $work['description']; ?>
             </p>  
           </div>
           <?php endforeach; ?>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-dark" id="works">
+      <div class="container-fluid px-10 sm:px-20 max-w-screen-lg">
+
+        <div class="mb-10 ">
+          <h2 class="text-dark text-lg font-heading uppercase mb-1 indent-[120px] md:indent-[140px]">Gesamtwerk</h2>
+          <p class="text-md font-body text-justify hyphens-auto indent-[120px] md:indent-[140px]">
+            Vom 29.01. bis 31.01.2026 wird die Arbeit <span class="italic">ZEHN METER DUNKEL</span> im Rahmen der Werkschau an der Hochschule Bielefeld (HSBI) als Abschlussarbeit des Masterstudiengangs in Form einer Rauminstallation öffentlich ausgestellt.
+          </p>
         </div>
       </div>
     </section>
@@ -206,23 +249,18 @@
                 Layout, Fotografie & Medien,<br>
                 Texte, Recherche & Forschung
               </h3>
-              <p class="text-light text-md font-body mb-6">
+              <p class="text-light text-md font-body font-medium mb-6">
                 Andreas Jon Grote
               </p>
 
-              <h3 class="text-light/50 text-md font-heading uppercase mb-1">Lektorat</h3>
-              <p class="text-light text-md font-body mb-6">
-                Kim Groche
-              </p>
-
               <h3 class="text-light/50 text-md font-heading uppercase mb-1">Betreuung</h3>
-              <p class="text-light text-md font-body mb-6">
+              <p class="text-light text-md font-body font-medium mb-6">
                 Prof. Dr. Kirsten Wagner<br>
                 Prof. Adrian Sauer
               </p>
 
               <h3 class="text-light/50 text-md font-heading uppercase mb-1">Dank</h3>
-              <p class="text-light text-md font-body mb-6">
+              <p class="text-light text-md font-body font-medium mb-6">
                 Vanessa Biondi,<br>
                 Carsten Gips,<br>
                 Kim Groche,<br>
@@ -235,13 +273,16 @@
                 Hochschule Bielefeld<br>
                 Fachbereich Gestaltung
               </h3>
-              <p class="text-light text-md font-body">
+              <p class="text-light text-md font-body font-medium">
                 Bielefeld, Dezember 2025
               </p>
             </div>
             <div class="col-span-6">
-              <h3 class="text-light/50 text-md font-heading uppercase mb-1">Kontakt</h3>
-              <p class="text-light text-md font-body">
+              <h3 class="text-light/50 text-md font-heading uppercase mb-1">
+                <br class="hidden sm:block">
+                Kontakt
+              </h3>
+              <p class="text-light text-md font-body font-medium">
                 Andreas Jon Grote<br>
                 Meindersstr. 3<br>
                 33615 Bielefeld<br>

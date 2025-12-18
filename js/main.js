@@ -171,3 +171,62 @@ if (document.readyState === 'loading') {
 } else {
 	startAutoplayVideos();
 }
+
+/**
+ * Initialisiert Bildfading für Container mit mehreren Bildern
+ */
+const initImageFade = () => {
+	const containers = document.querySelectorAll('.image-fade-container');
+	
+	containers.forEach(container => {
+		const imagesData = container.dataset.images;
+		if (!imagesData) return;
+		
+		const images = JSON.parse(imagesData);
+		if (!Array.isArray(images) || images.length <= 1) return;
+		
+		const firstImg = container.querySelector('.image-fade-item');
+		if (!firstImg) return;
+		
+		const alt = firstImg.alt || '';
+		
+		firstImg.style.position = 'relative';
+		
+		images.forEach((src, index) => {
+			if (index === 0) return;
+			
+			const img = document.createElement('img');
+			img.src = src;
+			img.alt = alt;
+			img.className = 'image-fade-item absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-[2000ms]';
+			container.appendChild(img);
+		});
+		
+		const allImages = container.querySelectorAll('.image-fade-item');
+		let currentIndex = 0;
+		const fadeDuration = 2000;
+		const displayDuration = 3000;
+		
+		const fadeNext = () => {
+			const currentImg = allImages[currentIndex];
+			const nextIndex = (currentIndex + 1) % images.length;
+			const nextImg = allImages[nextIndex];
+			
+			nextImg.style.opacity = '1';
+			currentImg.style.opacity = '0';
+			
+			setTimeout(() => {
+				currentIndex = nextIndex;
+				setTimeout(fadeNext, displayDuration);
+			}, fadeDuration);
+		};
+		
+		setTimeout(fadeNext, displayDuration);
+	});
+};
+
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', initImageFade);
+} else {
+	initImageFade();
+}
