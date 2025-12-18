@@ -12,9 +12,37 @@ import devHelpers from './global/devhelper';
 const navigation = document.querySelector('.navigation');
 const navigation_button = document.querySelector('.navigation-button');
 
+const closeNavigation = () => {
+	navigation.classList.remove('navigation-open');
+	document.body.classList.remove('navigation-open');
+};
+
+const openNavigation = () => {
+	navigation.classList.add('navigation-open');
+	document.body.classList.add('navigation-open');
+};
+
 navigation_button.addEventListener('click', () => {
-	navigation.classList.toggle('navigation-open');
-	document.body.classList.toggle('navigation-open');
+	if (navigation.classList.contains('navigation-open')) {
+		closeNavigation();
+	} else {
+		openNavigation();
+	}
+});
+
+// Navigation-Links schließen die Navigation
+const navLinks = navigation.querySelectorAll('a');
+navLinks.forEach(link => {
+	link.addEventListener('click', () => {
+		closeNavigation();
+	});
+});
+
+// ESC-Taste schließt die Navigation
+document.addEventListener('keydown', (e) => {
+	if (e.key === 'Escape' && navigation.classList.contains('navigation-open')) {
+		closeNavigation();
+	}
 }); 
 
 /**
@@ -179,41 +207,40 @@ const initImageFade = () => {
 	const containers = document.querySelectorAll('.image-fade-container');
 	
 	containers.forEach(container => {
-		const imagesData = container.dataset.images;
-		if (!imagesData) return;
+		const allPictures = container.querySelectorAll('.image-fade-item');
+		if (allPictures.length <= 1) return;
 		
-		const images = JSON.parse(imagesData);
-		if (!Array.isArray(images) || images.length <= 1) return;
+		// Container-Höhe vom ersten Bild übernehmen und erstes Bild auf absolute setzen
+		const firstPicture = allPictures[0];
+		const firstImg = firstPicture.querySelector('img');
 		
-		const firstImg = container.querySelector('.image-fade-item');
-		if (!firstImg) return;
+		const setupContainer = () => {
+			if (firstImg && firstImg.offsetHeight > 0) {
+				container.style.minHeight = `${firstImg.offsetHeight}px`;
+				firstPicture.classList.add('absolute', 'inset-0');
+				firstImg.classList.add('h-full', 'object-cover');
+			}
+		};
 		
-		const alt = firstImg.alt || '';
+		if (firstImg) {
+			if (firstImg.complete) {
+				setupContainer();
+			} else {
+				firstImg.onload = setupContainer;
+			}
+		}
 		
-		firstImg.style.position = 'relative';
-		
-		images.forEach((src, index) => {
-			if (index === 0) return;
-			
-			const img = document.createElement('img');
-			img.src = src;
-			img.alt = alt;
-			img.className = 'image-fade-item absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-[2000ms]';
-			container.appendChild(img);
-		});
-		
-		const allImages = container.querySelectorAll('.image-fade-item');
 		let currentIndex = 0;
 		const fadeDuration = 2000;
 		const displayDuration = 3000;
 		
 		const fadeNext = () => {
-			const currentImg = allImages[currentIndex];
-			const nextIndex = (currentIndex + 1) % images.length;
-			const nextImg = allImages[nextIndex];
+			const currentPicture = allPictures[currentIndex];
+			const nextIndex = (currentIndex + 1) % allPictures.length;
+			const nextPicture = allPictures[nextIndex];
 			
-			nextImg.style.opacity = '1';
-			currentImg.style.opacity = '0';
+			nextPicture.style.opacity = '1';
+			currentPicture.style.opacity = '0';
 			
 			setTimeout(() => {
 				currentIndex = nextIndex;
