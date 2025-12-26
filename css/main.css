@@ -71,8 +71,12 @@
 
 @layer components {
 	.container-fluid {
-		@apply px-5 md:px-10 py-24 mx-auto max-w-screen-lg;
+		@apply relative px-5 md:px-10 py-24 mx-auto max-w-screen-lg;
 	}
+
+  section {
+    @apply relative;
+  }
 
   /* Basis: Text darf leicht ausfaden, Linie nicht */
   li a,
@@ -104,4 +108,5 @@
   button {
     @apply outline-none cursor-pointer;
   }
+
 }
