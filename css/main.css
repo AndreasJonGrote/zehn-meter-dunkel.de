@@ -71,39 +71,28 @@
 
 @layer components {
 	.container-fluid {
-		@apply relative px-5 md:px-10 py-24 mx-auto max-w-screen-lg;
+		@apply relative px-5 md:px-5 py-24 mx-auto;
 	}
 
-  section {
+  section, footer, header {
     @apply relative;
   }
 
   /* Basis: Text darf leicht ausfaden, Linie nicht */
   li a,
   p a {
-    @apply relative no-underline opacity-100 transition-opacity duration-300 hover:opacity-80;
+    @apply relative no-underline;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    transition: background-size 0.3s;
+    box-decoration-break: clone;
   }
 
-  li a::after,
-  p a::after {
-    content: "";
-    @apply absolute left-0 bottom-0 w-full h-px bg-current;
-    @apply scale-x-0 transition-transform duration-300;
-    @apply opacity-100; 
-  }
-
-  li a::after {
-    @apply origin-right scale-x-0;
-  }
-  li a:hover::after {
-    @apply origin-left scale-x-100;
-  }
-
-  p a::after {
-    @apply origin-left scale-x-100;
-  }
-  p a:hover::after {
-    @apply origin-right scale-x-0;
+  li a:hover,
+  p a:hover {
+    background-size: 0% 1px;
   }
   button {
     @apply outline-none cursor-pointer;

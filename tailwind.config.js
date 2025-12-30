@@ -12,6 +12,7 @@ module.exports = {
     './*.{html,php}',
     './static/**/*.{html,php}',
     './templates/**/*.{php,twig}',
+    './views/**/*.{php,twig}',
     './css/*.css',
     './js/**/*.{js,ts}',
     './safelist.txt',
@@ -48,7 +49,7 @@ module.exports = {
 			colors: {
 				dark: '#050505',
         grey: '#262522',
-				light: '#fbfbf8',
+				light: '#fbfbf8'
 			},
 			keyframes: {
 				'caret-float': {
@@ -75,6 +76,8 @@ module.exports = {
 
       'icon-arrow': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><clipPath id="a"><path fill="none" d="M0 11.785h18V0H0Z" data-name="Pfad 6"/></clipPath></defs><g data-name="Gruppe 10"><path fill="none" d="M0 0h24v24H0z" data-name="Rechteck 2"/><g data-name="Gruppe 9"><g clip-path="url(#a)" data-name="Gruppe 8" transform="translate(3 6)"><g data-name="Gruppe 7"><path fill="svgcolor" d="M10.791.068c-.072.072-.1.126-.076.168l4.572 5.67-4.572 5.638a.14.14 0 0 0 .046.2.21.21 0 0 0 .229.015l6.888-5.642a.248.248 0 0 0 0-.427L10.989.022q-.09-.063-.2.046m6.053 6.449q.09 0 .122-.32a3.4 3.4 0 0 0 0-.625q-.03-.3-.122-.3H.107q-.063 0-.091.3a3.4 3.4 0 0 0 0 .625q.03.32.122.32Z" data-name="Pfad 5"/></g></g></g></g></svg>',
 
+      'icon-arrow-up': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="none" d="M0 0h256v256H0z"/><path fill="none" stroke="svgcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M128 224V72M56 144l72-72 72 72M40 40h176"/></svg>',
+      'icon-arrow-right': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="none" d="M0 0h256v256H0z"/><path fill="none" stroke="svgcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M40 128h176M144 56l72 72-72 72"/></svg>',
       'z': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.374 16.652"><path d="M12.167 16.652v-3.151H5.474l6.9-13.455V0H.51v3.152H6.9L0 16.606v.046Z" data-name="Pfad 5"/></svg>',
       'm': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.592 16.652"><path d="M-.004 16.652h3.22V6.601l2.484 5.2 2.484-5.2v10.051h3.4V0H8.533L5.819 5.934 3.082 0H-.004Z" data-name="Pfad 6"/></svg>',
       'd': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.006 16.652"><path d="M0 16.652h4.3a7.4 7.4 0 0 0 5.7-2.254 8.8 8.8 0 0 0 2-6.072 8.8 8.8 0 0 0-2-6.072A7.4 7.4 0 0 0 4.3 0H0Zm3.634-3.151V3.152h.621a3.68 3.68 0 0 1 3.036 1.38 6.1 6.1 0 0 1 1.058 3.8 6.1 6.1 0 0 1-1.058 3.8 3.68 3.68 0 0 1-3.036 1.38Z" data-name="Pfad 7"/></svg>',

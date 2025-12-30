@@ -13,9 +13,27 @@ const getModifierFromClass = (item) => {
 	return null;
 };
 
-const initParallax = () => {
-	const allElements = document.querySelectorAll('[class*="parallax-item-["]');
-	if (allElements.length === 0) return;
+const isInViewport = (element) => {
+	const rect = element.getBoundingClientRect();
+	const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+	const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+	
+	return (
+		rect.top < viewportHeight &&
+		rect.bottom > 0 &&
+		rect.left < viewportWidth &&
+		rect.right > 0
+	);
+};
+
+const initParallax = (item) => {
+	if (!item.dataset.init) {
+		// item.style.position = 'absolute';
+		// item.style.top = '0';
+		// item.style.left = '0';
+		// item.style.width = '100%';
+		// item.dataset.init = 'true';
+	}
 };
 
 const parallax = () => {
@@ -23,11 +41,15 @@ const parallax = () => {
 	if (allElements.length === 0) return;
 
 	allElements.forEach(item => {
+		if (!isInViewport(item)) {
+			return;
+		}
+
 		const modifier = getModifierFromClass(item);
 		if (modifier === null) return;
 
 		if (!item.dataset.init) {
-			initParallax();
+			initParallax(item);
 		}
 
 		const scrollOffset = window.scrollY * modifier;
@@ -35,7 +57,6 @@ const parallax = () => {
 	});
 };
 
-initParallax();
 window.addEventListener('scroll', () => {
 	parallax();
 }, { passive: true });

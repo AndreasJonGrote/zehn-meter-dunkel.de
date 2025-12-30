@@ -12,7 +12,7 @@ function devHelpers(breakpoint, grid) {
 
   if (BREAKPOINT || GRID) {
     const container = document.createElement('div');
-    container.className = 'flex fixed top-[var(--wp-admin--admin-bar--height,_0px)] right-0 z-50 flex-row items-center text-sm bg-black border border-white divide-x dev-helpers';
+    container.className = 'flex fixed top-[var(--wp-admin--admin-bar--height,_0px)] right-0 z-50 flex-row items-center text-[12px] bg-black border border-white divide-x dev-helpers';
     document.getElementsByTagName('body')[0].prepend(container);
 
     if (BREAKPOINT) {
