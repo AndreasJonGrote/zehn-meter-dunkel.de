@@ -28,14 +28,23 @@
 
     <section class="text-light mix-blend-difference">
       <div class="container-fluid">
-        <div class="grid grid-cols-12 relative parallax-item-[-0.1]">
-          <div class="col-span-6 col-start-4 font-medium text-md font-body">
-            <p class="indent">
+        <div class="grid grid-cols-12 relative parallax-item-[0.1]">
+          <div class="col-span-6 col-start-2 font-medium text-md font-body">
+            <p>
               <span class="italic">ZEHN METER DUNKEL</span> ist eine multimediale, künstlerlisch-forschende Auseinandersetzung mit Dunkelheit, Distanz und (Un-)Sicherheit im urbanen Raum. Ausgangspunkt ist eine Schwelle: jene wenigen Meter, in denen Orientierung noch möglich scheint – und zugleich kippen kann. Zehn Meter werden zur Wahrnehmungsspanne: nah genug, um Strukturen zu erkennen, weit genug, damit Gesichter und Absichten unscharf bleiben.
             </p>
             <p class="indent-5">
               Die Arbeit sucht keine abschließende Antwort – auch, weil sich das Themenfeld nicht abnutzt: Es ordnet sich fortlaufend neu und bleibt gegenwärtig, selbst wenn seine Intensität schwankt. Sie setzt bei Situationen an, in denen Alltag kippt: Engstellen, tote Winkel, Warteschleifen. Aus fotografischer Bildlektüre, Erfahrungswissen und Schlagzeilensprache entwickelt sie Verfahren, die Lesbarkeit als Voraussetzung von Orientierung greifbar machen.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-light mix-blend-difference">
+      <div class="container-fluid">
+        <div class="grid grid-cols-12 relative parallax-item-[-0.1]">
+          <div class="col-span-6 col-start-5 font-medium text-md font-body">
             <p class="indent-5">
               Im Zentrum steht nicht die Zuspitzung, sondern der zweite Blick – und die Verfahren, die ihn ermöglichen. Was bleibt, ist ein Maßstab, kein Manifest. Zivilität zeigt sich zwischen uns im Platzmachen, im Blickkontakt, im Ton, der beruhigt statt hetzt.
             </p>

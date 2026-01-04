@@ -11,14 +11,14 @@
       
     <?php include 'views/header.php'; ?>
 
-    <picture class="absolute top-[20%] left-12 w-[35%] max-w-[400px] parallax-item-[0.3]">
+    <picture class="absolute top-[20%] left-12 w-[35%] max-w-[400px] parallax-item-[0.4]">
       <source srcset="assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
       <img src="assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3">
     </picture>
 
     <section class="text-light mix-blend-difference">
       <div class="container-fluid mt-40">
-        <div class="grid grid-cols-12 relative parallax-item-[0.3]">
+        <div class="grid grid-cols-12 relative parallax-item-[0.2]">
           <div class="col-span-4 col-start-3 font-medium text-lg font-body">
             <h2 class="text-2xl font-heading uppercase">Forschungsprojekte</h2>
           </div>
@@ -29,7 +29,7 @@
     <section class="text-light mix-blend-difference">
       <div class="container-fluid">
         <div class="grid grid-cols-12 h-full relative items-center parallax-item-[-0.1]">
-          <div class="col-span-6 col-start-7 font-medium text-lg font-body">
+          <div class="col-span-6 col-start-7 font-medium text-md font-body">
             <p class="">
               Zwischen dem, was Menschen im öffentlichen Raum erleben, und dem, was darüber zirkuliert, 
               liegt ein Spannungsfeld, das den wissenschaftlichen Rahmen dieser Arbeit bildet: Erfahrung 
@@ -48,7 +48,7 @@
     <section class="text-light mix-blend-difference">
       <div class="container-fluid">
         <div class="grid grid-cols-12 h-full relative items-center parallax-item-[-0.2]">
-          <div class="col-span-6 col-start-2 font-medium text-lg font-body">
+          <div class="col-span-6 col-start-2 font-medium text-md font-body">
             <p>
               Zwei Forschungsprojekte tragen diese Perspektive. In der <a href="https://www.xjonx.com/heimweg-umfrage" target="_blank">Heimweg-Umfrage</a> 
               wurden bundesweit Erfahrungsberichte gesammelt und statistische Angaben mit offenen Antworten verbunden, sodass Angsträume, Vermeidungsverhalten 
@@ -57,6 +57,7 @@
               um Muster der Zuspitzung, Wiederholung und Intensität in der Berichterstattung herauszuarbeiten. Beide Projekte bilden damit den zentralen empirischen Kern, an dem sich 
               die methodische Vertiefung und die Reflexion etablierter Ansätze ausrichten – als Versuch, die Stadt weniger zu alarmieren als lesbar zu machen.
             </p>
+            <p><a href="nccm.php" class="text-sm font-heading uppercase">NCCM</a></p>
           </div>
         </div>
       </div>

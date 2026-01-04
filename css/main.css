@@ -98,4 +98,8 @@
     @apply outline-none cursor-pointer;
   }
 
+  input {
+    @apply outline-none;
+  }
+
 }
