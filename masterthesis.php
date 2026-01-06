@@ -115,9 +115,15 @@
               </p>
             </div>
 
-            <div class="col-span-4 col-start-8 parallax-item-[0.07]">
-              <video src="assets/ich-habe-kein-gesicht_membran.mp4" class="w-full h-auto mb-3" autoplay muted loop></video>
+            <div class="col-span-3 col-start-8 parallax-item-[0.07] relative">
+              <div class="relative aspect-[4/3] w-full">
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
+                  <source src="assets/ich-habe-kein-gesicht_membran.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
+
+            
           </div>
 
 
