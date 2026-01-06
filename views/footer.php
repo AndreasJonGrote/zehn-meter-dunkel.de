@@ -16,9 +16,9 @@
             <div class="col-span-2 col-start-8">
                 <h3 class="font-heading text-light/50 uppercase mb-3">&nbsp;</h3>
                 <ul class="flex flex-col gap-2">
-                    <li><a href="#top" class="font-heading uppercase">Ausstellung</a></li>
-                    <li><a href="#top" class="font-heading uppercase">Masterthesis</a></li>
-                    <li><a href="#top" class="font-heading uppercase">Forschungsprojekte</a></li>
+                    <li><a href="index.php#ausstellung" class="font-heading uppercase">Ausstellung</a></li>
+                    <li><a href="masterthesis.php" class="font-heading uppercase">Masterthesis</a></li>
+                    <li><a href="forschungsprojekte.php" class="font-heading uppercase">Forschungsprojekte</a></li>
                 </ul>
             </div>
             <div class="col-span-1 col-start-10">
