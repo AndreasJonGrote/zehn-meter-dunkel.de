@@ -11,14 +11,14 @@
       
     <?php include 'views/header.php'; ?>
 
-    <picture class="absolute top-5 right-12 w-[35%] max-w-[400px] parallax-item-[0.3]">
+    <picture class="absolute top-5 right-12 w-[35%] max-w-[400px] parallax-item-[0.3] z-10">
       <source srcset="assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
       <img src="assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3">
     </picture>
 
-    <section class="text-dark">
-      <div class="container-fluid mt-40">
-        <div class="grid grid-cols-12 relative parallax-item-[0.3]">
+    <section class="bg-paper text-dark">
+      <div class="container-fluid">
+        <div class="grid grid-cols-12 relative parallax-item-[0.3] mt-40">
           <div class="col-span-4 col-start-3 font-medium text-lg font-body">
             <h2 class="text-2xl font-heading uppercase">Masterthesis</h2>
           </div>
@@ -26,8 +26,8 @@
       </div>
     </section>
 
-    <section class="text-light mix-blend-difference">
-      <div class="container-fluid">
+    <section class="bg-paper text-light" >
+      <div class="container-fluid mix-blend-difference">
         <div class="grid grid-cols-12 relative parallax-item-[0.1]">
           <div class="col-span-6 col-start-2 font-medium text-md font-body">
             <p>
@@ -38,14 +38,10 @@
             </p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="text-light mix-blend-difference">
-      <div class="container-fluid">
-        <div class="grid grid-cols-12 relative parallax-item-[-0.1]">
+        <div class="grid grid-cols-12 relative parallax-item-[-0.1] mt-40">
           <div class="col-span-6 col-start-5 font-medium text-md font-body">
-            <p class="indent-5">
+            <p">
               Im Zentrum steht nicht die Zuspitzung, sondern der zweite Blick – und die Verfahren, die ihn ermöglichen. Was bleibt, ist ein Maßstab, kein Manifest. Zivilität zeigt sich zwischen uns im Platzmachen, im Blickkontakt, im Ton, der beruhigt statt hetzt.
             </p>
             <p class="indent-5">
@@ -55,6 +51,7 @@
         </div>
       </div>
     </section>
+
 
     <section class="bg-light text-dark" id="ausstellung">
       <div class="container-fluid">
@@ -67,11 +64,11 @@
 
       </div>
 
-        <div class="grid grid-cols-12 gap-5 mb-40 text-md font-body text-justify hyphens-auto">
+        <div class="grid grid-cols-12 gap-5 mb-40 text-md font-body hyphens-auto">
 
           <div class="col-span-3 col-start-4 work-item cursor-pointer parallax-item-[-0.05]">
             <h2 class="text-sm font-heading uppercase mb-1">Das Rauschen des Moments</h2>
-            <p>
+            <p class="text-justify">
               Interaktive Installation, die urbane Netzwerke körperlich erfahrbar macht. Zwei visuelle Ebenen zeigen, wie Bewegung zum Erkenntnisraum wird.<br><a href="https://www.xjonx.com/das-rauschen-des-moments" target="_blank" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
             </p>
           </div>
@@ -79,10 +76,10 @@
 
 
         </div>
-        <div class="grid grid-cols-12 gap-5 mb-40 text-md font-body text-justify hyphens-auto">
+        <div class="grid grid-cols-12 gap-5 mb-40 text-md font-body hyphens-auto">
           <div class="col-span-3 col-start-2 work-item cursor-pointer parallax-item-[0.05]">
             <h2 class="text-sm font-heading uppercase mb-3">Lesung urbaner Unsicherheiten</h2>
-            <p>
+            <p class="text-justify">
               Online-Umfrage mit rund tausend Teilnehmenden erhebt subjektives Sicherheitsempfinden. Die Originalzitate zeigen, dass Unsicherheit durch Konstellationen aus Lesbarkeit, Nähe und sozialer Präsenz entsteht.<br><a href="https://www.xjonx.com/das-rauschen-des-moments" target="_blank" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
             </p>
           </div>
@@ -94,16 +91,16 @@
             </div>
             <div class="col-span-3 col-start-10 work-item cursor-pointer">
               <h2 class="text-sm font-heading uppercase mb-3">Atlas der (Un-)Sicherheit</h2>
-              <p>
+              <p class="text-justify">
                 Räumliche Konstellationen zeigen, wie Schwellen, Barrieren, Beleuchtung und Überwachung zu Akteuren des Sicherheitsempfindens werden. Die Serie testet Thesen im Medium der Anschauung.<br><a href="https://www.xjonx.com/das-rauschen-des-moments" target="_blank" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
               </p>
             </div>
           </div>
 
-          <div class="grid grid-cols-12 gap-5 text-md font-body text-justify hyphens-auto">
+          <div class="grid grid-cols-12 gap-5 text-md font-body hyphens-auto">
             <div class="col-span-3 col-start-1 mt-10 work-item cursor-pointer">
               <h2 class="text-sm font-heading uppercase mb-3">Ceres</h2>
-              <p>
+              <p class="text-justify">
                 Systematische Analyse von Schlagzeilen entwickelt die Ceres Content Markers zur Erkennung gewaltbezogener Sprache. Ein Thermodrucker übersetzt digitale Nachrichten in eine physische Spur.<br><a href="https://www.xjonx.com/das-rauschen-des-moments" target="_blank" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
               </p>
             </div>
@@ -115,12 +112,10 @@
               </p>
             </div>
 
-            <div class="col-span-3 col-start-8 parallax-item-[0.07] relative">
-              <div class="relative aspect-[4/3] w-full">
-                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
-                  <source src="assets/ich-habe-kein-gesicht_membran.mp4" type="video/mp4">
-                </video>
-              </div>
+            <div class="col-span-4 col-start-8 relative parallax-item-[0.07]">
+              <video class="w-full aspect-[4/3] object-cover" autoplay muted loop playsinline webkit-playsinline>
+                <source src="assets/ich-habe-kein-gesicht_membran.mp4" type="video/mp4">
+              </video>
             </div>
 
             

@@ -102,4 +102,18 @@
     @apply outline-none;
   }
 
+  [data-tooltip] {
+    @apply relative;
+  }
+
+  [data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    @apply absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 text-xs bg-paper text-grey rounded whitespace-nowrap z-50 pointer-events-none;
+  }
+
+  [data-tooltip]:hover::before {
+    content: '';
+    @apply absolute top-full left-1/2 transform -translate-x-1/2 mt-1 border-4 border-transparent border-b-paper z-50 pointer-events-none;
+  }
+
 }

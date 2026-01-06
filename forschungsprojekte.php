@@ -57,7 +57,7 @@
               um Muster der Zuspitzung, Wiederholung und Intensität in der Berichterstattung herauszuarbeiten. Beide Projekte bilden damit den zentralen empirischen Kern, an dem sich 
               die methodische Vertiefung und die Reflexion etablierter Ansätze ausrichten – als Versuch, die Stadt weniger zu alarmieren als lesbar zu machen.
             </p>
-            <p><a href="nccm.php" class="text-sm font-heading uppercase">NCCM</a></p>
+            <p><a href="ceres-content-marker.php" class="text-sm font-heading uppercase">NCCM</a></p>
           </div>
         </div>
       </div>
@@ -67,12 +67,8 @@
     <section class="bg-light ">
       <div class="container-fluid text-dark">
         <div class="relative flex items-center justify-center gap-5">
-          <p>
-            <a href="index.php#ausstellung" class="text-sm font-heading uppercase text-dark flex items-center">
-              <span class="block bg-svg-icon-arrow-right-grey w-[18px] h-[18px] bg-no-repeat bg-contain"></span>
-              <span class="block">Ausstellung</span>
-            </a>
-          </p>
+
+          <p><a href="index.php#ausstellung" class="text-sm font-heading uppercase text-dark">Ausstellung</a></p>
           <p><a href="masterthesis.php" class="text-sm font-heading uppercase text-dark">Masterthesis</a></p>
         </div>
       </div>
