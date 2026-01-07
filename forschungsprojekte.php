@@ -49,7 +49,7 @@
       <div class="container-fluid">
         <div class="grid grid-cols-12 h-full relative items-center parallax-item-[-0.2]">
           <div class="col-span-6 col-start-2 font-medium text-md font-body">
-            <p>
+            <p class="mb-5">
               Zwei Forschungsprojekte tragen diese Perspektive. In der <a href="https://www.xjonx.com/heimweg-umfrage" target="_blank">Heimweg-Umfrage</a> 
               wurden bundesweit Erfahrungsberichte gesammelt und statistische Angaben mit offenen Antworten verbunden, sodass Angsträume, Vermeidungsverhalten 
               und erlebte Vorfälle nicht nur gezählt, sondern in ihrer Sprache sichtbar werden. Das <a href="https://www.xjonx.com/ceres-projekt" target="_blank">Ceres-Projekt</a> 
@@ -57,7 +57,8 @@
               um Muster der Zuspitzung, Wiederholung und Intensität in der Berichterstattung herauszuarbeiten. Beide Projekte bilden damit den zentralen empirischen Kern, an dem sich 
               die methodische Vertiefung und die Reflexion etablierter Ansätze ausrichten – als Versuch, die Stadt weniger zu alarmieren als lesbar zu machen.
             </p>
-            <p><a href="ceres-content-marker.php" class="text-sm font-heading uppercase">NCCM</a></p>
+            <p><a href="heimweg-umfrage.php" class="text-sm font-heading uppercase">Zur Heimweg-Umfrage</a></p>
+            <p><a href="ceres-projekt.php" class="text-sm font-heading uppercase">Zum Ceres-Projekt</a></p>
           </div>
         </div>
       </div>
