@@ -111,7 +111,7 @@ window.addEventListener('load', () => {
     if (hasCcf) {
       if (mainSentence.length > 0) {
         additionalInfo = 'Ein Kontextfilter weist darauf hin, dass der Text von zivilen Kontexten oder Deutschland abweicht.';
-      } else {
+    } else {
         mainSentence = 'Ein Kontextfilter weist darauf hin, dass der Text von zivilen Kontexten oder Deutschland abweicht';
       }
     }
@@ -152,10 +152,34 @@ window.addEventListener('load', () => {
     const allZero = nccmScore === 0 && ccmScore === 0 && confidenceScore === 0;
     
     const statsWrapper = document.querySelector('.ccm-stats-wrapper');
+    const statsContainer = statsWrapper ? statsWrapper.parentElement : null;
     const commentContainer = document.querySelector('.ccm-commment');
     
-    if (statsWrapper) {
-      statsWrapper.classList.remove('hidden');
+    if (statsContainer) {
+      const isCurrentlyClosed = statsContainer.classList.contains('h-0');
+      
+      if (isCurrentlyClosed) {
+        // Container ist geschlossen, also aufklappen
+        statsContainer.classList.remove('h-0');
+        statsContainer.style.height = 'auto';
+        // Mit requestAnimationFrame die tatsächliche Höhe des gesamten Containers messen
+        requestAnimationFrame(() => {
+          const height = statsContainer.scrollHeight;
+          // Höhe auf 0 setzen, damit wir von 0 animieren können
+          statsContainer.style.height = '0px';
+          // Dann auf die gemessene Höhe animieren
+          requestAnimationFrame(() => {
+            statsContainer.style.height = `${height}px`;
+          });
+        });
+      } else {
+        // Container ist bereits offen, nur Höhe aktualisieren ohne Animation
+        statsContainer.style.height = 'auto';
+        requestAnimationFrame(() => {
+          const height = statsContainer.scrollHeight;
+          statsContainer.style.height = `${height}px`;
+        });
+      }
     }
     if (commentContainer) {
       commentContainer.classList.remove('hidden');
@@ -191,7 +215,7 @@ window.addEventListener('load', () => {
         if (hasCmr) {
           commentElement.textContent = 'Der Text ist unauffällig, verfügt aber über einen dämpfenden Marker.';
         } else {
-          commentElement.textContent = 'Keine Marker gefunden bzw. unauffällig.';
+        commentElement.textContent = 'Keine Marker gefunden bzw. unauffällig.';
         }
       } else {
         commentElement.textContent = generateCommentText(nccmScore, ccmScore, confidenceScore, slicedData);
@@ -254,9 +278,22 @@ window.addEventListener('load', () => {
       tokenList.classList.remove('ccm-loaded');
       
       const statsWrapper = document.querySelector('.ccm-stats-wrapper');
+      const statsContainer = statsWrapper ? statsWrapper.parentElement : null;
       const commentContainer = document.querySelector('.ccm-commment');
-      if (statsWrapper) {
-        statsWrapper.classList.add('hidden');
+      if (statsContainer) {
+        // Aktuelle Höhe des gesamten Containers messen
+        const currentHeight = statsContainer.scrollHeight;
+        statsContainer.style.height = `${currentHeight}px`;
+        // Mit requestAnimationFrame sicherstellen, dass die Höhe gesetzt ist, bevor wir animieren
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            statsContainer.style.height = '0px';
+            // Nach der Animation h-0 hinzufügen
+            setTimeout(() => {
+              statsContainer.classList.add('h-0');
+            }, 1000); // Dauer der Transition
+          });
+        });
       }
       if (commentContainer) {
         commentContainer.classList.add('hidden');
@@ -338,9 +375,22 @@ window.addEventListener('load', () => {
       tokenList.classList.remove('ccm-loaded');
       
       const statsWrapper = document.querySelector('.ccm-stats-wrapper');
+      const statsContainer = statsWrapper ? statsWrapper.parentElement : null;
       const commentContainer = document.querySelector('.ccm-commment');
-      if (statsWrapper) {
-        statsWrapper.classList.add('hidden');
+      if (statsContainer) {
+        // Aktuelle Höhe des gesamten Containers messen
+        const currentHeight = statsContainer.scrollHeight;
+        statsContainer.style.height = `${currentHeight}px`;
+        // Mit requestAnimationFrame sicherstellen, dass die Höhe gesetzt ist, bevor wir animieren
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            statsContainer.style.height = '0px';
+            // Nach der Animation h-0 hinzufügen
+            setTimeout(() => {
+              statsContainer.classList.add('h-0');
+            }, 1000); // Dauer der Transition
+          });
+        });
       }
       if (commentContainer) {
         commentContainer.classList.add('hidden');

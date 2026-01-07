@@ -70,6 +70,11 @@
 }
 
 @layer components {
+
+  body {
+    @apply font-body text-grey;
+  }
+
 	.container-fluid {
 		@apply relative px-5 md:px-5 py-24 mx-auto;
 	}
