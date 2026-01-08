@@ -27,13 +27,13 @@
         <div class="grid grid-cols-12 relative">
           <div class="col-span-6 col-start-7 font-medium text-md">
             <h3 class="text-md font-heading uppercase mb-3">Datensammlung</h3>
-            <p>
-							Ceres verbindet soziologische Medienanalyse und künstlerische Praxis: Das Projekt analysiert systematisch Schlagzeilen aus 24 deutschen Großstädten (rund vier Millionen Überschriften) und entwickelt die Ceres Content Markers (CCM) als Werkzeug zur automatisierten Erkennung gewaltbezogener Sprache. 
-              Die Analyse zeigt, wie Gewalt im urbanen Raum medial in Szene gesetzt und in zugespitzter Form vermittelt wird – die Wortwahl ist drastisch, die Szenarien wirken alarmierend. Die fotografischen Motive liefern eine visuelle Grammatik; die Schlagzeilen laden diese Motive sprachlich und inhaltlich auf. 
+              <p>
+                Ceres verbindet soziologische Medienanalyse und künstlerische Praxis: Das Projekt analysiert systematisch Schlagzeilen aus 24 deutschen Großstädten (rund vier Millionen Überschriften) und entwickelt die Ceres Content Markers (CCM) als Werkzeug zur automatisierten Erkennung gewaltbezogener Sprache. 
+                Die Analyse zeigt, wie Gewalt im urbanen Raum medial in Szene gesetzt und in zugespitzter Form vermittelt wird – die Wortwahl ist drastisch, die Szenarien wirken alarmierend. Die fotografischen Motive liefern eine visuelle Grammatik; die Schlagzeilen laden diese Motive sprachlich und inhaltlich auf. 
               </p>
-            <p class="indent-5">
-              Die Cultivation Theory (Gerbner) beschreibt das Mean World Syndrome: Wer ständig Gewalt in den Medien sieht, hält die Welt für gefährlicher, als sie ist. 
-              Die Analyse deutet in eine ähnliche Richtung: Lokale Nachrichten zeichnen ein Städtebild, in dem vermeintlich an jeder Ecke Gewalt lauern könnte. 
+              <p class="indent-5">
+                Die Cultivation Theory (Gerbner) beschreibt das Mean World Syndrome: Wer ständig Gewalt in den Medien sieht, hält die Welt für gefährlicher, als sie ist. 
+                Die Analyse deutet in eine ähnliche Richtung: Lokale Nachrichten zeichnen ein Städtebild, in dem vermeintlich an jeder Ecke Gewalt lauern könnte. 
               </p>
           </div>
         </div>
@@ -53,7 +53,7 @@
           <div class="col-span-6 col-start-2 font-medium text-md">
             <h3 class="text-md font-heading uppercase mb-3">Ceres Content Markers</h3>
             <p>
-              Für die Bewertung der sprachlichen Intensität gewaltbezogener Sprache wurde im Rahmen von Ceres der **nCCM‑Algorithmus** (normierter kontextsensitiver Gewaltbewertungs‑Algorithmus) entwickelt. Dieser transparente, modulare Algorithmus bewertet Schlagzeilen auf einer Skala von 0.0 bis 1.0, wobei höhere Werte eine stärkere Gewaltintensität anzeigen. Kern der Methode ist eine bewusste Trennung von Gewalt‑Evidenz (Marker), Kontextdämpfung (CMR) und optionalen Policy‑Filtern (CCF). Diese Modularität macht Fehlerbilder sichtbar und ermöglicht lokale Korrekturen – beispielsweise wird das Wort „verletzt" in einem Unfallkontext anders gewichtet als in einem Gewaltkontext, um False Positives zu vermeiden. Der Algorithmus basiert auf explizit gepflegten Wörterbüchern (nicht auf trainierten Modellen) und kombiniert drei Perspektiven: die Sicherheit des Algorithmus, die Schwere der Marker und die lexikalische Dichte. Für das Gesamtprojekt Ceres ist nCCM ein zentrales Werkzeug, um die Intensität der Gewaltdarstellung über Zeit und über verschiedene Zeitungen hinweg zu vergleichen.
+              Für die Bewertung der sprachlichen Intensität gewaltbezogener Sprache wurde im Rahmen von Ceres der kontextsensitiver Gewaltbewertungs‑Algorithmus, die <em class="font-italic">Ceres Content Markers</em>, entwickelt. Dieser modulare Algorithmus bewertet Schlagzeilen auf einer Skala von 0.0 bis 1.0, wobei höhere Werte eine stärkere Gewaltintensität anzeigen. Kern der Methode ist eine bewusste Trennung von Gewalt‑Evidenz (Marker), Kontextdämpfung (CMR) und optionalen Policy‑Filtern (CCF). Diese Modularität macht Fehlerbilder sichtbar und ermöglicht lokale Korrekturen – beispielsweise wird das Wort „verletzt" in einem Unfallkontext anders gewichtet als in einem Gewaltkontext, um False Positives zu vermeiden. Der Algorithmus basiert auf explizit gepflegten Wörterbüchern (nicht auf trainierten Modellen) und kombiniert drei Perspektiven: die Sicherheit des Algorithmus, die Schwere der Marker und die lexikalische Dichte. Für das Gesamtprojekt Ceres ist nCCM ein zentrales Werkzeug, um die Intensität der Gewaltdarstellung über Zeit und über verschiedene Zeitungen hinweg zu vergleichen.
             </p>
           </div>
           <div class="col-span-3 col-start-9">
@@ -79,9 +79,9 @@
       </div>
     </section>  
 
-    <section class="parallax-item-[0]">
+    <section class="bg-light parallax-item-[0]">
       <div class="container-fluid">
-        <div class="grid grid-cols-12 relative">
+        <div class="grid grid-cols-12 relative z-10 mix-blend-difference text-light">
           <div class="col-span-8 col-start-2 font-medium text-md">
             <h3 class="text-md font-heading uppercase mb-3">Künstlerische Interpretation</h3>
             <p>
@@ -96,17 +96,24 @@
 
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="bg-light ">
-      <div class="container-fluid text-dark">
-        <div class="relative flex items-center justify-center gap-5">
-          <p><a href="index.php#ausstellung" class="text-sm font-heading uppercase text-dark">Ausstellung</a></p>
-          <p><a href="masterthesis.php" class="text-sm font-heading uppercase text-dark">Masterthesis</a></p>
+        <div class="grid grid-cols-12 gap-5">
+          <!-- Ceres -->
+          <div class="relative group col-span-3 col-start-9 cursor-pointer work-item parallax-item-[-0.05] z-0">
+            <div class="relative aspect-[3/4]">
+              <picture class="absolute inset-0">
+                <source srcset="assets/ceres.webp" type="image/webp">
+                <img src="assets/ceres.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+              </picture>
+            </div>
+            <h2 class="text-sm font-heading uppercase mt-3">Ceres-Drucker</h2>
+            <!-- <a href="#" class="absolute inset-0 z-10"></a> -->
+          </div>
+          <!--/ Ceres -->
         </div>
       </div>
     </section>
+
 
     <?php include 'views/footer.php'; ?>
 

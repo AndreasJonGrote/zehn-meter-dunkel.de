@@ -49,14 +49,26 @@
       <div class="container-fluid">
         <div class="grid grid-cols-12 h-full relative items-center parallax-item-[-0.2]">
           <div class="col-span-6 col-start-2 font-medium text-md font-body">
+<<<<<<< Updated upstream
             <p class="mb-5">
               Zwei Forschungsprojekte tragen diese Perspektive. In der <a href="https://www.xjonx.com/heimweg-umfrage" target="_blank">Heimweg-Umfrage</a> 
+=======
+            <p>
+              Zwei Forschungsprojekte tragen diese Perspektive. In der <a href="https://www.xjonx.com/heimweg-umfrage">Heimweg-Umfrage</a> 
+>>>>>>> Stashed changes
               wurden bundesweit Erfahrungsberichte gesammelt und statistische Angaben mit offenen Antworten verbunden, sodass Angsträume, Vermeidungsverhalten 
-              und erlebte Vorfälle nicht nur gezählt, sondern in ihrer Sprache sichtbar werden. Das <a href="https://www.xjonx.com/ceres-projekt" target="_blank">Ceres-Projekt</a> 
+              und erlebte Vorfälle nicht nur gezählt, sondern in ihrer Sprache sichtbar werden. Das <a href="https://www.xjonx.com/ceres-projekt">Ceres-Projekt</a> 
               untersucht Lokalzeitungs-Schlagzeilen: Ein mehrjähriger Korpus wird fortlaufend erweitert; ein Auswertungsalgorithmus filtert und gewichtet gewaltbezogene Formulierungen, 
               um Muster der Zuspitzung, Wiederholung und Intensität in der Berichterstattung herauszuarbeiten. Beide Projekte bilden damit den zentralen empirischen Kern, an dem sich 
               die methodische Vertiefung und die Reflexion etablierter Ansätze ausrichten – als Versuch, die Stadt weniger zu alarmieren als lesbar zu machen.
             </p>
+<<<<<<< Updated upstream
+=======
+          </div>
+        </div>
+        <div class="grid grid-cols-12 h-full relative items-center parallax-item-[-0.3] mt-10">
+          <div class="col-span-6 col-start-9 font-medium text-md font-body">
+>>>>>>> Stashed changes
             <p><a href="heimweg-umfrage.php" class="text-sm font-heading uppercase">Zur Heimweg-Umfrage</a></p>
             <p><a href="ceres-projekt.php" class="text-sm font-heading uppercase">Zum Ceres-Projekt</a></p>
           </div>
@@ -64,16 +76,6 @@
       </div>
     </section>
 
-
-    <section class="bg-light ">
-      <div class="container-fluid text-dark">
-        <div class="relative flex items-center justify-center gap-5">
-
-          <p><a href="index.php#ausstellung" class="text-sm font-heading uppercase text-dark">Ausstellung</a></p>
-          <p><a href="masterthesis.php" class="text-sm font-heading uppercase text-dark">Masterthesis</a></p>
-        </div>
-      </div>
-    </section>
 
     <?php include 'views/footer.php'; ?>
 
