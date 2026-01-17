@@ -11,11 +11,12 @@ module.exports = {
   content: [
     './*.{html,php}',
     './static/**/*.{html,php}',
-    './templates/**/*.{php,twig}',
+    './library/**/*.{php,twig}',
     './views/**/*.{php,twig}',
     './css/*.css',
     './js/**/*.{js,ts}',
     './safelist.txt',
+    './ausstellung/**/*.{html,php}',
   ],
   theme: {
     extend: {

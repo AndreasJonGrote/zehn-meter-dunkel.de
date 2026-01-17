@@ -15,11 +15,11 @@
             ?>
             <picture class="atlas-rotator-item absolute inset-0 <?php echo $hiddenClass; ?>">
               <source srcset="<?php echo $webpPath; ?>" type="image/webp">
-              <img src="<?php echo $jpgPath; ?>" alt="<?php echo $alt; ?>" class="w-full h-full object-contain">
+              <img src="<?php the_url() ; ?>/<?php echo $jpgPath; ?>" alt="<?php echo $alt; ?>" class="w-full h-full object-contain">
             </picture>
             <?php endforeach; ?>
           </div>
-          <a href="#top" class="block">
+          <a href="<?php the_url() ; ?>/#top" class="block">
             <h1>
                 <span class="block bg-svg-zmd-logo-white w-[70px] h-[45px] bg-no-repeat bg-contain"></span>
                 <span class="sr-only">ZEHN METER DUNKEL</span>
@@ -29,9 +29,9 @@
       </div>
       <div class="col-span-6">
         <ul class="flex items-center justify-end gap-5 text-light text-xs">
-          <li><a href="index.php#ausstellung" class="font-heading uppercase">Ausstellung</a></li>
-          <li><a href="masterthesis.php" class="font-heading uppercase">Masterthesis</a></li>
-          <li><a href="forschungsprojekte.php" class="font-heading uppercase">Forschungsprojekte</a></li>
+          <li><a href="<?php the_url() ; ?>/#ausstellung" class="font-heading uppercase">Ausstellung</a></li>
+          <li><a href="<?php the_url() ; ?>/masterthesis.php" class="font-heading uppercase">Masterthesis</a></li>
+          <li><a href="<?php the_url() ; ?>/forschungsprojekte.php" class="font-heading uppercase">Forschungsprojekte</a></li>
         </ul>
       </div>
     </div>

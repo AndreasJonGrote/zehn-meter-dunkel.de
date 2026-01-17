@@ -33,4 +33,4 @@
     </div>
 </footer>
 
-<script type="module" src="./dist/js/main.js?v=<?php echo time(); ?>"></script>
+<script type="module" src="<?php the_url() ; ?>/dist/js/main.js?v=<?php echo time(); ?>"></script>

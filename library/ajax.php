@@ -1,6 +1,8 @@
 <?php
 header('Content-Type: application/json');
 
+include 'config.php';
+
 if (!isset($_GET['analyze']) || empty($_GET['analyze'])) {
 	http_response_code(400);
 	echo json_encode(['error' => 'Kein Text zum Analysieren übergeben.']);

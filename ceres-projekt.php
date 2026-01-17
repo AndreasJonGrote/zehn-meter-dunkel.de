@@ -1,18 +1,19 @@
+<?php include 'library/config.php'; ?>
 
 <!DOCTYPE html>
 <html lang="de">
   <head>
 
-    <?php include 'views/head.php'; ?>
+    <?php include 'library/head.php'; ?>
 
     <title>ZEHN METER DUNKEL | Andreas Jon Grote</title>
   </head>
   <body class="bg-light">
       
-    <?php include 'views/header.php'; ?>
+    <?php include 'library/header.php'; ?>
 
 
-    <section class="parallax-item-[0]">
+    <section class="">
       <div class="container-fluid mt-40">
         <div class="grid grid-cols-12 relative">
           <div class="col-span-4 col-start-3 font-medium text-lg">
@@ -22,7 +23,7 @@
       </div>
     </section>
 
-		<section class="parallax-item-[0]">
+		<section class="">
       <div class="container-fluid">
         <div class="grid grid-cols-12 relative">
           <div class="col-span-6 col-start-7 font-medium text-md">
@@ -41,13 +42,13 @@
       </div>
     </section>
 
-    <section class="absolute top-[35%] left-12 w-[35%] max-w-[400px] parallax-item-[0]">
+    <section class="absolute top-[45%] left-12 w-[35%] max-w-[400px]">
       <div class="container-fluid sm:p-0">
         <?php include 'views/ceres-stats.php'; ?>
       </div>
     </section>
 
-    <section class="parallax-item-[0]">
+    <section class="">
       <div class="container-fluid">
         <div class="grid grid-cols-12 relative">
           <div class="col-span-6 col-start-2 font-medium text-md">
@@ -63,7 +64,7 @@
       </div>
     </section>
 
-    <section class="parallax-item-[0]">
+    <section class="">
       <div class="container-fluid">
           
           <div class="grid grid-cols-12 h-full relative items-center">
@@ -79,7 +80,7 @@
       </div>
     </section>  
 
-    <section class="bg-light parallax-item-[0]">
+    <section class="bg-light">
       <div class="container-fluid">
         <div class="grid grid-cols-12 relative z-10 mix-blend-difference text-light">
           <div class="col-span-8 col-start-2 font-medium text-md">
@@ -115,7 +116,7 @@
     </section>
 
 
-    <?php include 'views/footer.php'; ?>
+    <?php include 'library/footer.php'; ?>
 
 	<script src="js/ccm.js"></script>
 

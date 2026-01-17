@@ -1,15 +1,16 @@
+<?php include 'library/config.php'; ?>
 
 <!DOCTYPE html>
 <html lang="de">
   <head>
 
-    <?php include 'views/head.php'; ?>
+    <?php include 'library/head.php'; ?>
 
     <title>ZEHN METER DUNKEL | Andreas Jon Grote</title>
   </head>
   <body class="bg-light">
       
-    <?php include 'views/header.php'; ?>
+    <?php include 'library/header.php'; ?>
 
     <picture class="absolute top-5 right-12 w-[35%] max-w-[400px] parallax-item-[0.3] z-10">
       <source srcset="assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
@@ -136,7 +137,7 @@
       </div>
     </section>
 
-    <?php include 'views/footer.php'; ?>
+    <?php include 'library/footer.php'; ?>
 
   </body>
 </html>

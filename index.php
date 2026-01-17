@@ -1,15 +1,16 @@
+<?php include 'library/config.php'; ?>
 
 <!DOCTYPE html>
 <html lang="de">
   <head>
 
-    <?php include 'views/head.php'; ?>
+    <?php include 'library/head.php'; ?>
 
     <title>ZEHN METER DUNKEL | Andreas Jon Grote</title>
   </head>
   <body class="bg-light">
       
-    <?php include 'views/header.php'; ?>
+    <?php include 'library/header.php'; ?>
     <?php include 'views/hero.php'; ?>
 
     <section class="bg-light text-dark" id="ausstellung">
@@ -21,7 +22,15 @@
           <div class="col-span-4 parallax-item-[0.1]">
             <h2 class="text-sm font-heading uppercase mb-3">Ausstellung</h2>
             <p class="text-md font-body text-justify hyphens-auto">
-              Die Arbeit <span class="italic">ZEHN METER DUNKEL</span> ist eine multimediale, künstlerisch-forschende Auseinandersetzung mit Dunkelheit, Distanz und (Un-)Sicherheit im urbanen Raum. Ausgangspunkt ist eine Schwelle: jene wenigen Meter, in denen Orientierung noch möglich scheint – und zugleich kippen kann. Zehn Meter werden zur Wahrnehmungsspanne: nah genug, um Strukturen zu erkennen, weit genug, damit Gesichter und Absichten unscharf bleiben.
+              Zwischen Laternenlicht und Schatten liegt oft nur ein kurzer Abschnitt, 
+              wenige Schritte, in denen Orientierung noch möglich scheint und zugleich 
+              kippen kann. <span class="italic">ZEHN METER DUNKEL</span> setzt dort an, wo Distanz zu einer 
+              Wahrnehmungsspanne wird, nah genug, um Strukturen zu erkennen, 
+              weit genug, damit Details, Gesichter und Absichten in Unschärfe geraten. 
+              Die Ausstellung zeigt eine Auswahl von Arbeiten, die diesen Zustand als 
+              Frage von Lesbarkeit und Blick erfahrbar machen, als Fotografie, als 
+              Bewegtbild und als installative Setzung, die Verhalten, 
+              Sichtbarkeit und soziale Räumen hinterfragen.
             </p>
           </div>
           <!--/ Einleitung -->
@@ -43,7 +52,7 @@
               </picture>
             </div>
             <h2 class="text-sm font-heading uppercase mt-3">Lärmschutzwall I</h2>
-            <!-- <a href="#" class="absolute inset-0 z-10"></a> -->
+            <a href="ausstellung/laermschutzwall-i.php" class="absolute inset-0 z-10"></a>
           </div>
           <!--/ Lärmschutzwall I -->
 
@@ -55,7 +64,7 @@
               </video>
             </div>
             <h2 class="text-sm font-heading uppercase mt-3">Lärmschutzwall II</h2>
-            <!-- <a href="#" class="absolute inset-0 z-10"></a> -->
+            <a href="ausstellung/laermschutzwall-ii.php" class="absolute inset-0 z-10"></a>
           </div>
           <!--/ Lärmschutzwall II -->
         </div>
@@ -70,7 +79,7 @@
               </picture>
             </div>
             <h2 class="text-sm font-heading uppercase mt-3">Ceres-Drucker</h2>
-            <!-- <a href="#" class="absolute inset-0 z-10"></a> -->
+            <a href="ausstellung/ceres-projekt.php" class="absolute inset-0 z-10"></a>
           </div>
           <!--/ Ceres -->
         </div>
@@ -89,7 +98,7 @@
               </picture>
             </div>
             <h2 class="text-sm font-heading uppercase mt-3">Kesselbrink I</h2>
-            <!-- <a href="#" class="absolute inset-0 z-10"></a> -->
+            <a href="ausstellung/kesselbrink-i.php" class="absolute inset-0 z-10"></a>
           </div>
           <!--/ Kesselbrink I -->
           <!-- Kesselbrink II -->
@@ -100,7 +109,7 @@
               </video>
             </div>
             <h2 class="text-sm font-heading uppercase mt-3">Kesselbrink II</h2>
-            <!-- <a href="#" class="absolute inset-0 z-10"></a> -->
+            <a href="ausstellung/kesselbrink-ii.php" class="absolute inset-0 z-10"></a>
           </div>
           <!--/ Kesselbrink II -->
         </div>
@@ -114,7 +123,7 @@
               </video>
             </div>
             <h2 class="text-sm font-heading uppercase mt-3">Membran der Anonymität</h2>
-            <!-- <a href="#" class="absolute inset-0 z-10"></a> -->
+            <a href="ausstellung/membran-der-anonymitaet.php" class="absolute inset-0 z-10"></a>
           </div>
           <!--/ Membran der Anonymität -->
           <!-- Unterführung -->
@@ -125,7 +134,7 @@
               </video>
             </div>
             <h2 class="text-sm font-heading uppercase mt-3">Unterführung</h2>
-            <!-- <a href="#" class="absolute inset-0 z-10"></a> -->
+            <a href="ausstellung/unterfuehrung.php" class="absolute inset-0 z-10"></a>
           </div>
           <!--/ Unterführung -->
         </div>
@@ -141,7 +150,16 @@
       </div>
     </section>
 
-    <?php include 'views/footer.php'; ?>
+    <!-- Modals -->
+    <div class="modal-overlay">
+      <div class="modal">
+        <h2>Modal</h2>
+        <p>This is a modal</p>
+      </div>
+    </div>
+    <!--/ Modals -->
+
+    <?php include 'library/footer.php'; ?>
 
   </body>
 </html>
