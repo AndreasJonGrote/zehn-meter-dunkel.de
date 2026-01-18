@@ -8,158 +8,182 @@
 
     <title>ZEHN METER DUNKEL | Andreas Jon Grote</title>
   </head>
-  <body class="bg-light">
+  <body class="bg-light modal-open">
       
     <?php include 'library/header.php'; ?>
-    <?php include 'views/hero.php'; ?>
 
-    <section class="bg-light text-dark" id="ausstellung">
-      <div class="container-fluid">
+    <div class="fixed inset-0 pointer-events-none bg-light/90 [body.modal-open_&]:backdrop-blur-sm z-10"></div>
 
-        <div class="grid grid-cols-12 gap-5 mb-10">
+      <?php include 'views/hero.php'; ?>
 
-          <!-- Einleitung -->
-          <div class="col-span-4 parallax-item-[0.1]">
-            <h2 class="text-sm font-heading uppercase mb-3">Ausstellung</h2>
-            <p class="text-md font-body text-justify hyphens-auto">
-              Zwischen Laternenlicht und Schatten liegt oft nur ein kurzer Abschnitt, 
-              wenige Schritte, in denen Orientierung noch möglich scheint und zugleich 
-              kippen kann. <span class="italic">ZEHN METER DUNKEL</span> setzt dort an, wo Distanz zu einer 
-              Wahrnehmungsspanne wird, nah genug, um Strukturen zu erkennen, 
-              weit genug, damit Details, Gesichter und Absichten in Unschärfe geraten. 
-              Die Ausstellung zeigt eine Auswahl von Arbeiten, die diesen Zustand als 
-              Frage von Lesbarkeit und Blick erfahrbar machen, als Fotografie, als 
-              Bewegtbild und als installative Setzung, die Verhalten, 
-              Sichtbarkeit und soziale Räumen hinterfragen.
-            </p>
-          </div>
-          <!--/ Einleitung -->
+      <section class="bg-light text-dark" id="ausstellung">
+        <div class="container-fluid">
 
-          <!-- Lärmschutzwall I -->
-          <div class="relative group col-span-3 col-start-7 cursor-pointer work-item parallax-item-[0.05]">
-            <div class="image-fade-container relative aspect-[4/5] w-full">
-              <picture class="image-fade-item opacity-100 transition-opacity duration-[3000ms]">
-                <source srcset="assets/laermschutzwall_i-03.webp" type="image/webp">
-                <img src="assets/laermschutzwall_i-03.jpg" alt="Ausstellung" class="w-full">
-              </picture>
-              <picture class="image-fade-item absolute inset-0 opacity-0 transition-opacity duration-[3000ms]">
-                <source srcset="assets/laermschutzwall_i-13.webp" type="image/webp">
-                <img src="assets/laermschutzwall_i-13.jpg" alt="Ausstellung" class="w-full h-full object-cover">
-              </picture>
-              <picture class="image-fade-item absolute inset-0 opacity-0 transition-opacity duration-[3000ms]">
-                <source srcset="assets/laermschutzwall_i-21.webp" type="image/webp">
-                <img src="assets/laermschutzwall_i-21.jpg" alt="Ausstellung" class="w-full h-full object-cover">
-              </picture>
+          <div class="grid grid-cols-12 gap-5 mb-10">
+
+            <!-- Einleitung -->
+            <div class="col-span-4 parallax-item-[0.1]">
+              <h2 class="text-sm font-heading uppercase mb-3">Ausstellung</h2>
+              <p class="text-md font-body text-justify hyphens-auto">
+                Zwischen Laternenlicht und Schatten liegt oft nur ein kurzer Abschnitt, 
+                wenige Schritte, in denen Orientierung noch möglich scheint und zugleich 
+                kippen kann. <span class="italic">ZEHN METER DUNKEL</span> setzt dort an, wo Distanz zu einer 
+                Wahrnehmungsspanne wird, nah genug, um Strukturen zu erkennen, 
+                weit genug, damit Details, Gesichter und Absichten in Unschärfe geraten. 
+                Die Ausstellung zeigt eine Auswahl von Arbeiten, die diesen Zustand als 
+                Frage von Lesbarkeit und Blick erfahrbar machen, als Fotografie, als 
+                Bewegtbild und als installative Setzung, die Verhalten, 
+                Sichtbarkeit und soziale Räume hinterfragen.
+              </p>
             </div>
-            <h2 class="text-sm font-heading uppercase mt-3">Lärmschutzwall I</h2>
-            <a href="ausstellung/laermschutzwall-i.php" class="absolute inset-0 z-10"></a>
-          </div>
-          <!--/ Lärmschutzwall I -->
+            <!--/ Einleitung -->
 
-          <!-- Lärmschutzwall II -->
-          <div class="relative group col-span-3 cursor-pointer work-item parallax-item-[-0.05]">
-            <div class="relative aspect-[4/3]">
-              <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
-                <source src="assets/laermschutzwall_ii.mp4" type="video/mp4">
-              </video>
+            <!-- Lärmschutzwall I -->
+            <div class="relative group col-span-3 col-start-7 cursor-pointer work-item parallax-item-[0.05]">
+              <div class="image-fade-container relative aspect-[4/5] w-full">
+                <picture class="image-fade-item opacity-100 transition-opacity duration-[3000ms]">
+                  <source srcset="assets/laermschutzwall_i-03.webp" type="image/webp">
+                  <img src="assets/laermschutzwall_i-03.jpg" alt="Ausstellung" class="w-full">
+                </picture>
+                <picture class="image-fade-item absolute inset-0 opacity-0 transition-opacity duration-[3000ms]">
+                  <source srcset="assets/laermschutzwall_i-13.webp" type="image/webp">
+                  <img src="assets/laermschutzwall_i-13.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                </picture>
+                <picture class="image-fade-item absolute inset-0 opacity-0 transition-opacity duration-[3000ms]">
+                  <source srcset="assets/laermschutzwall_i-21.webp" type="image/webp">
+                  <img src="assets/laermschutzwall_i-21.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <h2 class="text-sm font-heading uppercase mt-3">Lärmschutzwall I</h2>
+              <a href="ausstellung/laermschutzwall-i.php" class="absolute inset-0 z-10"></a>
             </div>
-            <h2 class="text-sm font-heading uppercase mt-3">Lärmschutzwall II</h2>
-            <a href="ausstellung/laermschutzwall-ii.php" class="absolute inset-0 z-10"></a>
+            <!--/ Lärmschutzwall I -->
+
+            <!-- Lärmschutzwall II -->
+            <div class="relative group col-span-3 cursor-pointer work-item parallax-item-[-0.05]">
+              <div class="relative aspect-[4/3]">
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
+                  <source src="assets/laermschutzwall_ii.mp4" type="video/mp4">
+                </video>
+              </div>
+              <h2 class="text-sm font-heading uppercase mt-3">Lärmschutzwall II</h2>
+              <a href="ausstellung/laermschutzwall-ii.php" class="absolute inset-0 z-10"></a>
+            </div>
+            <!--/ Lärmschutzwall II -->
           </div>
-          <!--/ Lärmschutzwall II -->
+
+          <div class="grid grid-cols-12 gap-5 mb-10">
+            <!-- Ceres -->
+            <div class="relative group col-span-2 col-start-3 cursor-pointer work-item parallax-item-[0.05]">
+              <div class="relative aspect-[3/4]">
+                <picture class="absolute inset-0">
+                  <source srcset="assets/ceres.webp" type="image/webp">
+                  <img src="assets/ceres.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <h2 class="text-sm font-heading uppercase mt-3">Ceres-Drucker</h2>
+              <a href="ausstellung/ceres-projekt.php" class="absolute inset-0 z-10"></a>
+            </div>
+            <!--/ Ceres -->
+          </div>
+
+          <div class="grid grid-cols-12 gap-5 mb-10">
+            <!-- Kesselbrink I -->
+            <div class="relative group col-span-3 col-start-6 cursor-pointer work-item parallax-item-[0.03]">
+              <div class="image-fade-container relative aspect-[7/5]">
+                <picture class="image-fade-item opacity-100 transition-opacity duration-[3000ms]">
+                  <source srcset="assets/kesselbrink_i-links.webp" type="image/webp">
+                  <img src="assets/kesselbrink_i-links.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                </picture>
+                <picture class="image-fade-item absolute inset-0 opacity-0 transition-opacity duration-[3000ms]">
+                  <source srcset="assets/kesselbrink_i-rechts.webp" type="image/webp">
+                  <img src="assets/kesselbrink_i-rechts.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <h2 class="text-sm font-heading uppercase mt-3">Kesselbrink I</h2>
+              <a href="ausstellung/kesselbrink-i.php" class="absolute inset-0 z-10"></a>
+            </div>
+            <!--/ Kesselbrink I -->
+            <!-- Kesselbrink II -->
+            <div class="relative group col-span-3 cursor-pointer work-item parallax-item-[-0.05]">
+              <div class="relative aspect-[4/3]">
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
+                  <source src="assets/kesselbrink_ii.mp4" type="video/mp4">
+                </video>
+              </div>
+              <h2 class="text-sm font-heading uppercase mt-3">Kesselbrink II</h2>
+              <a href="ausstellung/kesselbrink-ii.php" class="absolute inset-0 z-10"></a>
+            </div>
+            <!--/ Kesselbrink II -->
+          </div>
+
+          <div class="grid grid-cols-12 gap-5 mb-10">
+            <!-- Membran der Anonymität -->
+            <div class="relative group col-span-3 col-start-2 cursor-pointer work-item parallax-item-[0.05]">
+              <div class="relative aspect-[4/3]">
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
+                  <source src="assets/ich-habe-kein-gesicht_membran.mp4" type="video/mp4">
+                </video>
+              </div>
+              <h2 class="text-sm font-heading uppercase mt-3">Membran der Anonymität</h2>
+              <a href="ausstellung/membran-der-anonymitaet.php" class="absolute inset-0 z-10"></a>
+            </div>
+            <!--/ Membran der Anonymität -->
+            <!-- Unterführung -->
+            <div class="relative group col-span-3 col-start-10 cursor-pointer work-item mt-[150px] parallax-item-[-0.05]">
+              <div class="relative aspect-[4/3]">
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
+                  <source src="assets/unterfuehrung.mp4" type="video/mp4">
+                </video>
+              </div>
+              <h2 class="text-sm font-heading uppercase mt-3">Unterführung</h2>
+              <a href="ausstellung/unterfuehrung.php" class="absolute inset-0 z-10"></a>
+            </div>
+            <!--/ Unterführung -->
+          </div>
         </div>
+      </section>
 
-        <div class="grid grid-cols-12 gap-5 mb-10">
-          <!-- Ceres -->
-          <div class="relative group col-span-2 col-start-3 cursor-pointer work-item parallax-item-[0.05]">
-            <div class="relative aspect-[3/4]">
-              <picture class="absolute inset-0">
-                <source srcset="assets/ceres.webp" type="image/webp">
-                <img src="assets/ceres.jpg" alt="Ausstellung" class="w-full h-full object-cover">
-              </picture>
-            </div>
-            <h2 class="text-sm font-heading uppercase mt-3">Ceres-Drucker</h2>
-            <a href="ausstellung/ceres-projekt.php" class="absolute inset-0 z-10"></a>
+      <section class="bg-light text-dark" id="theorie">
+        <div class="container-fluid">
+          <div class="relative flex items-center justify-center gap-5">
+            <p><a href="masterthesis.php" class="text-sm font-heading uppercase text-dark">Masterthesis</a></p>
+            <p><a href="forschungsprojekte.php" class="text-sm font-heading uppercase text-dark">Forschungsprojekte</a></p>
           </div>
-          <!--/ Ceres -->
         </div>
+      </section>
 
-        <div class="grid grid-cols-12 gap-5 mb-10">
-          <!-- Kesselbrink I -->
-          <div class="relative group col-span-3 col-start-6 cursor-pointer work-item parallax-item-[0.03]">
-            <div class="image-fade-container relative aspect-[7/5]">
-              <picture class="image-fade-item opacity-100 transition-opacity duration-[3000ms]">
-                <source srcset="assets/kesselbrink_i-links.webp" type="image/webp">
-                <img src="assets/kesselbrink_i-links.jpg" alt="Ausstellung" class="w-full h-full object-cover">
-              </picture>
-              <picture class="image-fade-item absolute inset-0 opacity-0 transition-opacity duration-[3000ms]">
-                <source srcset="assets/kesselbrink_i-rechts.webp" type="image/webp">
-                <img src="assets/kesselbrink_i-rechts.jpg" alt="Ausstellung" class="w-full h-full object-cover">
-              </picture>
+      <?php include 'library/footer.php'; ?>
+
+      
+
+        <section class="modal-overlay fixed inset-0 z-20 overflow-y-auto overscroll-contain">
+          <div class="container-fluid mt-2 max-w-screen-lg">
+            <h2 class="text-xl font-heading uppercase mb-10">Kesselbrink I</h2>
+            <div class="grid grid-cols-12 relative gap-12">
+              <div class="col-span-6 text-md">
+                <p class="text-justify hyphens-auto">
+                  Eine erhöhte Gesamtansicht ordnet den Platz wie eine horizontale Schnittfläche: 
+                  vordergründig Strauchwerk und Sitzelemente, mittig Wegeachsen und Spiellandschaft, 
+                  dahinter Fahrspuren und Parkreihen, ganz hinten ein Häuserband. Die Schwarz‑Weiß‑Setzung 
+                  entzieht dem Ort seine alltägliche Farbigkeit und reduziert ihn auf Geometrie, Licht 
+                  und Blickachsen; Personen erscheinen klein und verteilt, nicht als Hauptfiguren, 
+                  sondern als soziale Markierungen von Aufenthalt, Passage und Nebeneinander. 
+                  In <span class="italic">Kesselbrink I</span> wird so eine abstrahierte Platzfigur lesbar, 
+                  in der sich Sichtfelder überlagern und Sicherheit als Verhandlung im öffentlichen Raum 
+                  sichtbar wird – als Resultat von Sichtbarkeit, Nutzung und gemeinsamen Regeln, 
+                  nicht allein von Überwachung oder Licht.
+                </p>
+              </div>
+              <div class="col-span-6">
+                <picture class="">
+                  <source srcset="assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
+                  <img src="assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3">
+                </picture>
+              </div>
             </div>
-            <h2 class="text-sm font-heading uppercase mt-3">Kesselbrink I</h2>
-            <a href="ausstellung/kesselbrink-i.php" class="absolute inset-0 z-10"></a>
           </div>
-          <!--/ Kesselbrink I -->
-          <!-- Kesselbrink II -->
-          <div class="relative group col-span-3 cursor-pointer work-item parallax-item-[-0.05]">
-            <div class="relative aspect-[4/3]">
-              <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
-                <source src="assets/kesselbrink_ii.mp4" type="video/mp4">
-              </video>
-            </div>
-            <h2 class="text-sm font-heading uppercase mt-3">Kesselbrink II</h2>
-            <a href="ausstellung/kesselbrink-ii.php" class="absolute inset-0 z-10"></a>
-          </div>
-          <!--/ Kesselbrink II -->
-        </div>
-
-        <div class="grid grid-cols-12 gap-5 mb-10">
-          <!-- Membran der Anonymität -->
-          <div class="relative group col-span-3 col-start-2 cursor-pointer work-item parallax-item-[0.05]">
-            <div class="relative aspect-[4/3]">
-              <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
-                <source src="assets/ich-habe-kein-gesicht_membran.mp4" type="video/mp4">
-              </video>
-            </div>
-            <h2 class="text-sm font-heading uppercase mt-3">Membran der Anonymität</h2>
-            <a href="ausstellung/membran-der-anonymitaet.php" class="absolute inset-0 z-10"></a>
-          </div>
-          <!--/ Membran der Anonymität -->
-          <!-- Unterführung -->
-          <div class="relative group col-span-3 col-start-10 cursor-pointer work-item mt-[150px] parallax-item-[-0.05]">
-            <div class="relative aspect-[4/3]">
-              <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
-                <source src="assets/unterfuehrung.mp4" type="video/mp4">
-              </video>
-            </div>
-            <h2 class="text-sm font-heading uppercase mt-3">Unterführung</h2>
-            <a href="ausstellung/unterfuehrung.php" class="absolute inset-0 z-10"></a>
-          </div>
-          <!--/ Unterführung -->
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-light text-dark" id="theorie">
-      <div class="container-fluid">
-        <div class="relative flex items-center justify-center gap-5">
-          <p><a href="masterthesis.php" class="text-sm font-heading uppercase text-dark">Masterthesis</a></p>
-          <p><a href="forschungsprojekte.php" class="text-sm font-heading uppercase text-dark">Forschungsprojekte</a></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Modals -->
-    <div class="modal-overlay">
-      <div class="modal">
-        <h2>Modal</h2>
-        <p>This is a modal</p>
-      </div>
-    </div>
-    <!--/ Modals -->
-
-    <?php include 'library/footer.php'; ?>
+        </section>
 
   </body>
 </html>
