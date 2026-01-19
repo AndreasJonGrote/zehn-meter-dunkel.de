@@ -4,19 +4,47 @@ const modalHandler = () => {
 	const overlays = document.querySelectorAll('.modal-overlay[data-modal]');
 	const logoLink = document.querySelector('header a[href*="#top"]');
 	const closeButton = document.querySelector('header button.bg-svg-menu-close-white');
+	const defaultTitle = document.title;
 	let activeOverlay = null;
 
 	if (!triggers.length || !overlays.length) {
 		return;
 	}
 
-	const openModal = (overlay) => {
+	/* Modal-Overlay anhand Key finden */
+	const getOverlayByKey = (key) => document.querySelector(`.modal-overlay[data-modal="${key}"]`);
+
+	/* Modaltitel aus H2 ziehen */
+	const getModalTitle = (overlay) => {
+		const title = overlay.querySelector('h2');
+		return title ? title.textContent.trim() : '';
+	};
+
+	/* Modal einblenden */
+	const openModal = (overlay, updateHash = true) => {
+		if (activeOverlay && activeOverlay !== overlay) {
+			activeOverlay.classList.add('opacity-0', 'pointer-events-none');
+			activeOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+		}
 		activeOverlay = overlay;
 		document.body.classList.add('modal-open');
 		overlay.classList.remove('opacity-0', 'pointer-events-none');
 		overlay.classList.add('opacity-100', 'pointer-events-auto');
+
+		const modalTitle = getModalTitle(overlay);
+		if (modalTitle) {
+			document.title = `${modalTitle} | ${defaultTitle}`;
+		}
+
+		if (updateHash) {
+			const key = overlay.getAttribute('data-modal');
+			if (key) {
+				window.location.hash = key;
+			}
+		}
 	};
 
+	/* Modal ausblenden */
 	const closeModal = () => {
 		if (!activeOverlay) {
 			return;
@@ -24,18 +52,20 @@ const modalHandler = () => {
 		activeOverlay.classList.add('opacity-0', 'pointer-events-none');
 		activeOverlay.classList.remove('opacity-100', 'pointer-events-auto');
 		document.body.classList.remove('modal-open');
+		document.title = defaultTitle;
+		history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
 		activeOverlay = null;
 	};
 
 	triggers.forEach((trigger) => {
 		trigger.addEventListener('click', (event) => {
 			const target = trigger.getAttribute('data-modal');
-			const overlay = document.querySelector(`.modal-overlay[data-modal="${target}"]`);
+			const overlay = getOverlayByKey(target);
 			if (!overlay) {
 				return;
 			}
 			event.preventDefault();
-			openModal(overlay);
+			openModal(overlay, true);
 		});
 	});
 
@@ -56,6 +86,15 @@ const modalHandler = () => {
 			event.preventDefault();
 			closeModal();
 		});
+	}
+
+	/* Onload: Hash-Modal öffnen */
+	if (window.location.hash) {
+		const hashKey = window.location.hash.replace('#', '');
+		const overlay = getOverlayByKey(hashKey);
+		if (overlay) {
+			openModal(overlay, false);
+		}
 	}
 };
 

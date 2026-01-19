@@ -175,7 +175,7 @@
                 nicht allein von Überwachung oder Licht.
               </p>
             </div>
-            <div class="col-span-6">
+            <div class="col-span-6 -mt-40">
               <div class="swiper modal-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
