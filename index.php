@@ -12,7 +12,7 @@
       
     <?php include 'library/header.php'; ?>
 
-    <div class="fixed inset-0 pointer-events-none bg-light/90 opacity-0 transition-opacity duration-300 [body.modal-open_&]:backdrop-blur-sm [body.modal-open_&]:opacity-100 z-10"></div>
+    <div class="fixed inset-0 pointer-events-none bg-light/90 opacity-0 transition-opacity duration-300 [body.modal-open_&]:backdrop-blur-lg [body.modal-open_&]:opacity-100 z-10"></div>
 
       <?php include 'views/hero.php'; ?>
 
@@ -42,20 +42,20 @@
             <div class="relative group col-span-3 col-start-7 cursor-pointer work-item parallax-item-[0.05]">
               <div class="image-fade-container relative aspect-[4/5] w-full">
                 <picture class="image-fade-item opacity-100 transition-opacity duration-[3000ms]">
-                  <source srcset="assets/laermschutzwall_i-03.webp" type="image/webp">
-                  <img src="assets/laermschutzwall_i-03.jpg" alt="Ausstellung" class="w-full">
+                  <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-03.webp" type="image/webp">
+                  <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-03.jpg" alt="Ausstellung" class="w-full">
                 </picture>
                 <picture class="image-fade-item absolute inset-0 opacity-0 transition-opacity duration-[3000ms]">
-                  <source srcset="assets/laermschutzwall_i-13.webp" type="image/webp">
-                  <img src="assets/laermschutzwall_i-13.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                  <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-13.webp" type="image/webp">
+                  <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-13.jpg" alt="Ausstellung" class="w-full h-full object-cover">
                 </picture>
                 <picture class="image-fade-item absolute inset-0 opacity-0 transition-opacity duration-[3000ms]">
-                  <source srcset="assets/laermschutzwall_i-21.webp" type="image/webp">
-                  <img src="assets/laermschutzwall_i-21.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                  <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-21.webp" type="image/webp">
+                  <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-21.jpg" alt="Ausstellung" class="w-full h-full object-cover">
                 </picture>
               </div>
               <h2 class="text-sm font-heading uppercase mt-3">Lärmschutzwall I</h2>
-              <a href="ausstellung/laermschutzwall-i.php" class="absolute inset-0 z-10"></a>
+              <a href="<?php the_url() ; ?>/laermschutzwall-i/" data-modal="laermschutzwall-i" class="absolute inset-0 z-10"></a>
             </div>
             <!--/ Lärmschutzwall I -->
 
@@ -63,11 +63,11 @@
             <div class="relative group col-span-3 cursor-pointer work-item parallax-item-[-0.05]">
               <div class="relative aspect-[4/3]">
                 <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
-                  <source src="assets/laermschutzwall_ii.mp4" type="video/mp4">
+                  <source src="<?php the_url() ; ?>/assets/laermschutzwall_ii.mp4" type="video/mp4">
                 </video>
               </div>
               <h2 class="text-sm font-heading uppercase mt-3">Lärmschutzwall II</h2>
-              <a href="ausstellung/laermschutzwall-ii.php" class="absolute inset-0 z-10"></a>
+              <a href="<?php the_url() ; ?>/laermschutzwall-ii/" data-modal="laermschutzwall-ii" class="absolute inset-0 z-10"></a>
             </div>
             <!--/ Lärmschutzwall II -->
           </div>
@@ -77,12 +77,12 @@
             <div class="relative group col-span-2 col-start-3 cursor-pointer work-item parallax-item-[0.05]">
               <div class="relative aspect-[3/4]">
                 <picture class="absolute inset-0">
-                  <source srcset="assets/ceres.webp" type="image/webp">
-                  <img src="assets/ceres.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                  <source srcset="<?php the_url() ; ?>/assets/ceres.webp" type="image/webp">
+                  <img src="<?php the_url() ; ?>/assets/ceres.jpg" alt="Ausstellung" class="w-full h-full object-cover">
                 </picture>
               </div>
               <h2 class="text-sm font-heading uppercase mt-3">Ceres-Drucker</h2>
-              <a href="ausstellung/ceres-projekt.php" class="absolute inset-0 z-10"></a>
+              <a href="<?php the_url() ; ?>/ceres-projekt/" data-modal="ceres-projekt" class="absolute inset-0 z-10"></a>
             </div>
             <!--/ Ceres -->
           </div>
@@ -92,27 +92,27 @@
             <div class="relative group col-span-3 col-start-6 cursor-pointer work-item parallax-item-[0.03]">
               <div class="image-fade-container relative aspect-[7/5]">
                 <picture class="image-fade-item opacity-100 transition-opacity duration-[3000ms]">
-                  <source srcset="assets/kesselbrink_i-links.webp" type="image/webp">
-                  <img src="assets/kesselbrink_i-links.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                  <source srcset="<?php the_url() ; ?>/assets/kesselbrink_i-links.webp" type="image/webp">
+                  <img src="<?php the_url() ; ?>/assets/kesselbrink_i-links.jpg" alt="Ausstellung" class="w-full h-full object-cover">
                 </picture>
                 <picture class="image-fade-item absolute inset-0 opacity-0 transition-opacity duration-[3000ms]">
-                  <source srcset="assets/kesselbrink_i-rechts.webp" type="image/webp">
-                  <img src="assets/kesselbrink_i-rechts.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                  <source srcset="<?php the_url() ; ?>/assets/kesselbrink_i-rechts.webp" type="image/webp">
+                  <img src="<?php the_url() ; ?>/assets/kesselbrink_i-rechts.jpg" alt="Ausstellung" class="w-full h-full object-cover">
                 </picture>
               </div>
               <h2 class="text-sm font-heading uppercase mt-3">Kesselbrink I</h2>
-              <a href="#kesselbrink-i" data-modal="kesselbrink-i" class="absolute inset-0 z-10"></a>
+              <a href="<?php the_url() ; ?>/kesselbrink-i/" data-modal="kesselbrink-i" class="absolute inset-0 z-10"></a>
             </div>
             <!--/ Kesselbrink I -->
             <!-- Kesselbrink II -->
             <div class="relative group col-span-3 cursor-pointer work-item parallax-item-[-0.05]">
               <div class="relative aspect-[4/3]">
                 <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
-                  <source src="assets/kesselbrink_ii.mp4" type="video/mp4">
+                  <source src="<?php the_url() ; ?>/assets/kesselbrink_ii.mp4" type="video/mp4">
                 </video>
               </div>
               <h2 class="text-sm font-heading uppercase mt-3">Kesselbrink II</h2>
-              <a href="ausstellung/kesselbrink-ii.php" class="absolute inset-0 z-10"></a>
+              <a href="<?php the_url() ; ?>/kesselbrink-ii/" data-modal="kesselbrink-ii" class="absolute inset-0 z-10"></a>
             </div>
             <!--/ Kesselbrink II -->
           </div>
@@ -122,22 +122,22 @@
             <div class="relative group col-span-3 col-start-2 cursor-pointer work-item parallax-item-[0.05]">
               <div class="relative aspect-[4/3]">
                 <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
-                  <source src="assets/ich-habe-kein-gesicht_membran.mp4" type="video/mp4">
+                  <source src="<?php the_url() ; ?>/assets/ich-habe-kein-gesicht_membran.mp4" type="video/mp4">
                 </video>
               </div>
               <h2 class="text-sm font-heading uppercase mt-3">Membran der Anonymität</h2>
-              <a href="ausstellung/membran-der-anonymitaet.php" class="absolute inset-0 z-10"></a>
+              <a href="<?php the_url() ; ?>/membran-der-anonymitaet/" data-modal="membran-der-anonymitaet" class="absolute inset-0 z-10"></a>
             </div>
             <!--/ Membran der Anonymität -->
             <!-- Unterführung -->
             <div class="relative group col-span-3 col-start-10 cursor-pointer work-item mt-[150px] parallax-item-[-0.05]">
               <div class="relative aspect-[4/3]">
                 <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
-                  <source src="assets/unterfuehrung.mp4" type="video/mp4">
+                  <source src="<?php the_url() ; ?>/assets/unterfuehrung.mp4" type="video/mp4">
                 </video>
               </div>
               <h2 class="text-sm font-heading uppercase mt-3">Unterführung</h2>
-              <a href="ausstellung/unterfuehrung.php" class="absolute inset-0 z-10"></a>
+              <a href="<?php the_url() ; ?>/unterfuehrung/" data-modal="unterfuehrung" class="absolute inset-0 z-10"></a>
             </div>
             <!--/ Unterführung -->
           </div>
@@ -147,57 +147,16 @@
       <section class="bg-light text-dark" id="theorie">
         <div class="container-fluid">
           <div class="relative flex items-center justify-center gap-5">
-            <p><a href="masterthesis.php" class="text-sm font-heading uppercase text-dark">Masterthesis</a></p>
-            <p><a href="forschungsprojekte.php" class="text-sm font-heading uppercase text-dark">Forschungsprojekte</a></p>
+            <p><a href="<?php the_url() ; ?>/masterthesis/" class="text-sm font-heading uppercase text-dark">Masterthesis</a></p>
+            <p><a href="<?php the_url() ; ?>/forschungsprojekte/" class="text-sm font-heading uppercase text-dark">Forschungsprojekte</a></p>
           </div>
         </div>
       </section>
+    
+
+      <?php include 'views/modals-ausstellung.php'; ?>
 
       <?php include 'library/footer.php'; ?>
-
-      
-
-      <section class="modal-overlay fixed inset-0 z-20 overflow-y-auto overscroll-contain opacity-0 pointer-events-none transition-opacity duration-300" data-modal="kesselbrink-i">
-        <div class="container-fluid mt-2 max-w-screen-lg">
-          <h2 class="text-xl font-heading uppercase mb-10">Kesselbrink I</h2>
-          <div class="grid grid-cols-12 relative gap-12">
-            <div class="col-span-6 text-md">
-              <p class="text-justify hyphens-auto">
-                Eine erhöhte Gesamtansicht ordnet den Platz wie eine horizontale Schnittfläche: 
-                vordergründig Strauchwerk und Sitzelemente, mittig Wegeachsen und Spiellandschaft, 
-                dahinter Fahrspuren und Parkreihen, ganz hinten ein Häuserband. Die Schwarz‑Weiß‑Setzung 
-                entzieht dem Ort seine alltägliche Farbigkeit und reduziert ihn auf Geometrie, Licht 
-                und Blickachsen; Personen erscheinen klein und verteilt, nicht als Hauptfiguren, 
-                sondern als soziale Markierungen von Aufenthalt, Passage und Nebeneinander. 
-                In <span class="italic">Kesselbrink I</span> wird so eine abstrahierte Platzfigur lesbar, 
-                in der sich Sichtfelder überlagern und Sicherheit als Verhandlung im öffentlichen Raum 
-                sichtbar wird – als Resultat von Sichtbarkeit, Nutzung und gemeinsamen Regeln, 
-                nicht allein von Überwachung oder Licht.
-              </p>
-            </div>
-            <div class="col-span-6 -mt-40">
-              <div class="swiper modal-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <picture>
-                      <source srcset="assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
-                      <img src="assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide">
-                    <picture>
-                      <source srcset="assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
-                      <img src="assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3">
-                    </picture>
-                  </div>
-                </div>
-
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
   </body>
 </html>

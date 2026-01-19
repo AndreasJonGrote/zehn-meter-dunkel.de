@@ -1,0 +1,36 @@
+RewriteEngine On
+
+RewriteBase /zehn-meter-dunkel.de/
+
+# Verhindert Content-Negotiation (MultiViews), die mit mod_rewrite zu internen Redirect-Loops führen kann
+Options -MultiViews
+
+# Verhindert PATH_INFO auf PHP-Dateien (z.B. /academy.php/test), das zu internen Redirect-Loops führen kann
+AcceptPathInfo Off
+
+
+# Fetch sitemap.xml for SEO purposes
+RewriteRule ^sitemap.xml$ index.php?sitemap=true [L,QSA]
+
+# Section- und Modal-URLs dynamisch auf Startseite abbilden
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php !-f
+RewriteRule ^[^/]+/?$ index.php [L,QSA]
+
+# Generische Auflösung: Zusätzliche Segmente immer auf die Basis-Seite mappen
+# Beispiel: /academy/test/ -> academy.php
+# Hinweis: Kein Redirect (wie WordPress), damit keine unnötigen Redirect-Ketten entstehen.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/.+$ $1.php [L,QSA]
+
+# URLs ohne .php auflösen, wenn Datei existiert
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.+?)/?$ $1.php [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/404/?$
+RewriteRule .* /404/ [L,R=301]

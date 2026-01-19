@@ -4,8 +4,8 @@
       <div class="col-span-4 self-end relative z-0">
         <div class="parallax-wrapper relative">
           <picture class="parallax-item-[-0.5] w-full absolute bottom-16 -right-32">
-            <source srcset="assets/atlas-der-unsicherheit_rechteck.webp" type="image/webp">
-            <img src="assets/atlas-der-unsicherheit_rechteck.jpg" alt="Ausstellung" class="w-full">
+            <source srcset="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_rechteck.webp" type="image/webp">
+            <img src="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_rechteck.jpg" alt="Ausstellung" class="w-full">
           </picture>
         </div>
       </div>

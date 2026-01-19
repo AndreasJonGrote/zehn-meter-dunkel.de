@@ -13,8 +13,8 @@
     <?php include 'library/header.php'; ?>
 
     <picture class="absolute top-[20%] left-12 w-[35%] max-w-[400px] parallax-item-[0.4]">
-      <source srcset="assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
-      <img src="assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3">
+      <source srcset="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
+      <img src="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3">
     </picture>
 
     <section class="text-light mix-blend-difference">
@@ -62,8 +62,8 @@
         </div>
         <div class="grid grid-cols-12 h-full relative items-center parallax-item-[-0.3] mt-10">
           <div class="col-span-6 col-start-9 font-medium text-md font-body">
-            <p><a href="heimweg-umfrage.php" class="text-sm font-heading uppercase">Zur Heimweg-Umfrage</a></p>
-            <p><a href="ceres-projekt.php" class="text-sm font-heading uppercase">Zum Ceres-Projekt</a></p>
+            <p><a href="<?php the_url() ; ?>/heimweg-umfrage/" class="text-sm font-heading uppercase">Zur Heimweg-Umfrage</a></p>
+            <p><a href="<?php the_url() ; ?>/ceres-projekt/" class="text-sm font-heading uppercase">Zum Ceres-Projekt</a></p>
           </div>
         </div>
       </div>

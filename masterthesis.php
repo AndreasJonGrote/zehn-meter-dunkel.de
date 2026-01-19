@@ -13,8 +13,8 @@
     <?php include 'library/header.php'; ?>
 
     <picture class="absolute top-5 right-12 w-[35%] max-w-[400px] parallax-item-[0.3] z-10">
-      <source srcset="assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
-      <img src="assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3">
+      <source srcset="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
+      <img src="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3">
     </picture>
 
     <section class="bg-paper text-dark">
@@ -60,7 +60,7 @@
       <div class="grid grid-cols-12 gap-5 mb-10">
 
         <div class="col-span-4 col-start-3 parallax-item-[-0.02]">
-          <video src="assets/das-rauschen-des-moments-10s-small.mp4" class="w-full h-auto mb-3 aspect-auto" autoplay muted loop></video>
+          <video src="<?php the_url() ; ?>/assets/das-rauschen-des-moments-10s-small.mp4" class="w-full h-auto mb-3 aspect-auto" autoplay muted loop></video>
         </div>
 
       </div>
@@ -86,8 +86,8 @@
           </div>
           <div class="col-span-3 col-start-7 parallax-item-[-0.07]">
               <picture>
-                <source srcset="assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
-                <img src="assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3">
+                <source srcset="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
+                <img src="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3">
               </picture>
             </div>
             <div class="col-span-3 col-start-10 work-item cursor-pointer">
@@ -115,15 +115,10 @@
 
             <div class="col-span-4 col-start-8 relative parallax-item-[0.07]">
               <video class="w-full aspect-[4/3] object-cover" autoplay muted loop playsinline webkit-playsinline>
-                <source src="assets/ich-habe-kein-gesicht_membran.mp4" type="video/mp4">
+                <source src="<?php the_url() ; ?>/assets/ich-habe-kein-gesicht_membran.mp4" type="video/mp4">
               </video>
             </div>
-
-            
           </div>
-
-
-
         </div>
       </div>
     </section>
@@ -131,8 +126,8 @@
     <section class="bg-light text-dark" id="theorie">
       <div class="container-fluid">
         <div class="relative flex items-center justify-center gap-5">
-          <p><a href="index.php#ausstellung" class="text-sm font-heading uppercase text-dark">Ausstellung</a></p>
-          <p><a href="forschungsprojekte.php" class="text-sm font-heading uppercase text-dark">Forschungsprojekte</a></p>
+          <p><a href="<?php the_url() ; ?>/ausstellung/" class="text-sm font-heading uppercase text-dark">Ausstellung</a></p>
+          <p><a href="<?php the_url() ; ?>/forschungsprojekte/" class="text-sm font-heading uppercase text-dark">Forschungsprojekte</a></p>
         </div>
       </div>
     </section>

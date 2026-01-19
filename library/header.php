@@ -30,8 +30,8 @@
       <div class="col-span-6">
         <ul class="flex items-center justify-end gap-5 text-light text-xs [body.modal-open_&]:hidden">
           <li><a href="<?php the_url() ; ?>/#ausstellung" class="font-heading uppercase">Ausstellung</a></li>
-          <li><a href="<?php the_url() ; ?>/masterthesis.php" class="font-heading uppercase">Masterthesis</a></li>
-          <li><a href="<?php the_url() ; ?>/forschungsprojekte.php" class="font-heading uppercase">Forschungsprojekte</a></li>
+          <li><a href="<?php the_url() ; ?>/masterthesis/" class="font-heading uppercase">Masterthesis</a></li>
+          <li><a href="<?php the_url() ; ?>/forschungsprojekte/" class="font-heading uppercase">Forschungsprojekte</a></li>
         </ul>
         <div class="hidden text-light items-center justify-end gap-5 [body.modal-open_&]:flex">
           

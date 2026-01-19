@@ -20,20 +20,70 @@ const debug = true;
 	smoothScroll();
 	initImageFade();
 	modalHandler();
-	new Swiper('.modal-swiper', {
-		modules: [Autoplay, Navigation, Pagination],
-		loop: true,
-		autoplay: {
-			delay: 5000,
-			disableOnInteraction: false
-		},
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev'
-		},
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true
+
+	const swiperInstances = new WeakMap();
+
+	/* Modal-Swiper initialisieren */
+	const initModalSwipers = (overlay) => {
+		if (!overlay) {
+			return;
 		}
+		const modalSwipers = overlay.querySelectorAll('.modal-swiper');
+		if (modalSwipers.length === 0) {
+			return;
+		}
+		modalSwipers.forEach((swiperElement) => {
+			if (swiperInstances.has(swiperElement)) {
+				return;
+			}
+			const slideCount = swiperElement.querySelectorAll('.swiper-slide').length;
+			const enableLoop = slideCount > 1;
+
+			const instance = new Swiper(swiperElement, {
+				modules: [Autoplay, Navigation, Pagination],
+				loop: enableLoop,
+				autoplay: enableLoop ? {
+					delay: 5000,
+					disableOnInteraction: false
+				} : false,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev'
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true
+				}
+			});
+
+			swiperInstances.set(swiperElement, instance);
+		});
+	};
+
+	/* Modal-Swiper entfernen */
+	const destroyModalSwipers = (overlay) => {
+		if (!overlay) {
+			return;
+		}
+		const modalSwipers = overlay.querySelectorAll('.modal-swiper');
+		if (modalSwipers.length === 0) {
+			return;
+		}
+		modalSwipers.forEach((swiperElement) => {
+			const instance = swiperInstances.get(swiperElement);
+			if (!instance) {
+				return;
+			}
+			instance.destroy(true, true);
+			swiperInstances.delete(swiperElement);
+		});
+	};
+
+	document.addEventListener('modal:open', (event) => {
+		initModalSwipers(event.detail?.overlay);
+	});
+
+	document.addEventListener('modal:close', (event) => {
+		destroyModalSwipers(event.detail?.overlay);
 	});
 })();
