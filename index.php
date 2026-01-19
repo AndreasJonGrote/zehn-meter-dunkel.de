@@ -8,11 +8,11 @@
 
     <title>ZEHN METER DUNKEL | Andreas Jon Grote</title>
   </head>
-  <body class="bg-light modal-open">
+  <body class="bg-light">
       
     <?php include 'library/header.php'; ?>
 
-    <div class="fixed inset-0 pointer-events-none bg-light/90 [body.modal-open_&]:backdrop-blur-sm z-10"></div>
+    <div class="fixed inset-0 pointer-events-none bg-light/90 opacity-0 transition-opacity duration-300 [body.modal-open_&]:backdrop-blur-sm [body.modal-open_&]:opacity-100 z-10"></div>
 
       <?php include 'views/hero.php'; ?>
 
@@ -101,7 +101,7 @@
                 </picture>
               </div>
               <h2 class="text-sm font-heading uppercase mt-3">Kesselbrink I</h2>
-              <a href="ausstellung/kesselbrink-i.php" class="absolute inset-0 z-10"></a>
+              <a href="#kesselbrink-i" data-modal="kesselbrink-i" class="absolute inset-0 z-10"></a>
             </div>
             <!--/ Kesselbrink I -->
             <!-- Kesselbrink II -->
@@ -157,33 +157,47 @@
 
       
 
-        <section class="modal-overlay fixed inset-0 z-20 overflow-y-auto overscroll-contain">
-          <div class="container-fluid mt-2 max-w-screen-lg">
-            <h2 class="text-xl font-heading uppercase mb-10">Kesselbrink I</h2>
-            <div class="grid grid-cols-12 relative gap-12">
-              <div class="col-span-6 text-md">
-                <p class="text-justify hyphens-auto">
-                  Eine erhöhte Gesamtansicht ordnet den Platz wie eine horizontale Schnittfläche: 
-                  vordergründig Strauchwerk und Sitzelemente, mittig Wegeachsen und Spiellandschaft, 
-                  dahinter Fahrspuren und Parkreihen, ganz hinten ein Häuserband. Die Schwarz‑Weiß‑Setzung 
-                  entzieht dem Ort seine alltägliche Farbigkeit und reduziert ihn auf Geometrie, Licht 
-                  und Blickachsen; Personen erscheinen klein und verteilt, nicht als Hauptfiguren, 
-                  sondern als soziale Markierungen von Aufenthalt, Passage und Nebeneinander. 
-                  In <span class="italic">Kesselbrink I</span> wird so eine abstrahierte Platzfigur lesbar, 
-                  in der sich Sichtfelder überlagern und Sicherheit als Verhandlung im öffentlichen Raum 
-                  sichtbar wird – als Resultat von Sichtbarkeit, Nutzung und gemeinsamen Regeln, 
-                  nicht allein von Überwachung oder Licht.
-                </p>
-              </div>
-              <div class="col-span-6">
-                <picture class="">
-                  <source srcset="assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
-                  <img src="assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3">
-                </picture>
+      <section class="modal-overlay fixed inset-0 z-20 overflow-y-auto overscroll-contain opacity-0 pointer-events-none transition-opacity duration-300" data-modal="kesselbrink-i">
+        <div class="container-fluid mt-2 max-w-screen-lg">
+          <h2 class="text-xl font-heading uppercase mb-10">Kesselbrink I</h2>
+          <div class="grid grid-cols-12 relative gap-12">
+            <div class="col-span-6 text-md">
+              <p class="text-justify hyphens-auto">
+                Eine erhöhte Gesamtansicht ordnet den Platz wie eine horizontale Schnittfläche: 
+                vordergründig Strauchwerk und Sitzelemente, mittig Wegeachsen und Spiellandschaft, 
+                dahinter Fahrspuren und Parkreihen, ganz hinten ein Häuserband. Die Schwarz‑Weiß‑Setzung 
+                entzieht dem Ort seine alltägliche Farbigkeit und reduziert ihn auf Geometrie, Licht 
+                und Blickachsen; Personen erscheinen klein und verteilt, nicht als Hauptfiguren, 
+                sondern als soziale Markierungen von Aufenthalt, Passage und Nebeneinander. 
+                In <span class="italic">Kesselbrink I</span> wird so eine abstrahierte Platzfigur lesbar, 
+                in der sich Sichtfelder überlagern und Sicherheit als Verhandlung im öffentlichen Raum 
+                sichtbar wird – als Resultat von Sichtbarkeit, Nutzung und gemeinsamen Regeln, 
+                nicht allein von Überwachung oder Licht.
+              </p>
+            </div>
+            <div class="col-span-6">
+              <div class="swiper modal-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <picture>
+                      <source srcset="assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
+                      <img src="assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide">
+                    <picture>
+                      <source srcset="assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
+                      <img src="assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3">
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
   </body>
 </html>

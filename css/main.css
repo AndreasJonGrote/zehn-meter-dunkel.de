@@ -1,3 +1,4 @@
+@import "npm:swiper/swiper-bundle.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -125,8 +126,21 @@
     @apply overflow-hidden ;
   }
 
-  .modal {
-    
-  }
+	.modal-swiper .swiper-pagination {
+		position: static;
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+		margin-top: 12px;
+	}
+
+	.modal-swiper .swiper-pagination-bullet {
+		background: #262522;
+		opacity: 0.35;
+	}
+
+	.modal-swiper .swiper-pagination-bullet-active {
+		opacity: 1;
+	}
 
 }
