@@ -104,7 +104,7 @@
             <div class="relative aspect-[3/4]">
               <picture class="absolute inset-0">
                 <source srcset="assets/ceres.webp" type="image/webp">
-                <img src="assets/ceres.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                <img src="assets/ceres.jpg" alt="Ausstellung" class="w-full h-full object-cover" loading="lazy" decoding="async">
               </picture>
             </div>
             <h2 class="text-sm font-heading uppercase mt-3">Ceres-Drucker</h2>

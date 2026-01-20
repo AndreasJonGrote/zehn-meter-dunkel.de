@@ -11,11 +11,12 @@
               $webpPath = str_replace('.jpg', '.webp', $jpgPath);
               $alt = str_replace(['assets/atlas-der-unsicherheit_', '.jpg'], '', $jpgPath);
               $hiddenClass = $first ? '' : 'hidden';
+              $loadingAttr = $first ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
               $first = false;
             ?>
             <picture class="atlas-rotator-item absolute inset-0 <?php echo $hiddenClass; ?>">
               <source srcset="<?php echo $webpPath; ?>" type="image/webp">
-              <img src="<?php the_url() ; ?>/<?php echo $jpgPath; ?>" alt="<?php echo $alt; ?>" class="w-full h-full object-contain">
+              <img src="<?php the_url() ; ?>/<?php echo $jpgPath; ?>" alt="<?php echo $alt; ?>" class="w-full h-full object-contain" <?php echo $loadingAttr; ?> decoding="async">
             </picture>
             <?php endforeach; ?>
           </div>

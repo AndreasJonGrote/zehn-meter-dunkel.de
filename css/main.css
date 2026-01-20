@@ -72,9 +72,49 @@
 
 @layer components {
 
-  body {
-    @apply font-body text-grey;
-  }
+	html,
+	body {
+		@apply font-body text-grey;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+
+	html::-webkit-scrollbar,
+	body::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+
+	.custom-scrollbar {
+		position: fixed;
+		top: 0;
+		right: 6px;
+		width: 2px;
+		height: 100%;
+		pointer-events: auto;
+		mix-blend-mode: difference;
+		z-index: 50;
+	}
+
+	.custom-scrollbar-thumb {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 2px;
+		background: #fff;
+		border-radius: 9999px;
+		opacity: 0.9;
+		cursor: grab;
+		touch-action: none;
+	}
+
+	.custom-scrollbar-thumb:active {
+		cursor: grabbing;
+	}
+
+	.modal-open .custom-scrollbar {
+		display: none;
+	}
 
 	.container-fluid {
 		@apply relative px-5 md:px-5 py-24 mx-auto;
@@ -125,6 +165,24 @@
   .modal-open {
     @apply overflow-hidden ;
   }
+
+	.modal-overlay {
+		scrollbar-width: thin;
+		scrollbar-color: #fff transparent;
+	}
+
+	.modal-overlay::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	.modal-overlay::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	.modal-overlay::-webkit-scrollbar-thumb {
+		background: #fff;
+		border-radius: 9999px;
+	}
 
 	.modal-swiper .swiper-pagination {
 		position: static;

@@ -17,31 +17,31 @@
             <div class="swiper-slide">
               <picture>
                 <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-01.webp" type="image/webp">
-                <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-01.jpg" alt="Lärmschutzwall I" class="w-full h-auto mb-3">
+                <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-01.jpg" alt="Lärmschutzwall I" class="w-full h-auto mb-3" loading="lazy" decoding="async">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
                 <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-03.webp" type="image/webp">
-                <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-03.jpg" alt="Lärmschutzwall I" class="w-full h-auto mb-3">
+                <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-03.jpg" alt="Lärmschutzwall I" class="w-full h-auto mb-3" loading="lazy" decoding="async">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
                 <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-13.webp" type="image/webp">
-                <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-13.jpg" alt="Lärmschutzwall I" class="w-full h-auto mb-3">
+                <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-13.jpg" alt="Lärmschutzwall I" class="w-full h-auto mb-3" loading="lazy" decoding="async">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
                 <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-19.webp" type="image/webp">
-                <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-19.jpg" alt="Lärmschutzwall I" class="w-full h-auto mb-3">
+                <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-19.jpg" alt="Lärmschutzwall I" class="w-full h-auto mb-3" loading="lazy" decoding="async">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
                 <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-21.webp" type="image/webp">
-                <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-21.jpg" alt="Lärmschutzwall I" class="w-full h-auto mb-3">
+                <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-21.jpg" alt="Lärmschutzwall I" class="w-full h-auto mb-3" loading="lazy" decoding="async">
               </picture>
             </div>
           </div>
@@ -72,10 +72,43 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="relative aspect-[4/3]">
-                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
                   <source src="<?php the_url() ; ?>/assets/laermschutzwall_ii.mp4" type="video/mp4">
                 </video>
               </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="modal-overlay fixed inset-0 z-20 overflow-y-auto overscroll-contain opacity-0 pointer-events-none transition-opacity duration-300" data-modal="ceres-drucker">
+  <div class="container-fluid mt-2 max-w-screen-lg">
+    <h2 class="text-xl font-heading uppercase mb-10">Ceres-Drucker</h2>
+    <div class="grid grid-cols-12 relative gap-12">
+      <div class="col-span-6 text-md">
+        <p class="text-justify hyphens-auto">
+        An einer Wand hängt eine schlichte Box, in der ein Bondrucker arbeitet. 
+        In kurzen Intervallen druckt er auf Endlospapier jene Schlagzeilen, 
+        die als Meldungen mit intentioneller, ziviler Gewalt markiert wurden; 
+        das Papier läuft weiter und sammelt sich am Boden zu einem wachsenden, 
+        zunehmend unübersichtlichen Papierkörper. So wird die digitale Frequenz 
+        der Nachrichten als physische Spur lesbar – nicht die einzelne Meldung, 
+        sondern der kontinuierliche Zustrom, die Dauer, das Wiederkehren, 
+        die Gleichgültigkeit der Taktung, in der Gewaltnachrichten erscheinen.
+        </p>
+      </div>
+      <div class="col-span-6">
+        <div class="swiper modal-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="<?php the_url() ; ?>/assets/ceres.webp" type="image/webp">
+                <img src="<?php the_url() ; ?>/assets/ceres.jpg" alt="Ceres-Drucker" class="w-full h-auto mb-3" loading="lazy" decoding="async">
+              </picture>
             </div>
           </div>
           <div class="swiper-pagination"></div>
@@ -109,13 +142,13 @@
             <div class="swiper-slide">
               <picture>
                 <source srcset="<?php the_url() ; ?>/assets/kesselbrink_i-links.webp" type="image/webp">
-                <img src="<?php the_url() ; ?>/assets/kesselbrink_i-links.jpg" alt="Kesselbrink I" class="w-full h-auto mb-3">
+                <img src="<?php the_url() ; ?>/assets/kesselbrink_i-links.jpg" alt="Kesselbrink I" class="w-full h-auto mb-3" loading="lazy" decoding="async">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
                 <source srcset="<?php the_url() ; ?>/assets/kesselbrink_i-rechts.webp" type="image/webp">
-                <img src="<?php the_url() ; ?>/assets/kesselbrink_i-rechts.jpg" alt="Kesselbrink I" class="w-full h-auto mb-3">
+                <img src="<?php the_url() ; ?>/assets/kesselbrink_i-rechts.jpg" alt="Kesselbrink I" class="w-full h-auto mb-3" loading="lazy" decoding="async">
               </picture>
             </div>
           </div>
@@ -149,7 +182,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="relative aspect-[4/3]">
-                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
                   <source src="<?php the_url() ; ?>/assets/kesselbrink_ii.mp4" type="video/mp4">
                 </video>
               </div>
@@ -183,7 +216,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="relative aspect-[4/3]">
-                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
                   <source src="<?php the_url() ; ?>/assets/ich-habe-kein-gesicht_membran.mp4" type="video/mp4">
                 </video>
               </div>
@@ -215,7 +248,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="relative aspect-[4/3]">
-                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
                   <source src="<?php the_url() ; ?>/assets/unterfuehrung.mp4" type="video/mp4">
                 </video>
               </div>

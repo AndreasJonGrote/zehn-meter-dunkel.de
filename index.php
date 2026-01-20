@@ -43,15 +43,15 @@
               <div class="image-fade-container relative aspect-[4/5] w-full">
                 <picture class="image-fade-item opacity-100 transition-opacity duration-[3000ms]">
                   <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-03.webp" type="image/webp">
-                  <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-03.jpg" alt="Ausstellung" class="w-full">
+                  <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-03.jpg" alt="Ausstellung" class="w-full" loading="lazy" decoding="async">
                 </picture>
                 <picture class="image-fade-item absolute inset-0 opacity-0 transition-opacity duration-[3000ms]">
                   <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-13.webp" type="image/webp">
-                  <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-13.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                  <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-13.jpg" alt="Ausstellung" class="w-full h-full object-cover" loading="lazy" decoding="async">
                 </picture>
                 <picture class="image-fade-item absolute inset-0 opacity-0 transition-opacity duration-[3000ms]">
                   <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-21.webp" type="image/webp">
-                  <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-21.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                  <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-21.jpg" alt="Ausstellung" class="w-full h-full object-cover" loading="lazy" decoding="async">
                 </picture>
               </div>
               <h2 class="text-sm font-heading uppercase mt-3">Lärmschutzwall I</h2>
@@ -62,7 +62,7 @@
             <!-- Lärmschutzwall II -->
             <div class="relative group col-span-3 cursor-pointer work-item parallax-item-[-0.05]">
               <div class="relative aspect-[4/3]">
-                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
                   <source src="<?php the_url() ; ?>/assets/laermschutzwall_ii.mp4" type="video/mp4">
                 </video>
               </div>
@@ -78,11 +78,11 @@
               <div class="relative aspect-[3/4]">
                 <picture class="absolute inset-0">
                   <source srcset="<?php the_url() ; ?>/assets/ceres.webp" type="image/webp">
-                  <img src="<?php the_url() ; ?>/assets/ceres.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                  <img src="<?php the_url() ; ?>/assets/ceres.jpg" alt="Ausstellung" class="w-full h-full object-cover" loading="lazy" decoding="async">
                 </picture>
               </div>
               <h2 class="text-sm font-heading uppercase mt-3">Ceres-Drucker</h2>
-              <a href="<?php the_url() ; ?>/ceres-projekt/" data-modal="ceres-projekt" class="absolute inset-0 z-10"></a>
+              <a href="<?php the_url() ; ?>/ceres-drucker/" data-modal="ceres-drucker" class="absolute inset-0 z-10"></a>
             </div>
             <!--/ Ceres -->
           </div>
@@ -93,11 +93,11 @@
               <div class="image-fade-container relative aspect-[7/5]">
                 <picture class="image-fade-item opacity-100 transition-opacity duration-[3000ms]">
                   <source srcset="<?php the_url() ; ?>/assets/kesselbrink_i-links.webp" type="image/webp">
-                  <img src="<?php the_url() ; ?>/assets/kesselbrink_i-links.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                  <img src="<?php the_url() ; ?>/assets/kesselbrink_i-links.jpg" alt="Ausstellung" class="w-full h-full object-cover" loading="lazy" decoding="async">
                 </picture>
                 <picture class="image-fade-item absolute inset-0 opacity-0 transition-opacity duration-[3000ms]">
                   <source srcset="<?php the_url() ; ?>/assets/kesselbrink_i-rechts.webp" type="image/webp">
-                  <img src="<?php the_url() ; ?>/assets/kesselbrink_i-rechts.jpg" alt="Ausstellung" class="w-full h-full object-cover">
+                  <img src="<?php the_url() ; ?>/assets/kesselbrink_i-rechts.jpg" alt="Ausstellung" class="w-full h-full object-cover" loading="lazy" decoding="async">
                 </picture>
               </div>
               <h2 class="text-sm font-heading uppercase mt-3">Kesselbrink I</h2>
@@ -107,7 +107,7 @@
             <!-- Kesselbrink II -->
             <div class="relative group col-span-3 cursor-pointer work-item parallax-item-[-0.05]">
               <div class="relative aspect-[4/3]">
-                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
                   <source src="<?php the_url() ; ?>/assets/kesselbrink_ii.mp4" type="video/mp4">
                 </video>
               </div>
@@ -121,7 +121,7 @@
             <!-- Membran der Anonymität -->
             <div class="relative group col-span-3 col-start-2 cursor-pointer work-item parallax-item-[0.05]">
               <div class="relative aspect-[4/3]">
-                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
                   <source src="<?php the_url() ; ?>/assets/ich-habe-kein-gesicht_membran.mp4" type="video/mp4">
                 </video>
               </div>
@@ -132,7 +132,7 @@
             <!-- Unterführung -->
             <div class="relative group col-span-3 col-start-10 cursor-pointer work-item mt-[150px] parallax-item-[-0.05]">
               <div class="relative aspect-[4/3]">
-                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline>
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
                   <source src="<?php the_url() ; ?>/assets/unterfuehrung.mp4" type="video/mp4">
                 </video>
               </div>

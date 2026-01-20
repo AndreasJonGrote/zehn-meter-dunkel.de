@@ -5,7 +5,7 @@
         <div class="parallax-wrapper relative">
           <picture class="parallax-item-[-0.5] w-full absolute bottom-16 -right-32">
             <source srcset="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_rechteck.webp" type="image/webp">
-            <img src="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_rechteck.jpg" alt="Ausstellung" class="w-full">
+            <img src="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_rechteck.jpg" alt="Ausstellung" class="w-full" loading="lazy" decoding="async">
           </picture>
         </div>
       </div>

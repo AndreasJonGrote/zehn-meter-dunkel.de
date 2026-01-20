@@ -14,7 +14,7 @@
 
     <picture class="absolute top-[20%] left-12 w-[35%] max-w-[400px] parallax-item-[0.4]">
       <source srcset="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
-      <img src="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3">
+      <img src="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3" loading="lazy" decoding="async">
     </picture>
 
     <section class="text-light mix-blend-difference">

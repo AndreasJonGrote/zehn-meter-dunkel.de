@@ -4,6 +4,8 @@ import startAutoplayVideos from './global/videoautoplay';
 import imageRotator from './global/imagerotator';
 import parallax from './global/parallax';
 import smoothScroll from './global/smoothscroll';
+import initScrollbar from './global/scrollbar';
+import initMediaLoader from './global/medialoader';
 import initImageFade from './global/imagefade';
 import modalHandler from './global/modals';
 import Swiper from 'swiper';
@@ -18,6 +20,8 @@ const debug = true;
 	imageRotator();
 	parallax();
 	smoothScroll();
+	initScrollbar();
+	initMediaLoader();
 	initImageFade();
 	modalHandler();
 
