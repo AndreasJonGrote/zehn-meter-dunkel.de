@@ -122,12 +122,19 @@ const smoothScroll = () => {
 		 * Wheel-Events abfangen und Ziel-Scroll setzen.
 		 */
 		const onWheel = (event) => {
+			if (document.body.classList.contains('modal-open')) {
+				return;
+			}
+
 			if (event.ctrlKey) {
 				return;
 			}
 
 			event.preventDefault();
-			currentY = window.scrollY;
+			if (!isAnimating) {
+				currentY = window.scrollY;
+				targetY = window.scrollY;
+			}
 			targetY = Math.min(getMaxScroll(), Math.max(0, targetY + normalizeDelta(event)));
 
 			if (!isAnimating) {

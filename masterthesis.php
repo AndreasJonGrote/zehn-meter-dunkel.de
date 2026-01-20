@@ -12,6 +12,9 @@
       
     <?php include 'library/header.php'; ?>
 
+    <div class="fixed inset-0 pointer-events-none bg-light/90 opacity-0 transition-opacity duration-300 [body.modal-open_&]:backdrop-blur-lg [body.modal-open_&]:opacity-100 z-10"></div>
+
+
     <picture class="absolute top-5 right-12 w-[35%] max-w-[400px] parallax-item-[0.3] z-10">
       <source srcset="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_e-roller.webp" type="image/webp">
       <img src="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_e-roller.jpg" alt="Atlas der (Un-)Sicherheit" class="w-full h-auto mb-3" loading="lazy" decoding="async">
@@ -70,8 +73,10 @@
           <div class="col-span-3 col-start-4 work-item cursor-pointer parallax-item-[-0.05]">
             <h2 class="text-sm font-heading uppercase mb-1">Das Rauschen des Moments</h2>
             <p class="text-justify">
-              Interaktive Installation, die urbane Netzwerke körperlich erfahrbar macht. Zwei visuelle Ebenen zeigen, wie Bewegung zum Erkenntnisraum wird.<br><a href="https://www.xjonx.com/das-rauschen-des-moments" target="_blank" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
+              Interaktive Installation, die urbane Netzwerke körperlich erfahrbar macht. Zwei visuelle Ebenen zeigen, wie Bewegung zum Erkenntnisraum wird.<br>
+              <a href="<?php the_url() ; ?>/das-rauschen-des-moments/" data-modal="das-rauschen-des-moments" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
             </p>
+            
           </div>
 
 
@@ -99,11 +104,13 @@
           </div>
 
           <div class="grid grid-cols-12 gap-5 text-md font-body hyphens-auto">
-            <div class="col-span-3 col-start-1 mt-10 work-item cursor-pointer">
+            <div class="col-span-3 col-start-1 mt-10 work-item cursor-pointer relative">
               <h2 class="text-sm font-heading uppercase mb-3">Ceres</h2>
               <p class="text-justify">
-                Systematische Analyse von Schlagzeilen entwickelt die Ceres Content Markers zur Erkennung gewaltbezogener Sprache. Ein Thermodrucker übersetzt digitale Nachrichten in eine physische Spur.<br><a href="https://www.xjonx.com/das-rauschen-des-moments" target="_blank" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
+                Systematische Analyse von Schlagzeilen entwickelt die Ceres Content Markers zur Erkennung gewaltbezogener Sprache. Ein Thermodrucker übersetzt digitale Nachrichten in eine physische Spur.<br>
+                <a href="https://www.xjonx.com/das-rauschen-des-moments" target="_blank" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
               </p>
+              <a href="<?php the_url() ; ?>/das-rauschen-des-moments/" data-modal="das-rauschen-des-moments" class="absolute inset-0 z-10"></a>
             </div>
             
             <div class="col-span-3 col-start-5 work-item cursor-pointer parallax-item-[-0.05]">
@@ -131,6 +138,8 @@
         </div>
       </div>
     </section>
+
+    <?php include 'views/modals-masterthesis.php'; ?>
 
     <?php include 'library/footer.php'; ?>
 

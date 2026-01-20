@@ -93,7 +93,17 @@
 		height: 100%;
 		pointer-events: auto;
 		mix-blend-mode: difference;
-		z-index: 50;
+		z-index: 1000;
+	}
+
+	.custom-scrollbar--modal {
+		position: absolute;
+		mix-blend-mode: normal;
+		z-index: 1000;
+	}
+
+	.custom-scrollbar--modal .custom-scrollbar-thumb {
+		background: #000;
 	}
 
 	.custom-scrollbar-thumb {
@@ -112,7 +122,7 @@
 		cursor: grabbing;
 	}
 
-	.modal-open .custom-scrollbar {
+	.modal-open .custom-scrollbar--main {
 		display: none;
 	}
 
@@ -162,11 +172,14 @@
     @apply absolute top-full left-1/2 transform -translate-x-1/2 mt-1 border-4 border-transparent border-b-paper z-50 pointer-events-none;
   }
 
-  .modal-open {
-    @apply overflow-hidden ;
-  }
+	html.modal-open,
+	body.modal-open {
+		@apply overflow-hidden;
+	}
 
 	.modal-overlay {
+		overflow-y: auto;
+		scrollbar-gutter: stable;
 		scrollbar-width: thin;
 		scrollbar-color: #fff transparent;
 	}

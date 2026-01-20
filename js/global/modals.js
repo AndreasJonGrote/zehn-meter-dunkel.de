@@ -89,6 +89,7 @@ const modalHandler = () => {
 		}
 		activeOverlay = overlay;
 		document.body.classList.add('modal-open');
+		document.documentElement.classList.add('modal-open');
 		overlay.classList.remove('opacity-0', 'pointer-events-none');
 		overlay.classList.add('opacity-100', 'pointer-events-auto');
 		emitModalEvent('modal:open', overlay);
@@ -111,11 +112,12 @@ const modalHandler = () => {
 		if (!activeOverlay) {
 			return;
 		}
-		emitModalEvent('modal:close', activeOverlay);
 		activeOverlay.classList.add('opacity-0', 'pointer-events-none');
 		activeOverlay.classList.remove('opacity-100', 'pointer-events-auto');
 		document.body.classList.remove('modal-open');
+		document.documentElement.classList.remove('modal-open');
 		document.title = defaultTitle;
+		emitModalEvent('modal:close', activeOverlay);
 		if (updateUrl) {
 			resetModalUrl(method);
 		}
