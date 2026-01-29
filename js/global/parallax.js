@@ -82,38 +82,42 @@ const initParallax = (item) => {
 
 const parallax = () => {
 	const allElements = document.querySelectorAll('[class*="parallax-item-["]');
-	if (allElements.length === 0) return;
+	const len = allElements.length;
+	if (len === 0) return;
 
-	allElements.forEach(item => {
-		if (!isInViewport(item)) {
-			return;
-		}
-
+	const scrollY = window.scrollY;
+	for (let i = 0; i < len; i++) {
+		const item = allElements[i];
 		const modifier = getModifierFromClass(item);
-		if (modifier === null) return;
-
-		if (!item.dataset.init) {
-			initParallax(item);
+		if (modifier === null) {
+			item.style.transform = '';
+			continue;
 		}
+		if (!isInViewport(item)) continue;
 
-		const scrollOffset = window.scrollY * modifier;
-		item.style.transform = `translateY(${scrollOffset}px)`;
+		if (!item.dataset.init) initParallax(item);
+
+		item.style.transform = `translateY(${scrollY * modifier}px)`;
+	}
+};
+
+let rafId = null;
+let resizeTimeout = null;
+const throttledParallax = () => {
+	if (rafId) return;
+	rafId = requestAnimationFrame(() => {
+		parallax();
+		rafId = null;
 	});
 };
-
-let resizeTimeout;
 const handleResize = () => {
 	clearTimeout(resizeTimeout);
-	resizeTimeout = setTimeout(() => {
-		parallax();
-	}, 150);
+	resizeTimeout = setTimeout(parallax, 100);
 };
 
-window.addEventListener('scroll', () => {
-	parallax();
-}, { passive: true });
-
+window.addEventListener('scroll', throttledParallax, { passive: true });
 window.addEventListener('resize', handleResize, { passive: true });
+window.addEventListener('orientationchange', handleResize, { passive: true });
 
 parallax();
 

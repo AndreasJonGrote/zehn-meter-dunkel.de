@@ -148,20 +148,15 @@ const initScrollbar = () => {
 		}
 	};
 
-	/**
-	 * Scroll-Event abfangen.
-	 */
+	let scrollRaf = null;
 	const onScroll = () => {
-		if (document.body.classList.contains('modal-open')) {
-			return;
-		}
-		if (isDragging) {
-			return;
-		}
-		updateTarget();
-		if (!isRunning) {
-			requestAnimationFrame(render);
-		}
+		if (document.body.classList.contains('modal-open') || isDragging) return;
+		if (scrollRaf) return;
+		scrollRaf = requestAnimationFrame(() => {
+			scrollRaf = null;
+			updateTarget();
+			if (!isRunning) requestAnimationFrame(render);
+		});
 	};
 
 	/**

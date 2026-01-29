@@ -86,7 +86,7 @@
           <div class="col-span-3 col-start-2 work-item cursor-pointer parallax-item-[0.05]">
             <h2 class="text-sm font-heading uppercase mb-3">Lesung urbaner Unsicherheiten</h2>
             <p class="text-justify">
-              Online-Umfrage mit rund tausend Teilnehmenden erhebt subjektives Sicherheitsempfinden. Die Originalzitate zeigen, dass Unsicherheit durch Konstellationen aus Lesbarkeit, Nähe und sozialer Präsenz entsteht.<br><a href="https://www.xjonx.com/das-rauschen-des-moments" target="_blank" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
+              Online-Umfrage mit rund tausend Teilnehmenden erhebt subjektives Sicherheitsempfinden. Die Originalzitate zeigen, dass Unsicherheit durch Konstellationen aus Lesbarkeit, Nähe und sozialer Präsenz entsteht.<br><a href="https://www.xjonx.com/das-rauschen-des-moments" target="_blank" data-extern="xjonx-rauschen" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
             </p>
           </div>
           <div class="col-span-3 col-start-7 parallax-item-[-0.07]">
@@ -98,7 +98,7 @@
             <div class="col-span-3 col-start-10 work-item cursor-pointer">
               <h2 class="text-sm font-heading uppercase mb-3">Atlas der (Un-)Sicherheit</h2>
               <p class="text-justify">
-                Räumliche Konstellationen zeigen, wie Schwellen, Barrieren, Beleuchtung und Überwachung zu Akteuren des Sicherheitsempfindens werden. Die Serie testet Thesen im Medium der Anschauung.<br><a href="https://www.xjonx.com/das-rauschen-des-moments" target="_blank" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
+                Räumliche Konstellationen zeigen, wie Schwellen, Barrieren, Beleuchtung und Überwachung zu Akteuren des Sicherheitsempfindens werden. Die Serie testet Thesen im Medium der Anschauung.<br><a href="https://www.xjonx.com/das-rauschen-des-moments" target="_blank" data-extern="xjonx-rauschen" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
               </p>
             </div>
           </div>
@@ -108,7 +108,7 @@
               <h2 class="text-sm font-heading uppercase mb-3">Ceres</h2>
               <p class="text-justify">
                 Systematische Analyse von Schlagzeilen entwickelt die Ceres Content Markers zur Erkennung gewaltbezogener Sprache. Ein Thermodrucker übersetzt digitale Nachrichten in eine physische Spur.<br>
-                <a href="https://www.xjonx.com/das-rauschen-des-moments" target="_blank" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
+                <a href="https://www.xjonx.com/das-rauschen-des-moments" target="_blank" data-extern="xjonx-rauschen" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
               </p>
               <a href="<?php the_url() ; ?>/das-rauschen-des-moments/" data-modal="das-rauschen-des-moments" class="absolute inset-0 z-10"></a>
             </div>
@@ -116,7 +116,7 @@
             <div class="col-span-3 col-start-5 work-item cursor-pointer parallax-item-[-0.05]">
               <h2 class="text-sm font-heading uppercase mb-3 ">Ich habe kein Gesicht</h2>
               <p>
-                Videoinstallation zwischen Anonymität und permanenter Überwachung. Menschen sind verpixelt, Handlungen erkennbar. Die Installation macht sichtbar, wie unterschiedlich ein Raum erscheint, wenn er betrachtet oder durchschritten wird.<br><a href="https://www.xjonx.com/das-rauschen-des-moments" target="_blank" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
+                Videoinstallation zwischen Anonymität und permanenter Überwachung. Menschen sind verpixelt, Handlungen erkennbar. Die Installation macht sichtbar, wie unterschiedlich ein Raum erscheint, wenn er betrachtet oder durchschritten wird.<br><a href="https://www.xjonx.com/das-rauschen-des-moments" target="_blank" data-extern="xjonx-rauschen" class="text-sm font-heading uppercase text-dark">weiterlesen</a>
               </p>
             </div>
 

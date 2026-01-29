@@ -1,9 +1,9 @@
-<header class="fixed top-0 left-0 w-full z-30 mix-blend-difference">
+<header class="fixed top-0 left-0 w-full z-30 mix-blend-difference pointer-events-none">
   <div class="container-fluid py-5">
     <div class="md:grid grid-cols-12 gap-5">
       <div class="col-span-6">
         <div class="flex items-center">
-          <div class="image-rotator relative h-[45px] w-0 overflow-hidden transition-all duration-500">
+          <div class="image-rotator relative h-[45px] w-0 overflow-hidden transition-all duration-500 pointer-events-none">
             <?php
             $atlasImages = glob('assets/atlas-der-unsicherheit_*.jpg');
             $first = true;
@@ -20,7 +20,7 @@
             </picture>
             <?php endforeach; ?>
           </div>
-          <a href="<?php the_url() ; ?>/#top" class="block">
+          <a href="<?php the_url() ; ?>/#top" class="block pointer-events-auto">
             <h1>
                 <span class="block bg-svg-zmd-logo-white w-[70px] h-[45px] bg-no-repeat bg-contain"></span>
                 <span class="sr-only">ZEHN METER DUNKEL</span>

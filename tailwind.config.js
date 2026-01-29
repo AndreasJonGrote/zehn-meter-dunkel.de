@@ -17,6 +17,7 @@ module.exports = {
     './js/**/*.{js,ts}',
     './safelist.txt',
     './ausstellung/**/*.{html,php}',
+    './analytics/**/*.php',
   ],
   theme: {
     extend: {

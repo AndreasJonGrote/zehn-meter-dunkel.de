@@ -174,26 +174,22 @@ const initRotator = (rotator) => {
 		showImage(0);
 	};
 	
-	/**
-	 * Scroll-Handler
-	 */
+	let scrollRaf = null;
 	const handleScroll = () => {
-		const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-		const scrollDelta = Math.abs(scrollY - lastScrollY);
-		
-		if (scrollDelta >= config.minScrollDistance) {
-			if (scrollTimeout) {
-				clearTimeout(scrollTimeout);
+		if (scrollRaf) return;
+		scrollRaf = requestAnimationFrame(() => {
+			scrollRaf = null;
+			const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+			const scrollDelta = Math.abs(scrollY - lastScrollY);
+
+			if (scrollDelta >= config.minScrollDistance) {
+				if (scrollTimeout) clearTimeout(scrollTimeout);
+				show();
+				scrollTimeout = setTimeout(hide, config.scrollTimeout);
 			}
-			
-			show();
-			
-			scrollTimeout = setTimeout(() => {
-				hide();
-			}, config.scrollTimeout);
-		}
-		
-		lastScrollY = scrollY;
+
+			lastScrollY = scrollY;
+		});
 	};
 	
 	/**

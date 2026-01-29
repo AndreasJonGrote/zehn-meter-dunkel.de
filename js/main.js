@@ -8,13 +8,14 @@ import initScrollbar from './global/scrollbar';
 import initMediaLoader from './global/medialoader';
 import initImageFade from './global/imagefade';
 import modalHandler from './global/modals';
+import initTick from './global/tick';
 import Swiper from 'swiper';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 const debug = true;
 
 (() => {
-	devHelpers(true, { enable: true, onload: false, opacity: 10 });
+	// devHelpers(true, { enable: true, onload: false, opacity: 10 });
 	initWorkItemScramble({animationDuration: 1000, interval: 60000, onload: false});
 	startAutoplayVideos();
 	imageRotator();
@@ -24,6 +25,7 @@ const debug = true;
 	initMediaLoader();
 	initImageFade();
 	modalHandler();
+	initTick();
 
 	const swiperInstances = new WeakMap();
 

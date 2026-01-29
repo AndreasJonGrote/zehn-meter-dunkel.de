@@ -2,6 +2,9 @@
 build/*
 dist/*
 
+## Analytics
+analytics/datasets/*
+
 ## Node.js
 lib-cov
 *.seed

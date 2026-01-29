@@ -51,9 +51,9 @@
         <div class="grid grid-cols-12 h-full relative items-center parallax-item-[-0.2]">
           <div class="col-span-6 col-start-2 font-medium text-md font-body">
             <p class="mb-5">
-              Zwei Forschungsprojekte tragen diese Perspektive. In der <a href="https://www.xjonx.com/heimweg-umfrage">Heimweg-Umfrage</a> 
+              Zwei Forschungsprojekte tragen diese Perspektive. In der <a href="https://www.xjonx.com/heimweg-umfrage" data-extern="heimweg-umfrage">Heimweg-Umfrage</a> 
               wurden bundesweit Erfahrungsberichte gesammelt und statistische Angaben mit offenen Antworten verbunden, sodass Angsträume, Vermeidungsverhalten 
-              und erlebte Vorfälle nicht nur gezählt, sondern in ihrer Sprache sichtbar werden. Das <a href="https://www.xjonx.com/ceres-projekt">Ceres-Projekt</a> 
+              und erlebte Vorfälle nicht nur gezählt, sondern in ihrer Sprache sichtbar werden. Das <a href="https://www.xjonx.com/ceres-projekt" data-extern="ceres-projekt">Ceres-Projekt</a> 
               untersucht Lokalzeitungs-Schlagzeilen: Ein mehrjähriger Korpus wird fortlaufend erweitert; ein Auswertungsalgorithmus filtert und gewichtet gewaltbezogene Formulierungen, 
               um Muster der Zuspitzung, Wiederholung und Intensität in der Berichterstattung herauszuarbeiten. Beide Projekte bilden damit den zentralen empirischen Kern, an dem sich 
               die methodische Vertiefung und die Reflexion etablierter Ansätze ausrichten – als Versuch, die Stadt weniger zu alarmieren als lesbar zu machen.
