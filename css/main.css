@@ -97,7 +97,11 @@
 	}
 
 	.custom-scrollbar--modal {
-		position: absolute;
+		position: fixed !important;
+		top: 0 !important;
+		right: 6px !important;
+		width: 2px !important;
+		height: 100vh !important;
 		mix-blend-mode: normal;
 		z-index: 1000;
 	}
@@ -127,7 +131,7 @@
 	}
 
 	.container-fluid {
-		@apply relative px-5 md:px-5 py-24 mx-auto;
+		@apply relative px-5 md:px-5 py-10 md:py-24 mx-auto;
 	}
 
   section, footer, header {

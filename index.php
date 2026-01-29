@@ -19,17 +19,19 @@
       <section class="bg-light text-dark" id="ausstellung">
         <div class="container-fluid">
 
-          <div class="grid grid-cols-12 gap-5 mb-10">
+          <div class="md:grid grid-cols-12 gap-5 mb-10">
 
             <!-- Einleitung -->
-            <div class="col-span-4 parallax-item-[0.1]">
-              <h2 class="text-sm font-heading uppercase mb-3">Ausstellung</h2>
+            <div class="col-span-4 md:parallax-item-[0.1] mb-10 md:mb-0">
+              <h2 class="text-sm font-heading uppercase mb-3">Werkschau</h2>
               <p class="text-md font-body text-justify hyphens-auto">
                 Zwischen Laternenlicht und Schatten liegt oft nur ein kurzer Abschnitt, 
                 wenige Schritte, in denen Orientierung noch möglich scheint und zugleich 
                 kippen kann. <span class="italic">ZEHN METER DUNKEL</span> setzt dort an, wo Distanz zu einer 
                 Wahrnehmungsspanne wird, nah genug, um Strukturen zu erkennen, 
                 weit genug, damit Details, Gesichter und Absichten in Unschärfe geraten. 
+              </p>
+              <p class="text-md font-body text-justify hyphens-auto indent-5">
                 Die Ausstellung zeigt eine Auswahl von Arbeiten, die diesen Zustand als 
                 Frage von Lesbarkeit und Blick erfahrbar machen, als Fotografie, als 
                 Bewegtbild und als installative Setzung, die Verhalten, 
@@ -39,7 +41,7 @@
             <!--/ Einleitung -->
 
             <!-- Lärmschutzwall I -->
-            <div class="relative group col-span-3 col-start-7 cursor-pointer work-item parallax-item-[0.05]">
+            <div class="relative group col-span-3 col-start-7 cursor-pointer work-item md:parallax-item-[0.05] mb-10 md:mb-0">
               <div class="image-fade-container relative aspect-[4/5] w-full">
                 <picture class="image-fade-item opacity-100 transition-opacity duration-[3000ms]">
                   <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-03.webp" type="image/webp">
@@ -60,7 +62,7 @@
             <!--/ Lärmschutzwall I -->
 
             <!-- Lärmschutzwall II -->
-            <div class="relative group col-span-3 cursor-pointer work-item parallax-item-[-0.05]">
+            <div class="relative group col-span-3 cursor-pointer work-item md:parallax-item-[-0.05]">
               <div class="relative aspect-[4/3]">
                 <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
                   <source src="<?php the_url() ; ?>/assets/laermschutzwall_ii.mp4" type="video/mp4">
@@ -72,9 +74,9 @@
             <!--/ Lärmschutzwall II -->
           </div>
 
-          <div class="grid grid-cols-12 gap-5 mb-10">
+          <div class="md:grid grid-cols-12 gap-5 mb-10">
             <!-- Ceres -->
-            <div class="relative group col-span-2 col-start-3 cursor-pointer work-item parallax-item-[0.05]">
+            <div class="relative group col-span-2 col-start-3 cursor-pointer work-item md:parallax-item-[0.05]">
               <div class="relative aspect-[3/4]">
                 <picture class="absolute inset-0">
                   <source srcset="<?php the_url() ; ?>/assets/ceres.webp" type="image/webp">
@@ -87,9 +89,9 @@
             <!--/ Ceres -->
           </div>
 
-          <div class="grid grid-cols-12 gap-5 mb-10">
+          <div class="md:grid grid-cols-12 gap-5 mb-10">
             <!-- Kesselbrink I -->
-            <div class="relative group col-span-3 col-start-6 cursor-pointer work-item parallax-item-[0.03]">
+            <div class="relative group col-span-3 col-start-6 cursor-pointer work-item md:parallax-item-[0.03] mb-10 md:mb-0">
               <div class="image-fade-container relative aspect-[7/5]">
                 <picture class="image-fade-item opacity-100 transition-opacity duration-[3000ms]">
                   <source srcset="<?php the_url() ; ?>/assets/kesselbrink_i-links.webp" type="image/webp">
@@ -105,7 +107,7 @@
             </div>
             <!--/ Kesselbrink I -->
             <!-- Kesselbrink II -->
-            <div class="relative group col-span-3 cursor-pointer work-item parallax-item-[-0.05]">
+            <div class="relative group col-span-3 cursor-pointer work-item md:parallax-item-[-0.05]">
               <div class="relative aspect-[4/3]">
                 <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
                   <source src="<?php the_url() ; ?>/assets/kesselbrink_ii.mp4" type="video/mp4">
@@ -117,9 +119,9 @@
             <!--/ Kesselbrink II -->
           </div>
 
-          <div class="grid grid-cols-12 gap-5 mb-10">
+          <div class="md:grid grid-cols-12 gap-5 mb-10">
             <!-- Membran der Anonymität -->
-            <div class="relative group col-span-3 col-start-2 cursor-pointer work-item parallax-item-[0.05]">
+            <div class="relative group col-span-3 col-start-2 cursor-pointer work-item md:parallax-item-[0.05] mb-10 md:mb-0">
               <div class="relative aspect-[4/3]">
                 <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
                   <source src="<?php the_url() ; ?>/assets/ich-habe-kein-gesicht_membran.mp4" type="video/mp4">
@@ -130,7 +132,7 @@
             </div>
             <!--/ Membran der Anonymität -->
             <!-- Unterführung -->
-            <div class="relative group col-span-3 col-start-10 cursor-pointer work-item mt-[150px] parallax-item-[-0.05]">
+            <div class="relative group col-span-3 col-start-10 cursor-pointer work-item md:mt-[150px] md:parallax-item-[-0.05]">
               <div class="relative aspect-[4/3]">
                 <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
                   <source src="<?php the_url() ; ?>/assets/unterfuehrung.mp4" type="video/mp4">
@@ -144,7 +146,7 @@
         </div>
       </section>
 
-      <section class="bg-light text-dark" id="theorie">
+      <section class="bg-light text-dark hidden">
         <div class="container-fluid">
           <div class="relative flex items-center justify-center gap-5">
             <p><a href="<?php the_url() ; ?>/masterthesis/" class="text-sm font-heading uppercase text-dark">Masterthesis</a></p>

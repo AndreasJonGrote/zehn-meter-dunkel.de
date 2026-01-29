@@ -55,7 +55,7 @@
             <div class="swiper-slide">
               <div class="relative aspect-[4/3]">
                 <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
-                  <source src="<?php the_url() ; ?>/assets/laermschutzwall_ii.mp4" type="video/mp4">
+                  <source src="<?php the_url() ; ?>/assets/das-rauschen-des-moments-10s-small.mp4" type="video/mp4">
                 </video>
               </div>
             </div>

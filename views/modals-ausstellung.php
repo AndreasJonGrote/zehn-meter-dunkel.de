@@ -1,7 +1,7 @@
 <section class="modal-overlay fixed inset-0 z-20 overflow-y-auto overscroll-contain opacity-0 pointer-events-none transition-opacity duration-300" data-modal="laermschutzwall-i">
   <div class="container-fluid mt-2 max-w-screen-lg">
     <h2 class="text-xl font-heading uppercase mb-10 mt-40">Lärmschutzwall I</h2>
-    <div class="grid grid-cols-12 relative gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-12 relative gap-12">
       <div class="col-span-6 text-md">
         <p class="text-justify hyphens-auto">
           Einundzwanzig Bilder folgen dem Lärmschutzwall über zweihundert Meter – von einem Eingang zum anderen. 
@@ -57,7 +57,7 @@
 <section class="modal-overlay fixed inset-0 z-20 overflow-y-auto overscroll-contain opacity-0 pointer-events-none transition-opacity duration-300" data-modal="laermschutzwall-ii">
   <div class="container-fluid mt-2 max-w-screen-lg">
     <h2 class="text-xl font-heading uppercase mb-10 mt-40">Lärmschutzwall II</h2>
-    <div class="grid grid-cols-12 relative gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-12 relative gap-12">
       <div class="col-span-6 text-md">
         <p class="text-justify hyphens-auto">
         Nachts verengt sich der Fußweg entlang des Lärmschutzwalls zu einem Korridor, 
@@ -91,7 +91,7 @@
 <section class="modal-overlay fixed inset-0 z-20 overflow-y-auto overscroll-contain opacity-0 pointer-events-none transition-opacity duration-300" data-modal="ceres-drucker">
   <div class="container-fluid mt-2 max-w-screen-lg">
     <h2 class="text-xl font-heading uppercase mb-10 mt-40">Ceres-Drucker</h2>
-    <div class="grid grid-cols-12 relative gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-12 relative gap-12">
       <div class="col-span-6 text-md">
         <p class="text-justify hyphens-auto">
           An einer Wand hängt eine schlichte Box, in der ein Bondrucker arbeitet. 
@@ -127,7 +127,7 @@
 <section class="modal-overlay fixed inset-0 z-20 overflow-y-auto overscroll-contain opacity-0 pointer-events-none transition-opacity duration-300" data-modal="kesselbrink-i">
   <div class="container-fluid mt-2 max-w-screen-lg">
     <h2 class="text-xl font-heading uppercase mb-10 mt-40">Kesselbrink I</h2>
-    <div class="grid grid-cols-12 relative gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-12 relative gap-12">
       <div class="col-span-6 text-md">
         <p class="text-justify hyphens-auto">
           Eine erhöhte Gesamtansicht ordnet den Platz wie eine horizontale Schnittfläche: 
@@ -171,7 +171,7 @@
 <section class="modal-overlay fixed inset-0 z-20 overflow-y-auto overscroll-contain opacity-0 pointer-events-none transition-opacity duration-300" data-modal="kesselbrink-ii">
   <div class="container-fluid mt-2 max-w-screen-lg">
     <h2 class="text-xl font-heading uppercase mb-10 mt-40">Kesselbrink II</h2>
-    <div class="grid grid-cols-12 relative gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-12 relative gap-12">
       <div class="col-span-6 text-md">
         <p class="text-justify hyphens-auto">
           Der Kesselbrink erscheint in der Videosequenz nahezu menschenleer, 
@@ -208,7 +208,7 @@
 <section class="modal-overlay fixed inset-0 z-20 overflow-y-auto overscroll-contain opacity-0 pointer-events-none transition-opacity duration-300" data-modal="membran-der-anonymitaet">
   <div class="container-fluid mt-2 max-w-screen-lg">
     <h2 class="text-xl font-heading uppercase mb-10 mt-40">Membran der Anonymität</h2>
-    <div class="grid grid-cols-12 relative gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-12 relative gap-12">
       <div class="col-span-6 text-md">
         <p class="text-justify hyphens-auto">
           Hinter einer halbtransparenten Folie werden Körper zu Andeutungen: Umrisse, 
@@ -245,7 +245,7 @@
 <section class="modal-overlay fixed inset-0 z-20 overflow-y-auto overscroll-contain opacity-0 pointer-events-none transition-opacity duration-300" data-modal="unterfuehrung">
   <div class="container-fluid mt-2 max-w-screen-lg">
     <h2 class="text-xl font-heading uppercase mb-10 mt-40">Unterführung</h2>
-    <div class="grid grid-cols-12 relative gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-12 relative gap-12">
       <div class="col-span-6 text-md">
         <p class="text-justify hyphens-auto">
           Aus der typischen Perspektive einer Sicherheitskamera ist der Blick auf einen schmalen Durchgang fixiert: 

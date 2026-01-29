@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
-Script zum Konvertieren von JPG zu WebP (lossless) und 
+Script zum Konvertieren von JPG zu WebP (lossless) und
 lossless Komprimieren von JPG-Dateien.
 """
 
-import os
+import argparse
 from pathlib import Path
 from PIL import Image
 
-# Konstante: Pfad zum Ordner (relativ zum Script-Verzeichnis)
 SCRIPT_DIR = Path(__file__).parent
 FOLDER_PATH = SCRIPT_DIR / "../assets"
+
 
 def normalize_filename(filename):
 	"""
@@ -19,10 +19,11 @@ def normalize_filename(filename):
 	name = filename.stem.lower().replace(' ', '_')
 	return filename.parent / f"{name}{filename.suffix.lower()}"
 
-def process_jpg_files(folder_path):
+def process_jpg_files(folder_path, force=False):
 	"""
 	Verarbeitet alle JPG-Dateien im angegebenen Ordner.
 	Erstellt lossless WebP und komprimiert JPG lossless.
+	force: Bei True werden bestehende WebP ueberschrieben und JPG neu komprimiert.
 	"""
 	folder = Path(folder_path).resolve()
 	
@@ -53,9 +54,8 @@ def process_jpg_files(folder_path):
 				print(f"✓ Umbenannt zu: {jpg_file.name}")
 			
 			webp_path = jpg_file.with_suffix('.webp')
-			
-			# Nur verarbeiten, wenn noch kein WebP existiert
-			if webp_path.exists():
+
+			if webp_path.exists() and not force:
 				print(f"⊘ Übersprungen (WebP vorhanden): {jpg_file.name}")
 				continue
 			
@@ -76,5 +76,8 @@ def process_jpg_files(folder_path):
 			print(f"✗ Fehler bei {jpg_file.name}: {e}")
 
 if __name__ == "__main__":
-	process_jpg_files(FOLDER_PATH)
+	parser = argparse.ArgumentParser(description="JPG zu WebP konvertieren und JPG komprimieren")
+	parser.add_argument("-f", "--force", action="store_true", help="Bestehende WebP ueberschreiben, JPG neu komprimieren")
+	args = parser.parse_args()
+	process_jpg_files(FOLDER_PATH, force=args.force)
 

@@ -205,7 +205,8 @@ const initScrollbar = () => {
 		modalScrollbar.setAttribute('aria-hidden', 'true');
 		modalThumb.className = 'custom-scrollbar-thumb';
 		modalScrollbar.appendChild(modalThumb);
-		overlay.appendChild(modalScrollbar);
+		document.body.appendChild(modalScrollbar);
+		modalScrollbar.style.height = `${window.innerHeight}px`;
 
 		let modalMaxScroll = 0;
 		let modalTrackHeight = 0;
@@ -221,7 +222,8 @@ const initScrollbar = () => {
 		 */
 		const updateModalMetrics = () => {
 			modalMaxScroll = Math.max(0, overlay.scrollHeight - overlay.clientHeight);
-			modalTrackHeight = modalScrollbar.offsetHeight;
+			modalTrackHeight = window.innerHeight;
+			modalScrollbar.style.height = `${modalTrackHeight}px`;
 			const ratio = overlay.scrollHeight ? overlay.clientHeight / overlay.scrollHeight : 1;
 			modalThumbHeight = Math.max(24, modalTrackHeight * ratio);
 			modalThumb.style.height = `${modalThumbHeight}px`;
@@ -355,6 +357,7 @@ const initScrollbar = () => {
 			modalThumb.removeEventListener('pointerdown', onModalThumbPointerDown);
 			window.removeEventListener('pointermove', onModalPointerMove);
 			window.removeEventListener('pointerup', onModalPointerUp);
+			window.removeEventListener('resize', updateModalMetrics);
 			if (modalScrollbar.parentNode) {
 				modalScrollbar.parentNode.removeChild(modalScrollbar);
 			}
@@ -366,6 +369,12 @@ const initScrollbar = () => {
 		updateModalMetrics();
 		updateModalTarget();
 		renderModal();
+
+		requestAnimationFrame(() => {
+			updateModalMetrics();
+			updateModalTarget();
+			renderModal();
+		});
 
 		overlay.addEventListener('scroll', onModalScroll, { passive: true });
 		modalScrollbar.addEventListener('pointerdown', onModalTrackPointerDown);
