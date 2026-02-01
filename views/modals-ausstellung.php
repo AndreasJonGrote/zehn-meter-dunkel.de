@@ -18,32 +18,32 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <picture>
-                <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-01.webp" type="image/webp">
-                <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-01.jpg" alt="Lärmschutzwall I" class="w-full h-auto mb-3" loading="lazy" decoding="async">
+                <source data-srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-01.webp" type="image/webp">
+                <img data-src="<?php the_url() ; ?>/assets/laermschutzwall_i-01.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Lärmschutzwall I" class="w-full h-auto mb-3" decoding="async">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
-                <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-03.webp" type="image/webp">
-                <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-03.jpg" alt="Lärmschutzwall I" class="w-full h-auto mb-3" loading="lazy" decoding="async">
+                <source data-srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-03.webp" type="image/webp">
+                <img data-src="<?php the_url() ; ?>/assets/laermschutzwall_i-03.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Lärmschutzwall I" class="w-full h-auto mb-3" decoding="async">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
-                <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-13.webp" type="image/webp">
-                <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-13.jpg" alt="Lärmschutzwall I" class="w-full h-auto mb-3" loading="lazy" decoding="async">
+                <source data-srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-13.webp" type="image/webp">
+                <img data-src="<?php the_url() ; ?>/assets/laermschutzwall_i-13.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Lärmschutzwall I" class="w-full h-auto mb-3" decoding="async">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
-                <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-19.webp" type="image/webp">
-                <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-19.jpg" alt="Lärmschutzwall I" class="w-full h-auto mb-3" loading="lazy" decoding="async">
+                <source data-srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-19.webp" type="image/webp">
+                <img data-src="<?php the_url() ; ?>/assets/laermschutzwall_i-19.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Lärmschutzwall I" class="w-full h-auto mb-3" decoding="async">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
-                <source srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-21.webp" type="image/webp">
-                <img src="<?php the_url() ; ?>/assets/laermschutzwall_i-21.jpg" alt="Lärmschutzwall I" class="w-full h-auto mb-3" loading="lazy" decoding="async">
+                <source data-srcset="<?php the_url() ; ?>/assets/laermschutzwall_i-21.webp" type="image/webp">
+                <img data-src="<?php the_url() ; ?>/assets/laermschutzwall_i-21.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Lärmschutzwall I" class="w-full h-auto mb-3" decoding="async">
               </picture>
             </div>
           </div>
@@ -76,7 +76,7 @@
             <div class="swiper-slide">
               <div class="relative aspect-[4/3]">
                 <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
-                  <source src="<?php the_url() ; ?>/assets/laermschutzwall_ii.mp4" type="video/mp4">
+                  <source data-src="<?php the_url() ; ?>/assets/laermschutzwall_ii.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
@@ -112,8 +112,8 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <picture>
-                <source srcset="<?php the_url() ; ?>/assets/ceres.webp" type="image/webp">
-                <img src="<?php the_url() ; ?>/assets/ceres.jpg" alt="Ceres-Drucker" class="w-full h-auto mb-3" loading="lazy" decoding="async">
+                <source data-srcset="<?php the_url() ; ?>/assets/ceres.webp" type="image/webp">
+                <img data-src="<?php the_url() ; ?>/assets/ceres.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Ceres-Drucker" class="w-full h-auto mb-3" decoding="async">
               </picture>
             </div>
           </div>
@@ -149,14 +149,14 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <picture>
-                <source srcset="<?php the_url() ; ?>/assets/kesselbrink_i-links.webp" type="image/webp">
-                <img src="<?php the_url() ; ?>/assets/kesselbrink_i-links.jpg" alt="Kesselbrink I" class="w-full h-auto mb-3" loading="lazy" decoding="async">
+                <source data-srcset="<?php the_url() ; ?>/assets/kesselbrink_i-links.webp" type="image/webp">
+                <img data-src="<?php the_url() ; ?>/assets/kesselbrink_i-links.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Kesselbrink I" class="w-full h-auto mb-3" decoding="async">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
-                <source srcset="<?php the_url() ; ?>/assets/kesselbrink_i-rechts.webp" type="image/webp">
-                <img src="<?php the_url() ; ?>/assets/kesselbrink_i-rechts.jpg" alt="Kesselbrink I" class="w-full h-auto mb-3" loading="lazy" decoding="async">
+                <source data-srcset="<?php the_url() ; ?>/assets/kesselbrink_i-rechts.webp" type="image/webp">
+                <img data-src="<?php the_url() ; ?>/assets/kesselbrink_i-rechts.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Kesselbrink I" class="w-full h-auto mb-3" decoding="async">
               </picture>
             </div>
           </div>
@@ -193,7 +193,7 @@
             <div class="swiper-slide">
               <div class="relative aspect-[4/3]">
                 <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
-                  <source src="<?php the_url() ; ?>/assets/kesselbrink_ii.mp4" type="video/mp4">
+                  <source data-src="<?php the_url() ; ?>/assets/kesselbrink_ii.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
@@ -230,7 +230,7 @@
             <div class="swiper-slide">
               <div class="relative aspect-[4/3]">
                 <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
-                  <source src="<?php the_url() ; ?>/assets/ich-habe-kein-gesicht_membran.mp4" type="video/mp4">
+                  <source data-src="<?php the_url() ; ?>/assets/ich-habe-kein-gesicht_membran.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
@@ -265,7 +265,7 @@
             <div class="swiper-slide">
               <div class="relative aspect-[4/3]">
                 <video class="w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline preload="none">
-                  <source src="<?php the_url() ; ?>/assets/unterfuehrung.mp4" type="video/mp4">
+                  <source data-src="<?php the_url() ; ?>/assets/unterfuehrung.mp4" type="video/mp4">
                 </video>
               </div>
             </div>

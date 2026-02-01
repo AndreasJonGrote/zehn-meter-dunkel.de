@@ -9,8 +9,6 @@ import initMediaLoader from './global/medialoader';
 import initImageFade from './global/imagefade';
 import modalHandler from './global/modals';
 import initTick from './global/tick';
-import Swiper from 'swiper';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 const debug = true;
 
@@ -28,67 +26,57 @@ const debug = true;
 	initTick();
 
 	const swiperInstances = new WeakMap();
+	let swiperPromise = null;
 
-	/* Modal-Swiper initialisieren */
-	const initModalSwipers = (overlay) => {
-		if (!overlay) {
-			return;
+	const getSwiper = () => {
+		if (!swiperPromise) {
+			swiperPromise = Promise.all([
+				import('swiper'),
+				import('swiper/modules')
+			]).then(([swiperMod, modulesMod]) => ({
+				Swiper: swiperMod.default,
+				Autoplay: modulesMod.Autoplay,
+				Navigation: modulesMod.Navigation,
+				Pagination: modulesMod.Pagination
+			}));
 		}
+		return swiperPromise;
+	};
+
+	const initModalSwipers = async (overlay) => {
+		if (!overlay) return;
 		const modalSwipers = overlay.querySelectorAll('.modal-swiper');
-		if (modalSwipers.length === 0) {
-			return;
-		}
+		if (modalSwipers.length === 0) return;
+		const { Swiper, Autoplay, Navigation, Pagination } = await getSwiper();
 		modalSwipers.forEach((swiperElement) => {
-			if (swiperInstances.has(swiperElement)) {
-				return;
-			}
+			if (swiperInstances.has(swiperElement)) return;
 			const slideCount = swiperElement.querySelectorAll('.swiper-slide').length;
 			const enableLoop = slideCount > 1;
-
 			const instance = new Swiper(swiperElement, {
 				modules: [Autoplay, Navigation, Pagination],
 				loop: enableLoop,
-				autoplay: enableLoop ? {
-					delay: 5000,
-					disableOnInteraction: false
-				} : false,
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev'
-				},
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: true
-				}
+				autoplay: enableLoop ? { delay: 5000, disableOnInteraction: false } : false,
+				navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+				pagination: { el: '.swiper-pagination', clickable: true }
 			});
-
 			swiperInstances.set(swiperElement, instance);
 		});
 	};
 
-	/* Modal-Swiper entfernen */
 	const destroyModalSwipers = (overlay) => {
-		if (!overlay) {
-			return;
-		}
-		const modalSwipers = overlay.querySelectorAll('.modal-swiper');
-		if (modalSwipers.length === 0) {
-			return;
-		}
-		modalSwipers.forEach((swiperElement) => {
+		if (!overlay) return;
+		overlay.querySelectorAll('.modal-swiper').forEach((swiperElement) => {
 			const instance = swiperInstances.get(swiperElement);
-			if (!instance) {
-				return;
+			if (instance) {
+				instance.destroy(true, true);
+				swiperInstances.delete(swiperElement);
 			}
-			instance.destroy(true, true);
-			swiperInstances.delete(swiperElement);
 		});
 	};
 
 	document.addEventListener('modal:open', (event) => {
 		initModalSwipers(event.detail?.overlay);
 	});
-
 	document.addEventListener('modal:close', (event) => {
 		destroyModalSwipers(event.detail?.overlay);
 	});

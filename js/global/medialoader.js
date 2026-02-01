@@ -1,5 +1,6 @@
 /**
- * Laedt Medien zuerst im Viewport, danach den Rest.
+ * Laedt Medien priorisiert: erst Viewport, danach Rest.
+ * Videos nur bei echter Sichtbarkeit (IntersectionObserver).
  */
 const initMediaLoader = () => {
 	const images = Array.from(document.querySelectorAll('img'));
@@ -9,72 +10,75 @@ const initMediaLoader = () => {
 		return;
 	}
 
-	/**
-	 * Sichtbarkeit im Viewport pruefen.
-	 */
-	const isInViewport = (element) => {
-		const rect = element.getBoundingClientRect();
-		return rect.bottom > 0 && rect.top < window.innerHeight;
+	const vh = window.innerHeight;
+
+	const isInFirstScreen = (el) => {
+		const rect = el.getBoundingClientRect();
+		return rect.top < vh && rect.bottom > 0;
 	};
 
-	/**
-	 * Erste Sichtbarkeitsrunde setzen.
-	 */
-	const primeViewportMedia = () => {
-		images.forEach((image) => {
-			image.setAttribute('loading', 'lazy');
-			image.setAttribute('decoding', 'async');
+	images.forEach((img) => {
+		if (!isInFirstScreen(img)) {
+			img.setAttribute('loading', 'lazy');
+			img.setAttribute('fetchpriority', 'low');
+			return;
+		}
+		img.setAttribute('loading', 'eager');
+	});
 
-			if (isInViewport(image)) {
-				image.setAttribute('loading', 'eager');
-				image.setAttribute('fetchpriority', 'high');
+	let firstVideoHandled = false;
+	const videoObserver = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			const video = entry.target;
+			if (!entry.isIntersecting) {
 				return;
 			}
-
-			image.setAttribute('fetchpriority', 'low');
-		});
-
-		videos.forEach((video) => {
-			if (isInViewport(video)) {
-				video.setAttribute('preload', 'auto');
-				if (video.autoplay) {
-					video.play().catch(() => {});
-				}
-				return;
-			}
-
-			video.setAttribute('preload', 'none');
-		});
-	};
-
-	/**
-	 * Restliche Medien nachladen.
-	 */
-	const loadRemainingMedia = () => {
-		images.forEach((image) => {
-			if (image.complete) {
-				return;
-			}
-			image.setAttribute('loading', 'eager');
-			image.setAttribute('fetchpriority', 'low');
-		});
-
-		videos.forEach((video) => {
 			if (video.readyState > 0) {
 				return;
 			}
 			video.setAttribute('preload', 'auto');
 			video.load();
+			if (video.autoplay) {
+				video.play().catch(() => {});
+			}
+			videoObserver.unobserve(video);
+		});
+	}, { rootMargin: '50px', threshold: 0.1 });
+
+	videos.forEach((video) => {
+		if (video.closest('.modal-overlay')) {
+			return;
+		}
+		if (isInFirstScreen(video) && !firstVideoHandled) {
+			firstVideoHandled = true;
+			video.setAttribute('preload', 'auto');
+			video.load();
+			if (video.autoplay) {
+				video.play().catch(() => {});
+			}
+			return;
+		}
+		videoObserver.observe(video);
+	});
+
+	const loadRemainingMedia = () => {
+		images.forEach((img) => {
+			if (img.complete) return;
+			img.setAttribute('loading', 'eager');
+			img.setAttribute('fetchpriority', 'low');
+		});
+		videos.forEach((video) => {
+			if (video.closest('.modal-overlay')) return;
+			if (video.readyState > 0) return;
+			video.setAttribute('preload', 'auto');
+			video.load();
 		});
 	};
-
-	primeViewportMedia();
 
 	if (document.readyState === 'complete') {
 		loadRemainingMedia();
 		return;
 	}
-
 	window.addEventListener('load', loadRemainingMedia);
 };
 

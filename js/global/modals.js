@@ -80,6 +80,29 @@ const modalHandler = () => {
 		document.dispatchEvent(new CustomEvent(name, { detail: { overlay } }));
 	};
 
+	/* Deferred Media im Overlay laden */
+	const loadDeferredMedia = (overlay) => {
+		overlay.querySelectorAll('img[data-src]').forEach((img) => {
+			img.src = img.dataset.src;
+			img.removeAttribute('data-src');
+		});
+		overlay.querySelectorAll('source[data-srcset]').forEach((s) => {
+			s.srcset = s.dataset.srcset;
+			s.removeAttribute('data-srcset');
+		});
+		overlay.querySelectorAll('source[data-src]').forEach((s) => {
+			s.src = s.dataset.src;
+			s.removeAttribute('data-src');
+			const video = s.closest('video');
+			if (video) {
+				video.load();
+				if (video.autoplay) {
+					video.play().catch(() => {});
+				}
+			}
+		});
+	};
+
 	/* Modal einblenden */
 	const openModal = (overlay, updateUrl = true, method = 'push') => {
 		if (activeOverlay && activeOverlay !== overlay) {
@@ -88,6 +111,7 @@ const modalHandler = () => {
 			activeOverlay.classList.remove('opacity-100', 'pointer-events-auto');
 		}
 		activeOverlay = overlay;
+		loadDeferredMedia(overlay);
 		document.body.classList.add('modal-open');
 		document.documentElement.classList.add('modal-open');
 		overlay.classList.remove('opacity-0', 'pointer-events-none');

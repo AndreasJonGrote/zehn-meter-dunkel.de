@@ -1,6 +1,22 @@
+/* Basis-URL fuer Ajax (APP_BASE oder aus Script-Src ableiten) */
+const getBase = () => {
+	if (typeof window.APP_BASE === 'string' && window.APP_BASE) {
+		return window.APP_BASE.replace(/\/$/, '');
+	}
+	const script = document.querySelector('script[src*="main.js"]');
+	if (script?.src) {
+		try {
+			const u = new URL(script.src);
+			const basePath = u.pathname.replace(/\/dist\/.*$/, '') || '/';
+			return u.origin + basePath.replace(/\/$/, '');
+		} catch {}
+	}
+	return '';
+};
+
 /* Tick: schlankes Analytics via ajax, load/scroll/time/modal/extern */
 const tick = (event, extra) => {
-	const base = typeof window.APP_BASE === 'string' ? window.APP_BASE : '';
+	const base = getBase();
 	if (!base) return;
 	let url = `${base}/library/ajax.php?tick=${encodeURIComponent(event)}`;
 	if (extra) url += `&page=${encodeURIComponent(extra)}`;
@@ -9,7 +25,7 @@ const tick = (event, extra) => {
 
 /* Extern-Link: sendBeacon + sofort weiterleiten */
 const tickExtern = (key, href, newTab) => {
-	const base = typeof window.APP_BASE === 'string' ? window.APP_BASE : '';
+	const base = getBase();
 	if (!base) {
 		if (newTab) window.open(href, '_blank');
 		else location.href = href;
@@ -22,8 +38,7 @@ const tickExtern = (key, href, newTab) => {
 };
 
 const initTick = () => {
-	const base = typeof window.APP_BASE === 'string' ? window.APP_BASE : '';
-	if (!base) return;
+	if (!getBase()) return;
 
 	let scrollDone = false;
 	let loadDone = false;

@@ -202,6 +202,21 @@ foreach ($sessions as $s) {
 krsort($visitsByDay);
 $visitsByDay = array_slice($visitsByDay, 0, 14, true);
 $maxVisits = !empty($visitsByDay) ? max($visitsByDay) : 1;
+
+$now = time();
+$cutoff24h = $now - 86400;
+$visitsByHour = [];
+for ($i = 0; $i < 24; $i++) {
+	$slotStart = $cutoff24h + $i * 3600;
+	$visitsByHour[$i] = ['label' => date('d.m. H:00', $slotStart), 'count' => 0];
+}
+foreach ($sessions as $s) {
+	if ($s['first'] < $cutoff24h) continue;
+	$slot = (int) floor(($s['first'] - $cutoff24h) / 3600);
+	if ($slot >= 24) $slot = 23;
+	$visitsByHour[$slot]['count']++;
+}
+$maxVisitsHour = !empty($visitsByHour) ? max(array_column($visitsByHour, 'count')) : 1;
 $maxModals = !empty($modalCounts) ? max($modalCounts) : 1;
 $maxExtern = !empty($externByUrl) ? max(array_column($externByUrl, 'count')) : 1;
 ?>
@@ -251,6 +266,24 @@ $maxExtern = !empty($externByUrl) ? max(array_column($externByUrl, 'count')) : 1
 			<div class="border border-grey/20 rounded p-4">
 				<p class="text-xs font-heading uppercase text-grey mb-1">Ceres</p>
 				<p class="text-2xl font-heading"><?php echo $totalCeres; ?></p>
+			</div>
+		</div>
+
+		<div class="mb-10">
+			<h2 class="text-xs font-heading uppercase text-grey mb-4">Letzte 24 Stunden</h2>
+			<div class="flex gap-0.5 items-end h-16 max-w-2xl">
+				<?php foreach ($visitsByHour as $slot): ?>
+				<div class="flex-1 min-w-[8px] flex flex-col items-center group" title="<?php echo htmlspecialchars($slot['label']); ?>: <?php echo $slot['count']; ?> Besucher">
+					<span class="text-[10px] tabular-nums text-grey mb-0.5 opacity-0 group-hover:opacity-100 transition-opacity"><?php echo $slot['count']; ?></span>
+					<div class="w-full flex-1 flex items-end rounded-t bg-grey/20 overflow-hidden" style="min-height: 4px;">
+						<div class="w-full bg-grey rounded-t transition-all" style="height: <?php echo $maxVisitsHour > 0 ? round(100 * $slot['count'] / $maxVisitsHour) : 0; ?>%; min-height: <?php echo $slot['count'] > 0 ? 2 : 0; ?>px;"></div>
+					</div>
+				</div>
+				<?php endforeach; ?>
+			</div>
+			<div class="flex justify-between mt-1 text-[10px] text-grey max-w-2xl">
+				<span><?php echo date('d.m. H:00', $cutoff24h); ?></span>
+				<span><?php echo date('d.m. H:00', $now); ?></span>
 			</div>
 		</div>
 

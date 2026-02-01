@@ -4,7 +4,7 @@
       <div class="col-span-1 sm:col-span-4 self-end md:relative z-0">
         <picture class="parallax-item-[-0.5] w-[200px] md:w-full absolute bottom-16 right-8 md:-right-32">
           <source srcset="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_rechteck.webp" type="image/webp">
-          <img src="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_rechteck.jpg" alt="Ausstellung" class="w-full" loading="lazy" decoding="async">
+          <img src="<?php the_url() ; ?>/assets/atlas-der-unsicherheit_rechteck.jpg" alt="Ausstellung" class="w-full" loading="eager" fetchpriority="high" decoding="async">
         </picture>
       </div>
       <p class="text-2xl font-heading uppercase col-span-8 relative z-1 mix-blend-difference parallax-item-[0.4]">
